@@ -8,11 +8,6 @@
  * clobber the other's variables, whatever prefix a host is configured with.
  */
 
-@font-face {
-  font-family: 'Oxanium';
-  src: local('Oxanium'), url(./fonts/Oxanium-Medium.ttf) format('truetype');
-}
-
 :root {
   --whui-max-width: 1200px;
   /* rc-virtual-list's thumb is black, which a dark dropdown swallows. */
@@ -26,6 +21,20 @@ body {
   font-size: 14px;
   line-height: 1.5715;
   background-color: var(--whui-background-color);
+}
+
+img {
+  image-rendering: pixelated;
+}
+
+body :is(
+  .ant-typography-secondary,
+  .ant-card-meta-description,
+  .ant-form-item-explain,
+  .ant-alert-description,
+  .ant-empty-description
+) {
+  font-family: var(--whui-font-family-secondary);
 }
 
 a {

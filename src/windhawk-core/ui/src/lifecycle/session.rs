@@ -20,7 +20,7 @@ use windhawk_core_host::{
     GatedCore, HostError, Session, SessionApi, SessionApiExt, SessionCallbacks, SessionConfig,
     resolve_dll_path,
 };
-use windhawk_core_protocol::{CoreInfo, SourceLocation};
+use windhawk_core_protocol::{AppSettings, CoreInfo, SourceLocation};
 
 use crate::pump::PumpMessage;
 use crate::pump::ops::FIRST_GENERATION;
@@ -57,6 +57,11 @@ pub struct CoreHandles {
     /// `getCoreInfo` `fsPaths.compilerPath`, the compiler root handed to the child as
     /// `WINDHAWK_COMPILER_PATH`.
     pub compiler_path: PathBuf,
+    /// `getCoreInfo` `fsPaths.enginePath`, where the architecture-specific
+    /// injection engine DLL is loaded from.
+    pub engine_path: PathBuf,
+    /// Whether the stored Safe Mode setting disables injection for this run.
+    pub safe_mode: bool,
 }
 
 /// A fatal startup failure: the message to present before exit and the source
@@ -112,6 +117,8 @@ pub fn start_core(app_root: &str, pump: Sender<PumpMessage>) -> Result<CoreHandl
         portable,
         ui_path,
         compiler_path,
+        engine_path,
+        safe_mode,
     } = resolve_startup_info(&session)?;
 
     Ok(CoreHandles {
@@ -122,20 +129,21 @@ pub fn start_core(app_root: &str, pump: Sender<PumpMessage>) -> Result<CoreHandl
         portable,
         ui_path,
         compiler_path,
+        engine_path,
+        safe_mode,
     })
 }
 
-/// The `getCoreInfo` fields the UI needs at startup: the install directory (the
-/// mod-runtime seed's copy source), the resolved AppData directory (where it
-/// roots its WebView2 profile and the editor's workspaces), the portable flag
-/// (which, with the process admin state, decides the window title), and the
-/// UI/compiler paths the editor launcher needs.
+/// The resolved paths and Safe Mode setting needed at startup by the UI and the
+/// injection engine host.
 pub struct StartupInfo {
     pub app_root_path: PathBuf,
     pub app_data_path: PathBuf,
     pub portable: bool,
     pub ui_path: PathBuf,
     pub compiler_path: PathBuf,
+    pub engine_path: PathBuf,
+    pub safe_mode: bool,
 }
 
 /// Read the startup info from the core (`getCoreInfo`). The core owns storage
@@ -149,12 +157,20 @@ pub fn resolve_startup_info(session: &dyn SessionApi) -> Result<StartupInfo, Sta
     let info: CoreInfo = session
         .invoke_as("getCoreInfo", &json!({}))
         .map_err(|error| StartupError::from_host("Failed to read the Windhawk core info", error))?;
+    let settings: AppSettings =
+        session
+            .invoke_as("getAppSettings", &json!({}))
+            .map_err(|error| {
+                StartupError::from_host("Failed to read the injection engine settings", error)
+            })?;
     Ok(StartupInfo {
         app_root_path: PathBuf::from(info.fs_paths.app_root_path),
         app_data_path: PathBuf::from(info.fs_paths.app_data_path),
         portable: info.portable,
         ui_path: PathBuf::from(info.fs_paths.ui_path),
         compiler_path: PathBuf::from(info.fs_paths.compiler_path),
+        engine_path: PathBuf::from(info.fs_paths.engine_path),
+        safe_mode: settings.safe_mode,
     })
 }
 

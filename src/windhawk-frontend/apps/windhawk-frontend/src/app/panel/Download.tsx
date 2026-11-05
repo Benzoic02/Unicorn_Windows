@@ -31,7 +31,7 @@ function Download() {
   const { t } = useTranslation();
 
   useEffect(() => {
-    document.title = `${t('general.actions.download')} - Windhawk`;
+    document.title = `${t('general.actions.download')} - UniWind`;
   }, [t]);
 
   return (

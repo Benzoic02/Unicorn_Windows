@@ -150,7 +150,7 @@
       },
       "patternsMatchCriticalSystemProcesses": {
         "title": "Beakta inkluderingslistans mönster för kritiska systemprocesser",
-        "description": "Som standard laddar Windhawk bara moddar i kritiska systemprocesser om processen inkluderas utan mönster, t.ex. <0>critical.exe</0>, inte <0>*</0> eller <0>*.exe</0>. För mer information om kritiska systemprocesser, se <1>dokumentationen</1>."
+        "description": "Som standard laddar UniWind bara moddar i kritiska systemprocesser om processen inkluderas utan mönster, t.ex. <0>critical.exe</0>, inte <0>*</0> eller <0>*.exe</0>. För mer information om kritiska systemprocesser, se <1>dokumentationen</1>."
       }
     },
     "changes": {
@@ -213,7 +213,7 @@
   "settings": {
     "language": {
       "title": "Språk",
-      "description": "Välj ditt föredragna visningsspråk för Windhawk.",
+      "description": "Välj ditt föredragna visningsspråk för UniWind.",
       "contribute": "<0>Bidra med en ny översättning</0>.",
       "credits": "Svensk översättning av <0>Sopor</0> och <1>Viktor Engkvist</1>.",
       "creditsLink": "mailto:sopor@users.noreply.github.com",
@@ -221,7 +221,7 @@
     },
     "updates": {
       "title": "Sök efter uppdateringar",
-      "description": "Sök automatiskt efter och meddela om nya versioner av Windhawk och installerade moddar."
+      "description": "Sök automatiskt efter och meddela om nya versioner av UniWind och installerade moddar."
     },
     "devMode": {
       "title": "Utvecklarläge",
@@ -230,19 +230,19 @@
     "advancedSettings": "Avancerade inställningar",
     "hideTrayIcon": {
       "title": "Dölj systemfältsikon",
-      "description": "Du måste inaktivera det här alternativet för att kunna avsluta Windhawk."
+      "description": "Du måste inaktivera det här alternativet för att kunna avsluta UniWind."
     },
     "alwaysCompileModsLocally": {
       "title": "Kompilera alltid moddar lokalt",
-      "description": "Som standard laddar Windhawk ned förkompilerade binärer från Windhawk-servern när de finns tillgängliga. Aktivera det här alternativet för att alltid kompilera moddar lokalt istället."
+      "description": "Som standard laddar UniWind ned förkompilerade binärer från UniWind-servern när de finns tillgängliga. Aktivera det här alternativet för att alltid kompilera moddar lokalt istället."
     },
     "requireElevation": {
-      "title": "Kräv UAC för att köra Windhawk",
-      "description": "Windhawk kräver administratörsrättigheter, men för en dator med en enda användare kan UAC-prompten varje gång vara irriterande, så Windhawk kringgår den. Aktivera det här alternativet för att kräva UAC för att köra Windhawk."
+      "title": "Kräv UAC för att köra UniWind",
+      "description": "UniWind kräver administratörsrättigheter, men för en dator med en enda användare kan UAC-prompten varje gång vara irriterande, så UniWind kringgår den. Aktivera det här alternativet för att kräva UAC för att köra UniWind."
     },
     "dontAutoShowToolkit": {
       "title": "Visa inte verktygslådan automatiskt",
-      "description": "Som standard visar Windhawk automatiskt verktygslådan när det upptäcker att aktivitetsfältet inte är tillgängligt, antingen på grund av systeminstabilitet eller av en annan anledning. Verktygslådan låter dig avsluta Windhawk, byta till felsäkert läge och utföra andra åtgärder. Verktygslådan kan också visas med tangentbordsgenvägen Ctrl+Win+W."
+      "description": "Som standard visar UniWind automatiskt verktygslådan när det upptäcker att aktivitetsfältet inte är tillgängligt, antingen på grund av systeminstabilitet eller av en annan anledning. Verktygslådan låter dig avsluta UniWind, byta till felsäkert läge och utföra andra åtgärder. Verktygslådan kan också visas med tangentbordsgenvägen Ctrl+Win+W."
     },
     "modInitDialogDelay": {
       "title": "Fördröjning för modinitiering",
@@ -250,12 +250,12 @@
     },
     "moreAdvancedSettings": {
       "title": "Fler avancerade inställningar",
-      "restartNotice": "Windhawk kommer att startas om för att tillämpa inställningarna.",
-      "saveButton": "Spara och starta om Windhawk"
+      "restartNotice": "UniWind kommer att startas om för att tillämpa inställningarna.",
+      "saveButton": "Spara och starta om UniWind"
     },
     "loggingVerbosity": {
-      "appLoggingTitle": "Windhawk-loggningsdetaljnivå",
-      "engineLoggingTitle": "Windhawk-motorns loggningsdetaljnivå",
+      "appLoggingTitle": "UniWind-loggningsdetaljnivå",
+      "engineLoggingTitle": "UniWind-motorns loggningsdetaljnivå",
       "description": "Loggar kan visas med ett verktyg som DebugView.",
       "none": "Ingen",
       "error": "Fel",
@@ -263,13 +263,13 @@
     },
     "processList": {
       "titleExclusion": "Processexkluderingslista",
-      "descriptionExclusion": "En lista med processnamn/sökvägar som Windhawk inte injicerar i. Kan vara användbart i fall när Windhawk inte är kompatibelt med ett specifikt program. Observera att om du lägger till en process i den här listan hindrar det inte bara Windhawk från att anpassa den, utan förhindrar också Windhawk från att avlyssna underordnade processer som den här processen skapar. Detta gör att Windhawk laddar moddar med en liten fördröjning i sådana fall.",
+      "descriptionExclusion": "En lista med processnamn/sökvägar som UniWind inte injicerar i. Kan vara användbart i fall när UniWind inte är kompatibelt med ett specifikt program. Observera att om du lägger till en process i den här listan hindrar det inte bara UniWind från att anpassa den, utan förhindrar också UniWind från att avlyssna underordnade processer som den här processen skapar. Detta gör att UniWind laddar moddar med en liten fördröjning i sådana fall.",
       "descriptionExclusionWiki": "För mer information om att exkludera processer och om de inbyggda processexkluderingslistorna, se <0>dokumentationen</0>.",
       "excludeCriticalProcesses": "Exkludera kritiska systemprocesser",
       "excludeIncompatiblePrograms": "Exkludera kända inkompatibla program",
       "excludeGames": "Exkludera välkända spel",
       "titleInclusion": "Processinkluderingslista",
-      "descriptionInclusion": "En lista med processnamn/sökvägar som Windhawk injicerar i, även om de finns i exkluderingslistan.",
+      "descriptionInclusion": "En lista med processnamn/sökvägar som UniWind injicerar i, även om de finns i exkluderingslistan.",
       "inclusionWithoutExclusionNotice": "Processinkluderingslistan har ingen effekt med en tom processexkluderingslista.",
       "inclusionWithoutTotalExclusionNotice": "Om du menade att exkludera alla processer utom dessa kan du ange \"*\" i processexkluderingslistan.",
       "processListPlaceholder": "Processnamn/sökvägar, en per rad, till exempel:",
@@ -277,24 +277,24 @@
     }
   },
   "about": {
-    "title": "Windhawk v{{version}}",
+    "title": "UniWind v{{version}}",
     "beta": "beta",
     "subtitle": "Anpassningsmarknadsplatsen för Windows och program",
     "credit": "Av <0>{{author}}</0>",
     "update": {
       "title": "En uppdatering är tillgänglig",
-      "subtitle": "Överväg att uppdatera Windhawk för att få de senaste funktionerna och felkorrigeringarna",
+      "subtitle": "Överväg att uppdatera UniWind för att få de senaste funktionerna och felkorrigeringarna",
       "changelogButton": "Ändringslogg",
       "modal": {
-        "title": "Uppdaterar Windhawk",
+        "title": "Uppdaterar UniWind",
         "downloading": "Laddar ned uppdatering...",
         "installing": "Installerar uppdatering...",
-        "installingNote": "Windhawk startar om automatiskt när installationen är klar.",
+        "installingNote": "UniWind startar om automatiskt när installationen är klar.",
         "failed": "Uppdateringen misslyckades"
       }
     },
     "changelog": {
-      "title": "Nyheter i Windhawk"
+      "title": "Nyheter i UniWind"
     },
     "links": {
       "title": "Länkar",
@@ -327,10 +327,10 @@
     "beginCodingButton": "Börja koda"
   },
   "safeMode": {
-    "alert": "Windhawk körs i felsäkert läge och all kodinjektion är avstängd.",
+    "alert": "UniWind körs i felsäkert läge och all kodinjektion är avstängd.",
     "offButton": "Stäng av felsäkert läge",
-    "offConfirm": "Windhawk kommer att startas om för att tillämpa inställningarna.",
-    "offConfirmOk": "Starta om Windhawk"
+    "offConfirm": "UniWind kommer att startas om för att tillämpa inställningarna.",
+    "offConfirmOk": "Starta om UniWind"
   },
   "modPreview": {
     "notCompiled": "Modden måste kompileras innan den kan förhandsgranskas"
@@ -359,29 +359,29 @@
     "home": {
       "tagline": "Anpassningsmarknadsplatsen för Windows och program",
       "getInvolved": "Engagera dig",
-      "joinDiscord": "Gå med i Windhawk-servern på Discord",
-      "discussWindhawk": "Diskutera Windhawk på GitHub Discussions",
-      "discussMods": "Diskutera Windhawk-moddar på GitHub Discussions",
+      "joinDiscord": "Gå med i UniWind-servern på Discord",
+      "discussWindhawk": "Diskutera UniWind på GitHub Discussions",
+      "discussMods": "Diskutera UniWind-moddar på GitHub Discussions",
       "browseLinks": "Bläddra bland andra användbara länkar",
       "highlights": "Höjdpunkter",
       "robust": "Robust",
-      "robustDescription": "Stabilitet och prestanda är högsta prioritet för Windhawk. Det designades för att köras konstant i bakgrunden utan märkbar påverkan på systemet.",
+      "robustDescription": "Stabilitet och prestanda är högsta prioritet för UniWind. Det designades för att köras konstant i bakgrunden utan märkbar påverkan på systemet.",
       "simple": "Enkelt",
-      "simpleDescription": "Du behöver inte vara dataexpert för att använda Windhawk, det kan användas av alla. Sofistikerade moddar kan installeras med bara ett par klick och anpassas via användarvänliga alternativ.",
+      "simpleDescription": "Du behöver inte vara dataexpert för att använda UniWind, det kan användas av alla. Sofistikerade moddar kan installeras med bara ett par klick och anpassas via användarvänliga alternativ.",
       "transparent": "Transparent",
-      "transparentDescription": "Moddarna som Windhawk erbjuder är inga svarta lådor. Varje mod levereras i form av källkod, som kan granskas för att säkerställa att modden gör exakt vad den utger sig för att göra."
+      "transparentDescription": "Moddarna som UniWind erbjuder är inga svarta lådor. Varje mod levereras i form av källkod, som kan granskas för att säkerställa att modden gör exakt vad den utger sig för att göra."
     },
     "modDetails": {
-      "getWindhawk": "Skaffa Windhawk för att installera den här modden"
+      "getWindhawk": "Skaffa UniWind för att installera den här modden"
     },
     "links": {
       "news": "Nyheter",
-      "windhawkNews": "Windhawk-nyheter – Ramen Software",
-      "windhawkChangelog": "Windhawk-ändringslogg",
+      "windhawkNews": "UniWind-nyheter – Ramen Software",
+      "windhawkChangelog": "UniWind-ändringslogg",
       "community": "Gemenskap",
       "discord": "Discord",
-      "windhawkDiscussions": "Windhawk – GitHub Discussions",
-      "modsDiscussions": "Windhawk-moddar – GitHub Discussions",
+      "windhawkDiscussions": "UniWind – GitHub Discussions",
+      "modsDiscussions": "UniWind-moddar – GitHub Discussions",
       "documentation": "Dokumentation",
       "creatingNewMod": "Skapa en ny mod",
       "otherTopics": "Andra ämnen",
@@ -390,8 +390,8 @@
       "contactRamenSoftware": "Kontakta Ramen Software"
     },
     "download": {
-      "title": "Uppdatera Windhawk",
-      "newVersionAvailable": "En ny Windhawk-version är tillgänglig",
+      "title": "Uppdatera UniWind",
+      "newVersionAvailable": "En ny UniWind-version är tillgänglig",
       "whatsNew": "Nyheter"
     },
     "footer": {

@@ -193,7 +193,7 @@
       },
       "patternsMatchCriticalSystemProcesses": {
         "title": "중대한 시스템 프로세스를 목록에 포함하기 위해 패턴(와일드카드) 고려",
-        "description": "기본값으로 Windhawk는 프로세스가 패턴(와일드카드)으로 포함될 경우(예: <0>*</0> 또는 <0>*.exe</0>)에는 모드를 중대한 시스템 프로세스 내에서는 불러오지 않습니다. (허용하는 예: <0>critical.exe</0>) 중대한 시스템 프로세스에 대한 자세한 정보는 <1>문서</1>를 참조해주세요."
+        "description": "기본값으로 UniWind는 프로세스가 패턴(와일드카드)으로 포함될 경우(예: <0>*</0> 또는 <0>*.exe</0>)에는 모드를 중대한 시스템 프로세스 내에서는 불러오지 않습니다. (허용하는 예: <0>critical.exe</0>) 중대한 시스템 프로세스에 대한 자세한 정보는 <1>문서</1>를 참조해주세요."
       }
     },
     "changes": {
@@ -320,7 +320,7 @@
   "settings": {
     "language": {
       "title": "언어",
-      "description": "Windhawk의 기본 표시 언어를 선택하세요.",
+      "description": "UniWind의 기본 표시 언어를 선택하세요.",
       "contribute": "<0>새 번역 기여하기</0>.",
       "credits": "한국어 번역 by <0>근육질푸키</0>.",
       "creditsLink": "mailto:muscularpuky@gmail.com"
@@ -334,7 +334,7 @@
     },
     "updates": {
       "title": "업데이트 확인",
-      "description": "Windhawk와 설치된 모드의 새로운 버전을 자동으로 확인하고 알립니다."
+      "description": "UniWind와 설치된 모드의 새로운 버전을 자동으로 확인하고 알립니다."
     },
     "devMode": {
       "title": "개발자 모드",
@@ -343,19 +343,19 @@
     "advancedSettings": "고급 설정",
     "hideTrayIcon": {
       "title": "트레이 아이콘 숨기기",
-      "description": "이 옵션을 비활성화하려면 Windhawk를 종료해야 합니다."
+      "description": "이 옵션을 비활성화하려면 UniWind를 종료해야 합니다."
     },
     "alwaysCompileModsLocally": {
       "title": "항상 모드를 로컬에서 컴파일",
-      "description": "기본값으로는 Windhawk가 사용 가능할 때 미리 컴파일된 모드 바이너리를 Windhawk 서버에서 다운로드합니다. 이 옵션을 활성화하면 그러는 대신 항상 모드를 로컬에서 컴파일합니다."
+      "description": "기본값으로는 UniWind가 사용 가능할 때 미리 컴파일된 모드 바이너리를 UniWind 서버에서 다운로드합니다. 이 옵션을 활성화하면 그러는 대신 항상 모드를 로컬에서 컴파일합니다."
     },
     "requireElevation": {
-      "title": "Windhawk를 실행하려면 UAC 권한 상승 필요",
-      "description": "Windhawk가 관리자 권한을 요구하지만 단일 사용자 컴퓨터에서는 매번 UAC 프롬프트가 표시되어 성가실 수 있습니다. 그래서 Windhawk는 이것을 우회합니다. 이 옵션을 활성화하면 Windhawk를 실행하는 데 UAC 권한 상승을 요구하게 됩니다."
+      "title": "UniWind를 실행하려면 UAC 권한 상승 필요",
+      "description": "UniWind가 관리자 권한을 요구하지만 단일 사용자 컴퓨터에서는 매번 UAC 프롬프트가 표시되어 성가실 수 있습니다. 그래서 UniWind는 이것을 우회합니다. 이 옵션을 활성화하면 UniWind를 실행하는 데 UAC 권한 상승을 요구하게 됩니다."
     },
     "dontAutoShowToolkit": {
       "title": "툴킷 대화 상자 자동으로 표시 안 함",
-      "description": "기본값으로는 시스템 불안정 또는 다른 이유로 인해 작업 표시줄에 액세스할 수 없음을 감지했을 때 Windhawk가 자동으로 툴킷 대화 상자를 표시합니다. 툴킷 대화 상자는 Windhawk를 종료하고, 안전 모드로 전환하고, 기타 작업을 수행할 수 있도록 합니다. Win+Ctrl+W 키보드 단축키로 툴킷 대화 상자를 표시할 수도 있습니다."
+      "description": "기본값으로는 시스템 불안정 또는 다른 이유로 인해 작업 표시줄에 액세스할 수 없음을 감지했을 때 UniWind가 자동으로 툴킷 대화 상자를 표시합니다. 툴킷 대화 상자는 UniWind를 종료하고, 안전 모드로 전환하고, 기타 작업을 수행할 수 있도록 합니다. Win+Ctrl+W 키보드 단축키로 툴킷 대화 상자를 표시할 수도 있습니다."
     },
     "disableToolkitHotkey": {
       "title": "툴킷 대화 상자 키보드 바로 가기 비활성화",
@@ -367,16 +367,16 @@
     },
     "moreAdvancedSettings": {
       "title": "더 많은 설정",
-      "restartNotice": "이 설정을 적용하면 Windhawk가 다시 시작됩니다.",
-      "saveButton": "저장하고 Windhawk 다시 시작",
+      "restartNotice": "이 설정을 적용하면 UniWind가 다시 시작됩니다.",
+      "saveButton": "저장하고 UniWind 다시 시작",
       "unsavedChangesTitle": "저장하지 않은 설정",
       "unsavedChangesMessage": "고급 설정의 변경 내용이 저장되지 않았습니다. 정말 버리시겠습니까?",
       "unsavedChangesLeave": "변경 내용 버리기",
       "unsavedChangesStay": "계속 편집"
     },
     "loggingVerbosity": {
-      "appLoggingTitle": "Windhawk 로깅 수준",
-      "engineLoggingTitle": "Windhawk 엔진 로깅 수준",
+      "appLoggingTitle": "UniWind 로깅 수준",
+      "engineLoggingTitle": "UniWind 엔진 로깅 수준",
       "description": "로그는 DebugView 같은 도구로 볼 수 있습니다.",
       "none": "없음",
       "error": "오류",
@@ -384,13 +384,13 @@
     },
     "processList": {
       "titleExclusion": "프로세스 제외 목록",
-      "descriptionExclusion": "Windhawk가 인젝션하지 않는 프로세스 이름/경로 목록입니다. Windhawk가 특정 프로그램과 호환되지 않는 경우에 유용할 수 있습니다. 이 목록에 프로세스를 추가하면 Windhawk가 해당 프로세스를 사용자 정의하지 못할 뿐만 아니라 Windhawk가 이 프로세스가 생성하는 자식 프로세스를 가로채는 것도 방지됩니다. 이렇게 하면 Windhawk가 모드를 불러오는 데 약간의 지연이 생깁니다.",
+      "descriptionExclusion": "UniWind가 인젝션하지 않는 프로세스 이름/경로 목록입니다. UniWind가 특정 프로그램과 호환되지 않는 경우에 유용할 수 있습니다. 이 목록에 프로세스를 추가하면 UniWind가 해당 프로세스를 사용자 정의하지 못할 뿐만 아니라 UniWind가 이 프로세스가 생성하는 자식 프로세스를 가로채는 것도 방지됩니다. 이렇게 하면 UniWind가 모드를 불러오는 데 약간의 지연이 생깁니다.",
       "descriptionExclusionWiki": "프로세스 제외 및 내장된 프로세스 제외 목록에 대한 자세한 내용은 <0>문서</0>를 참조해주세요.",
       "excludeCriticalProcesses": "중대한 시스템 프로세스 제외",
       "excludeIncompatiblePrograms": "호환되지 않는다고 알려진 프로그램 제외",
       "excludeGames": "익히 알려진 게임 제외",
       "titleInclusion": "프로세스 포함 목록",
-      "descriptionInclusion": "제외 목록에 있어도 Windhawk가 인젝션할 프로세스 이름/경로 목록입니다.",
+      "descriptionInclusion": "제외 목록에 있어도 UniWind가 인젝션할 프로세스 이름/경로 목록입니다.",
       "inclusionWithoutExclusionNotice": "프로세스 포함 목록은 빈 프로세스 제외 목록에 영향을 주지 않습니다.",
       "inclusionWithoutTotalExclusionNotice": "여기의 프로세스들 이외의 모든 프로세스를 제외하려면 프로세스 제외 목록에 \"*\"를 설정할 수 있습니다.",
       "processListPlaceholder": "1줄당 프로세스 이름/경로 1개, 예:",
@@ -398,7 +398,7 @@
     },
     "userData": {
       "title": "백업 및 복원",
-      "description": "앱 설정과 모드, 모드 설정과 구성 등의 Windhawk 설정을 파일로 백업하거나 복원합니다.",
+      "description": "앱 설정과 모드, 모드 설정과 구성 등의 UniWind 설정을 파일로 백업하거나 복원합니다.",
       "exportAction": "내보내기...",
       "importAction": "가져오기...",
       "appSettings": "앱 설정",
@@ -416,7 +416,7 @@
         "exportButton": "내보내기",
         "doneButton": "완료",
         "doneTitle": "내보내기 완료",
-        "doneSubtitle": "Windhawk 사용자 데이터가 선택된 파일로 저장되었습니다.",
+        "doneSubtitle": "UniWind 사용자 데이터가 선택된 파일로 저장되었습니다.",
         "warningsTitle": "일부 데이터는 건너뜀",
         "offlineTitle": "오프라인 복원을 위해 소스 포함",
         "offlineDescription": "인터넷 연결 없이 복원할 수 있도록 각 모드의 소스를 아카이브에 포함합니다. 파일 크기가 커집니다. 로컬 모드는 항상 포함됩니다."
@@ -469,24 +469,24 @@
     }
   },
   "about": {
-    "title": "Windhawk v{{version}}",
+    "title": "UniWind v{{version}}",
     "beta": "베타",
     "subtitle": "Windows 프로그램용 사용자 정의 마켓플레이스",
     "credit": "By <0>{{author}}</0>",
     "update": {
       "title": "업데이트를 사용할 수 있음",
-      "subtitle": "최신 기능 및 버그 수정을 받으려면 Windhawk를 업데이트하세요.",
+      "subtitle": "최신 기능 및 버그 수정을 받으려면 UniWind를 업데이트하세요.",
       "changelogButton": "변경 로그",
       "modal": {
-        "title": "Windhawk 업데이트 중",
+        "title": "UniWind 업데이트 중",
         "downloading": "업데이트 다운로드 중...",
         "installing": "업데이트 설치 중...",
-        "installingNote": "설치가 완료되면 Windhawk가 자동으로 다시 시작됩니다.",
+        "installingNote": "설치가 완료되면 UniWind가 자동으로 다시 시작됩니다.",
         "failed": "업데이트 실패"
       }
     },
     "changelog": {
-      "title": "Windhawk의 새로운 기능"
+      "title": "UniWind의 새로운 기능"
     },
     "links": {
       "title": "링크",
@@ -521,7 +521,7 @@
         "title": "개발 도구 필요",
         "downloading": "개발 도구 다운로드 중...",
         "installing": "개발 도구 설치 중...",
-        "installingNote": "설치가 완료되면 Windhawk가 자동으로 다시 시작됩니다.",
+        "installingNote": "설치가 완료되면 UniWind가 자동으로 다시 시작됩니다.",
         "failed": "설치 실패"
       }
     }
@@ -533,10 +533,10 @@
     "beginCodingButton": "코딩 시작"
   },
   "safeMode": {
-    "alert": "Windhawk가 안전 모드로 실행 중입니다. 모든 코드 인젝션 기능이 꺼졌습니다.",
+    "alert": "UniWind가 안전 모드로 실행 중입니다. 모든 코드 인젝션 기능이 꺼졌습니다.",
     "offButton": "안전 모드 끄기",
-    "offConfirm": "이 설정을 적용하기 위해 Windhawk가 다시 시작됩니다.",
-    "offConfirmOk": "Windhawk 다시 시작"
+    "offConfirm": "이 설정을 적용하기 위해 UniWind가 다시 시작됩니다.",
+    "offConfirmOk": "UniWind 다시 시작"
   },
   "modPreview": {
     "notCompiled": "모드를 미리 보려면 컴파일해야 합니다."
@@ -567,29 +567,29 @@
     "home": {
       "tagline": "Windows 프로그램용 사용자 정의 마켓플레이스",
       "getInvolved": "참여하기",
-      "joinDiscord": "Discord의 Windhawk 커뮤니티에 가입하기",
-      "discussWindhawk": "GitHub Discussions에서 Windhawk 논의하기",
-      "discussMods": "GitHub Discussions에서 Windhawk 모드 논의하기",
+      "joinDiscord": "Discord의 UniWind 커뮤니티에 가입하기",
+      "discussWindhawk": "GitHub Discussions에서 UniWind 논의하기",
+      "discussMods": "GitHub Discussions에서 UniWind 모드 논의하기",
       "browseLinks": "기타 유용한 링크 찾아보기",
       "highlights": "하이라이트",
       "robust": "강건함",
-      "robustDescription": "Windhawk는 안정성과 성능을 가장 우선합니다. 시스템에 눈에 띄는 영향 없이 끊임없게 실행되도록 디자인되었습니다.",
+      "robustDescription": "UniWind는 안정성과 성능을 가장 우선합니다. 시스템에 눈에 띄는 영향 없이 끊임없게 실행되도록 디자인되었습니다.",
       "simple": "간단함",
-      "simpleDescription": "Windhawk를 사용하기 위해 컴퓨터 전문가가 될 필요가 없으며 누구든지 사용할 수 있습니다. 정교한 모드들이 클릭 두 번 만에 설치되며 사용자 친화적인 옵션을 통해 모드를 사용자 정의할 수 있습니다.",
+      "simpleDescription": "UniWind를 사용하기 위해 컴퓨터 전문가가 될 필요가 없으며 누구든지 사용할 수 있습니다. 정교한 모드들이 클릭 두 번 만에 설치되며 사용자 친화적인 옵션을 통해 모드를 사용자 정의할 수 있습니다.",
       "transparent": "투명함",
-      "transparentDescription": "Windhawk에서 제공하는 모드들은 블랙 박스가 아닙니다. 각 모드는 설명 그대로 작동하는지 검토할 수 있는 소스 코드 형태로 옵니다."
+      "transparentDescription": "UniWind에서 제공하는 모드들은 블랙 박스가 아닙니다. 각 모드는 설명 그대로 작동하는지 검토할 수 있는 소스 코드 형태로 옵니다."
     },
     "modDetails": {
-      "getWindhawk": "Windhawk를 받고 이 모드 설치하기"
+      "getWindhawk": "UniWind를 받고 이 모드 설치하기"
     },
     "links": {
       "news": "뉴스",
-      "windhawkNews": "Windhawk 뉴스 - Ramen Software",
-      "windhawkChangelog": "Windhawk 변경 로그",
+      "windhawkNews": "UniWind 뉴스 - Ramen Software",
+      "windhawkChangelog": "UniWind 변경 로그",
       "community": "커뮤니티",
       "discord": "Discord",
-      "windhawkDiscussions": "Windhawk - GitHub Discussions",
-      "modsDiscussions": "Windhawk 모드 - GitHub Discussions",
+      "windhawkDiscussions": "UniWind - GitHub Discussions",
+      "modsDiscussions": "UniWind 모드 - GitHub Discussions",
       "documentation": "문서",
       "creatingNewMod": "새 모드 만들기",
       "otherTopics": "기타 주제",
@@ -598,8 +598,8 @@
       "contactRamenSoftware": "Ramen Software에 연락하기"
     },
     "download": {
-      "title": "Windhawk 업데이트하기",
-      "newVersionAvailable": "새 Windhawk 버전을 사용할 수 있습니다",
+      "title": "UniWind 업데이트하기",
+      "newVersionAvailable": "새 UniWind 버전을 사용할 수 있습니다",
       "whatsNew": "새로운 기능"
     },
     "footer": {

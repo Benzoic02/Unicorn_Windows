@@ -17,10 +17,30 @@ const LIGHT_TEXT_MUTED = 'rgba(0, 0, 0, 0.6)';
 
 // Deeper than antd's #fadb14, so the stars do not wash out on the white card.
 const LIGHT_RATE_STAR = '#e6c200';
+const APP_FONT_FAMILY = "'Aptos', 'Segoe UI', sans-serif";
+const SECONDARY_FONT_FAMILY = "'STXihei', 'Microsoft YaHei', sans-serif";
+const DARK_BACKGROUND = '#161616';
+const DARK_ACCENT = '#FFE680';
+const DARK_ACCENT_TEXT = '#1e1e1e';
 
 function buildAntdTheme(resolved: ResolvedTheme): ThemeConfig {
   const algorithm = ALGORITHM[resolved];
-  const base = theme.getDesignToken({ algorithm });
+  const isDark = resolved === 'dark';
+  const themeTokens = {
+    fontFamily: APP_FONT_FAMILY,
+    ...(isDark && {
+      colorPrimary: DARK_ACCENT,
+      colorBgBase: DARK_BACKGROUND,
+      colorBgContainer: DARK_BACKGROUND,
+      colorBgElevated: DARK_BACKGROUND,
+      colorBgLayout: DARK_BACKGROUND,
+      colorBgSpotlight: DARK_BACKGROUND,
+    }),
+  };
+  const base = theme.getDesignToken({
+    algorithm,
+    token: themeTokens,
+  });
 
   // The app's standard outlined button is a ghost one, on whichever surface
   // holds it. antd means ghost for a colored background, and draws it in the
@@ -28,19 +48,25 @@ function buildAntdTheme(resolved: ResolvedTheme): ThemeConfig {
   const Button = {
     defaultGhostColor: base.colorText,
     defaultGhostBorderColor: base.colorBorder,
+    ...(isDark && {
+      colorPrimary: DARK_ACCENT,
+      colorPrimaryHover: '#fff0ad',
+      colorPrimaryActive: '#e6cc72',
+      primaryColor: DARK_ACCENT_TEXT,
+    }),
   };
 
   // antd draws a slider's track and handle in the primary's pale border tint
   // until it is hovered, which reads as disabled beside a checked switch or
   // checkbox. They take the primary and its hover color, as those do.
   const Slider = {
-    trackBg: base.colorPrimary,
-    trackHoverBg: base.colorPrimaryHover,
-    handleColor: base.colorPrimary,
-    dotActiveBorderColor: base.colorPrimary,
+    trackBg: isDark ? DARK_ACCENT : base.colorPrimary,
+    trackHoverBg: isDark ? '#fff0ad' : base.colorPrimaryHover,
+    handleColor: isDark ? DARK_ACCENT : base.colorPrimary,
+    dotActiveBorderColor: isDark ? DARK_ACCENT : base.colorPrimary,
     // The handle's ring while the slider is hovered, which antd reads off this
     // global token rather than a slider one.
-    colorPrimaryBorderHover: base.colorPrimaryHover,
+    colorPrimaryBorderHover: isDark ? '#fff0ad' : base.colorPrimaryHover,
   };
 
   if (resolved === 'dark') {
@@ -51,6 +77,7 @@ function buildAntdTheme(resolved: ResolvedTheme): ThemeConfig {
     const floating = { colorBgElevated: base.colorBgSpotlight };
     return {
       algorithm,
+      token: themeTokens,
       components: {
         Button,
         Slider,
@@ -64,6 +91,7 @@ function buildAntdTheme(resolved: ResolvedTheme): ThemeConfig {
   return {
     algorithm,
     token: {
+      fontFamily: APP_FONT_FAMILY,
       // antd's secondary border (#f0f0f0) barely separates the app's stacked
       // surfaces, so every light-theme border reads at the base weight.
       colorBorderSecondary: base.colorBorder,
@@ -135,13 +163,13 @@ function withAlpha(hexColor: string, alpha: number) {
 const APP_COLORS: Record<ResolvedTheme, Record<string, string>> = {
   dark: {
     // The panel follows the webview's own theme, not a host editor color.
-    '--whui-background-color': '#1e1e1e',
-    '--whui-logo-color': '#ffffff',
-    '--whui-logo-color-hover': '#ffffff',
+    '--whui-background-color': DARK_BACKGROUND,
+    '--whui-logo-color': DARK_ACCENT,
+    '--whui-logo-color-hover': DARK_ACCENT,
     '--whui-text-muted': 'rgba(255, 255, 255, 0.45)',
     '--whui-preformat': '#d7ba7d',
-    '--whui-link': '#388ed3',
-    '--whui-link-hover': '#4daafc',
+    '--whui-link': DARK_ACCENT,
+    '--whui-link-hover': '#fff0ad',
     // Reads as "pending" next to the primary blue of the non-default mark
     // without competing with it.
     '--whui-setting-unsaved': '#d89614',
@@ -152,7 +180,7 @@ const APP_COLORS: Record<ResolvedTheme, Record<string, string>> = {
     '--whui-chip-bg': 'rgba(255, 255, 255, 0.17)',
     // Lighter than both the panel and the card, so a control floating above the
     // form reads as raised over either.
-    '--whui-float-bg': '#2d2d2d',
+    '--whui-float-bg': DARK_BACKGROUND,
     '--whui-inline-code-bg': 'rgba(60, 60, 60, 0.4)',
     '--whui-hover-bg': 'rgba(127, 127, 127, 0.22)',
     '--whui-track-bg': 'rgba(23, 18, 18, 0.1)',
@@ -203,23 +231,25 @@ const APP_COLORS: Record<ResolvedTheme, Record<string, string>> = {
 // Used by the sidebar where it renders outside a real VSCode webview, which
 // otherwise supplies --vscode-sideBar-background.
 const SIDEBAR_BACKGROUND_FALLBACK: Record<ResolvedTheme, string> = {
-  dark: '#252526',
+  dark: DARK_BACKGROUND,
   light: '#ececec',
 };
 
 export function themeVariables(resolved: ResolvedTheme): Record<string, string> {
   const token = theme.getDesignToken(ANTD_THEME[resolved]);
+  const primary = resolved === 'dark' ? DARK_ACCENT : token.colorPrimary;
   return {
     '--whui-text': token.colorText,
     '--whui-text-secondary': token.colorTextSecondary,
     '--whui-font-family': token.fontFamily,
+    '--whui-font-family-secondary': SECONDARY_FONT_FAMILY,
     '--whui-card-background-color': token.colorBgContainer,
     // The surface of a dialog, for what is drawn over its scrolled body.
     '--whui-modal-background-color': token.colorBgElevated,
-    '--whui-primary': token.colorPrimary,
+    '--whui-primary': primary,
     // How antd draws a focused field, for a control beside one that has to read
     // as focused the same way.
-    '--whui-focus-border': token.colorPrimary,
+    '--whui-focus-border': primary,
     '--whui-focus-ring': token.controlOutline,
     '--whui-border': token.colorBorderSecondary,
     '--whui-border-strong': token.colorBorder,
@@ -231,24 +261,22 @@ export function themeVariables(resolved: ResolvedTheme): Record<string, string> 
     // The edge of a bar pinned over content that scrolls under it: antd's
     // shadow for a borderless card.
     '--whui-stuck-shadow': token.boxShadowTertiary,
-    '--whui-rate-star':
-      resolved === 'light' ? LIGHT_RATE_STAR : token.yellow6,
-    // The links on the dark theme's tooltip surface, a gray antd's link blue
-    // all but disappears into: two steps lighter in the same palette.
+    '--whui-rate-star': resolved === 'light' ? LIGHT_RATE_STAR : DARK_ACCENT,
+    // Links on a floating surface use the same theme accent as the rest of the UI.
     ...(resolved === 'dark' && {
-      '--whui-floating-link': token.blue9,
-      '--whui-floating-link-hover': token.blue10,
+      '--whui-floating-link': DARK_ACCENT,
+      '--whui-floating-link-hover': '#fff0ad',
     }),
     // The two states a mod settings row is marked with, in the gutter beside
     // it: holding something other than the value its mod declares, and holding
     // an edit that is not saved yet.
-    '--whui-setting-non-default': token.colorPrimary,
+    '--whui-setting-non-default': primary,
     // The tint a settings row is washed with for a moment after it is carried
     // to another place in its array.
-    '--whui-setting-moved-bg': withAlpha(token.colorPrimary, 0.2),
+    '--whui-setting-moved-bg': withAlpha(primary, 0.2),
     // The tint of a selected mod, in either view of the installed mods. Derived
     // from the primary so "selected" is one color in the app.
-    '--whui-selected-bg': withAlpha(token.colorPrimary, 0.15),
+    '--whui-selected-bg': withAlpha(primary, 0.15),
     ...APP_COLORS[resolved],
   };
 }

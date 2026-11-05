@@ -155,14 +155,14 @@
   "settings": {
     "language": {
       "title": "Bahasa",
-      "description": "Pilih bahasa tampilan yang anda sukai untuk Windhawk.",
+      "description": "Pilih bahasa tampilan yang anda sukai untuk UniWind.",
       "contribute": "<0>Kontribusi untuk terjemahan Baru</0>.",
       "credits": "Indonesian translation by <0>Lieba Natur Brilian (naturbrilian)</0>.",
       "creditsLink": "https://github.com/naturbrilian"
     },
     "updates": {
       "title": "Periksa pembaruan",
-      "description": "Periksa secara berkala versi baru Windhawk dan mod yang terinstal."
+      "description": "Periksa secara berkala versi baru UniWind dan mod yang terinstal."
     },
     "devMode": {
       "title": "Mode pengembang",
@@ -171,15 +171,15 @@
     "advancedSettings": "Pengaturan lanjutan",
     "hideTrayIcon": {
       "title": "Sembunyikan ikon baki",
-      "description": "Anda akan menonaktifkan opsi ini untuk menutup Windhawk."
+      "description": "Anda akan menonaktifkan opsi ini untuk menutup UniWind."
     },
     "requireElevation": {
-      "title": "Dibutuhkan elevasi UAC untuk menjalankan Windhawk",
-      "description": "Windhawk memerlukan administrator, tetapi untuk komputer single-user, mendapatkan prompt UAC setiap waktu bisa jadi menyebalkan, jadi Windhawk melewatinya. Aktifkan opsi ini untuk membutuhkan elevasi UAC untuk menjalankan Windhawk."
+      "title": "Dibutuhkan elevasi UAC untuk menjalankan UniWind",
+      "description": "UniWind memerlukan administrator, tetapi untuk komputer single-user, mendapatkan prompt UAC setiap waktu bisa jadi menyebalkan, jadi UniWind melewatinya. Aktifkan opsi ini untuk membutuhkan elevasi UAC untuk menjalankan UniWind."
     },
     "dontAutoShowToolkit": {
       "title": "Otomatis jangan tampilkan dialog toolkit",
-      "description": "Secara default, Windhawk otomatis menampilkan dialog toolkit ketika mendeteksi taskbar tidak bisa diakses, baik karena ketidakstabilan sistem atau karena alasan lain. Dialog toolkit mengizinkan untuk menutup Windhawk, beralih ke mode aman, dan buat tindakan lain. Dialog toolkit juga bisa ditampilkan dengan pintasan keyboard Ctrl+Win+W."
+      "description": "Secara default, UniWind otomatis menampilkan dialog toolkit ketika mendeteksi taskbar tidak bisa diakses, baik karena ketidakstabilan sistem atau karena alasan lain. Dialog toolkit mengizinkan untuk menutup UniWind, beralih ke mode aman, dan buat tindakan lain. Dialog toolkit juga bisa ditampilkan dengan pintasan keyboard Ctrl+Win+W."
     },
     "modInitDialogDelay": {
       "title": "Penundaan dialog inisialisasi mod",
@@ -187,12 +187,12 @@
     },
     "moreAdvancedSettings": {
       "title": "Pengaturan lanjutan lainnya",
-      "restartNotice": "Windhawk akan dimulai ulang untuk menerapkan pengaturan.",
-      "saveButton": "Simpan dan memulai ulang Windhawk"
+      "restartNotice": "UniWind akan dimulai ulang untuk menerapkan pengaturan.",
+      "saveButton": "Simpan dan memulai ulang UniWind"
     },
     "loggingVerbosity": {
-      "appLoggingTitle": "Verbositas pencatatan Windhawk",
-      "engineLoggingTitle": "Verbositas pencatatan mesin Windhawk",
+      "appLoggingTitle": "Verbositas pencatatan UniWind",
+      "engineLoggingTitle": "Verbositas pencatatan mesin UniWind",
       "description": "Logs bisa dilihat dengan tool seperti DebugView.",
       "none": "Tidak ada",
       "error": "Kesalahan",
@@ -200,22 +200,22 @@
     },
     "processList": {
       "titleExclusion": "Proses pengecualian daftar",
-      "descriptionExclusion": "Daftar nama/jalur proses yang tidak akan diinject Windhawk. Dapat berguna untuk kasus-kasus ketika Windhawk tidak kompatibel dengan program tertentu. Perhatikan bahwa menambahkan proses ke daftar ini tidak hanya akan mencegah Windhawk untuk menyesuaikannya, tetapi juga akan mencegah Windhawk untuk mencegat proses anak yang dibuat oleh proses ini. Ini akan menyebabkan Windhawk memuat mod dengan sedikit keterlambatan dalam kasus-kasus seperti itu.",
+      "descriptionExclusion": "Daftar nama/jalur proses yang tidak akan diinject UniWind. Dapat berguna untuk kasus-kasus ketika UniWind tidak kompatibel dengan program tertentu. Perhatikan bahwa menambahkan proses ke daftar ini tidak hanya akan mencegah UniWind untuk menyesuaikannya, tetapi juga akan mencegah UniWind untuk mencegat proses anak yang dibuat oleh proses ini. Ini akan menyebabkan UniWind memuat mod dengan sedikit keterlambatan dalam kasus-kasus seperti itu.",
       "titleInclusion": "Proses penyertaan daftar",
-      "descriptionInclusion": "Daftar nama proses/jalur yang akan diinject Windhawk, bahkan jika mereka ada dalam daftar pengecualian.",
+      "descriptionInclusion": "Daftar nama proses/jalur yang akan diinject UniWind, bahkan jika mereka ada dalam daftar pengecualian.",
       "inclusionWithoutExclusionNotice": "Proses penyertaan daftar tidak berefek dengan proses kosong daftar pengecualian.",
       "inclusionWithoutTotalExclusionNotice": "Jika anda bermaksud untuk mengecualikan semua proses kecuali ini, anda bisa mengatur \"*\" di daftar proses pengecualian.",
       "processListPlaceholder": "Nama proses/jalur, satu per baris, sebagai contoh:"
     }
   },
   "about": {
-    "title": "Windhawk v{{version}}",
+    "title": "UniWind v{{version}}",
     "beta": "beta",
     "subtitle": "Marketplace kustomisasi untuk Windows dan program",
     "credit": "By <0>{{author}}</0>",
     "update": {
       "title": "Pembaruan tersedia",
-      "subtitle": "Pastikan memperbarui Windhawk untuk mendapatkan fitur terbaru dan perbaikan bug"
+      "subtitle": "Pastikan memperbarui UniWind untuk mendapatkan fitur terbaru dan perbaikan bug"
     },
     "links": {
       "title": "Tautan",
@@ -248,10 +248,10 @@
     "beginCodingButton": "Mulai mengoding"
   },
   "safeMode": {
-    "alert": "Windhawk berjalan di mode aman, semua fungsi kode injeksi dinonaktifkan.",
+    "alert": "UniWind berjalan di mode aman, semua fungsi kode injeksi dinonaktifkan.",
     "offButton": "Nonaktifkan mode aman",
-    "offConfirm": "Windhawk akan dimulai ulang untuk menerapkan pengaturan.",
-    "offConfirmOk": "Mulai ulang Windhawk"
+    "offConfirm": "UniWind akan dimulai ulang untuk menerapkan pengaturan.",
+    "offConfirmOk": "Mulai ulang UniWind"
   },
   "modPreview": {
     "notCompiled": "Mod harus dikompilasi sebelum bisa dipratinjau"

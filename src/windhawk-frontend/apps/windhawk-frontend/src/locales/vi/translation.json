@@ -193,7 +193,7 @@
       },
       "patternsMatchCriticalSystemProcesses": {
         "title": "Áp dụng pattern trong danh sách bao gồm cho cả tiến trình hệ thống quan trọng",
-        "description": "Mặc định, Windhawk chỉ tải mod vào các tiến trình hệ thống quan trọng nếu nó được chỉ định chính xác (VD: <0>critical.exe</0>), không dùng pattern (VD: <0>*</0> hoặc <0>*.exe</0>). Để biết thêm chi tiết, vui lòng xem <1>tài liệu</1>."
+        "description": "Mặc định, UniWind chỉ tải mod vào các tiến trình hệ thống quan trọng nếu nó được chỉ định chính xác (VD: <0>critical.exe</0>), không dùng pattern (VD: <0>*</0> hoặc <0>*.exe</0>). Để biết thêm chi tiết, vui lòng xem <1>tài liệu</1>."
       }
     },
     "changes": {
@@ -320,7 +320,7 @@
   "settings": {
     "language": {
       "title": "Ngôn ngữ",
-      "description": "Chọn ngôn ngữ hiển thị mong muốn cho Windhawk.",
+      "description": "Chọn ngôn ngữ hiển thị mong muốn cho UniWind.",
       "contribute": "<0>Đóng góp bản dịch mới</0>.",
       "credits": "Bản dịch tiếng Việt của <0>Tran Tuan Kiet</0>.",
       "creditsLink": "https://github.com/redrag2105"
@@ -334,7 +334,7 @@
     },
     "updates": {
       "title": "Kiểm tra cập nhật",
-      "description": "Tự động kiểm tra và thông báo về các phiên bản mới của Windhawk và các mod đã cài đặt."
+      "description": "Tự động kiểm tra và thông báo về các phiên bản mới của UniWind và các mod đã cài đặt."
     },
     "devMode": {
       "title": "Chế độ Nhà phát triển",
@@ -343,19 +343,19 @@
     "advancedSettings": "Cài đặt nâng cao",
     "hideTrayIcon": {
       "title": "Ẩn biểu tượng dưới khay hệ thống",
-      "description": "Bạn sẽ phải tắt tùy chọn này nếu muốn thoát Windhawk."
+      "description": "Bạn sẽ phải tắt tùy chọn này nếu muốn thoát UniWind."
     },
     "alwaysCompileModsLocally": {
       "title": "Luôn biên dịch mod trên máy",
-      "description": "Theo mặc định, Windhawk sẽ tải các bản mod đã biên dịch sẵn từ máy chủ nếu có. Bật tùy chọn này để luôn tự biên dịch mod trên máy của bạn."
+      "description": "Theo mặc định, UniWind sẽ tải các bản mod đã biên dịch sẵn từ máy chủ nếu có. Bật tùy chọn này để luôn tự biên dịch mod trên máy của bạn."
     },
     "requireElevation": {
-      "title": "Yêu cầu quyền Administrator (UAC) khi chạy Windhawk",
-      "description": "Windhawk yêu cầu quyền quản trị viên (Administrator), nhưng để tránh thông báo UAC liên tục gây khó chịu cho máy tính cá nhân, Windhawk sẽ tự động bỏ qua nó. Bật tùy chọn này nếu bạn muốn Windhawk luôn hiện thông báo UAC khi chạy."
+      "title": "Yêu cầu quyền Administrator (UAC) khi chạy UniWind",
+      "description": "UniWind yêu cầu quyền quản trị viên (Administrator), nhưng để tránh thông báo UAC liên tục gây khó chịu cho máy tính cá nhân, UniWind sẽ tự động bỏ qua nó. Bật tùy chọn này nếu bạn muốn UniWind luôn hiện thông báo UAC khi chạy."
     },
     "dontAutoShowToolkit": {
       "title": "Không tự động hiển thị Hộp công cụ",
-      "description": "Mặc định, Windhawk sẽ tự động hiện Hộp công cụ khi phát hiện thanh Taskbar không thể truy cập do hệ thống không ổn định hoặc vì lí do khác. Hộp công cụ giúp bạn thoát Windhawk, vào chế độ Safe mode và thao tác những thứ khác. Bạn cũng có thể mở nó bằng phím tắt Ctrl+Win+W."
+      "description": "Mặc định, UniWind sẽ tự động hiện Hộp công cụ khi phát hiện thanh Taskbar không thể truy cập do hệ thống không ổn định hoặc vì lí do khác. Hộp công cụ giúp bạn thoát UniWind, vào chế độ Safe mode và thao tác những thứ khác. Bạn cũng có thể mở nó bằng phím tắt Ctrl+Win+W."
     },
     "disableToolkitHotkey": {
       "title": "Vô hiệu hóa phím tắt mở Hộp công cụ",
@@ -367,16 +367,16 @@
     },
     "moreAdvancedSettings": {
       "title": "Các cài đặt nâng cao khác",
-      "restartNotice": "Windhawk sẽ phải khởi động lại để áp dụng cài đặt.",
-      "saveButton": "Lưu và khởi động lại Windhawk",
+      "restartNotice": "UniWind sẽ phải khởi động lại để áp dụng cài đặt.",
+      "saveButton": "Lưu và khởi động lại UniWind",
       "unsavedChangesTitle": "Cài đặt chưa lưu",
       "unsavedChangesMessage": "Bạn có các thay đổi trong phần Cài đặt nâng cao chưa được lưu. Bạn có chắc chắn muốn hủy bỏ chúng không?",
       "unsavedChangesLeave": "Hủy bỏ thay đổi",
       "unsavedChangesStay": "Tiếp tục chỉnh sửa"
     },
     "loggingVerbosity": {
-      "appLoggingTitle": "Mức độ ghi log ứng dụng Windhawk",
-      "engineLoggingTitle": "Mức độ ghi log engine Windhawk",
+      "appLoggingTitle": "Mức độ ghi log ứng dụng UniWind",
+      "engineLoggingTitle": "Mức độ ghi log engine UniWind",
       "description": "Log có thể được xem bằng các công cụ như DebugView.",
       "none": "Không chọn",
       "error": "Lỗi (Error)",
@@ -384,13 +384,13 @@
     },
     "processList": {
       "titleExclusion": "Danh sách Loại trừ tiến trình",
-      "descriptionExclusion": "Danh sách các tên/đường dẫn tiến trình mà Windhawk sẽ KHÔNG inject vào. Hữu ích khi Windhawk xung đột với một chương trình nào đó. Lưu ý: Thêm tiến trình vào đây cũng sẽ khiến Windhawk bỏ qua cả các tiến trình con do nó tạo ra. Điều này sẽ khiến Windhawk tải mod hơi chậm lại một chút trong các trường hợp đó.",
+      "descriptionExclusion": "Danh sách các tên/đường dẫn tiến trình mà UniWind sẽ KHÔNG inject vào. Hữu ích khi UniWind xung đột với một chương trình nào đó. Lưu ý: Thêm tiến trình vào đây cũng sẽ khiến UniWind bỏ qua cả các tiến trình con do nó tạo ra. Điều này sẽ khiến UniWind tải mod hơi chậm lại một chút trong các trường hợp đó.",
       "descriptionExclusionWiki": "Để biết thêm chi tiết về việc loại trừ tiến trình và các danh sách loại trừ có sẵn, vui lòng xem <0>tài liệu</0>.",
       "excludeCriticalProcesses": "Loại trừ các tiến trình hệ thống quan trọng",
       "excludeIncompatiblePrograms": "Loại trừ các chương trình không tương thích đã biết",
       "excludeGames": "Loại trừ các tựa game phổ biến",
       "titleInclusion": "Danh sách Bao gồm tiến trình",
-      "descriptionInclusion": "Danh sách các tên/đường dẫn tiến trình mà Windhawk SẼ inject vào, kể cả khi chúng nằm trong danh sách loại trừ.",
+      "descriptionInclusion": "Danh sách các tên/đường dẫn tiến trình mà UniWind SẼ inject vào, kể cả khi chúng nằm trong danh sách loại trừ.",
       "inclusionWithoutExclusionNotice": "Danh sách này sẽ không có tác dụng nếu Danh sách Loại trừ tiến trình đang trống.",
       "inclusionWithoutTotalExclusionNotice": "Nếu bạn muốn loại trừ tất cả các tiến trình TRỪ những tiến trình này, bạn có thể nhập \"*\" vào Danh sách Loại trừ.",
       "processListPlaceholder": "Tên/đường dẫn tiến trình, mỗi dòng một mục, ví dụ:",
@@ -398,7 +398,7 @@
     },
     "userData": {
       "title": "Sao lưu & Khôi phục",
-      "description": "Sao lưu toàn bộ dữ liệu Windhawk của bạn - bao gồm cài đặt ứng dụng, các mod đã cài cùng cấu hình của chúng - ra một tệp tin, hoặc khôi phục lại từ đó.",
+      "description": "Sao lưu toàn bộ dữ liệu UniWind của bạn - bao gồm cài đặt ứng dụng, các mod đã cài cùng cấu hình của chúng - ra một tệp tin, hoặc khôi phục lại từ đó.",
       "exportAction": "Xuất dữ liệu...",
       "importAction": "Nhập dữ liệu...",
       "appSettings": "Cài đặt ứng dụng",
@@ -416,7 +416,7 @@
         "exportButton": "Xuất",
         "doneButton": "Hoàn tất",
         "doneTitle": "Đã xuất xong",
-        "doneSubtitle": "Dữ liệu Windhawk của bạn đã được lưu vào tệp tin thành công.",
+        "doneSubtitle": "Dữ liệu UniWind của bạn đã được lưu vào tệp tin thành công.",
         "warningsTitle": "Đã bỏ qua một số dữ liệu",
         "offlineTitle": "Đính kèm mã nguồn để khôi phục ngoại tuyến (Offline)",
         "offlineDescription": "Đóng gói mã nguồn của các mod vào trong bản sao lưu để có thể khôi phục mà không cần internet. Điều này sẽ làm tệp tin nặng hơn. Các mod local (trên máy) luôn được đính kèm mặc định."
@@ -469,24 +469,24 @@
     }
   },
   "about": {
-    "title": "Windhawk v{{version}}",
+    "title": "UniWind v{{version}}",
     "beta": "beta",
     "subtitle": "Nơi tùy biến (Customization marketplace) cho Windows và ứng dụng",
     "credit": "Bởi <0>{{author}}</0>",
     "update": {
       "title": "Đã có bản cập nhật",
-      "subtitle": "Hãy cập nhật Windhawk để trải nghiệm các tính năng mới nhất và các bản sửa lỗi",
+      "subtitle": "Hãy cập nhật UniWind để trải nghiệm các tính năng mới nhất và các bản sửa lỗi",
       "changelogButton": "Lịch sử thay đổi (Changelog)",
       "modal": {
-        "title": "Đang cập nhật Windhawk",
+        "title": "Đang cập nhật UniWind",
         "downloading": "Đang tải bản cập nhật...",
         "installing": "Đang cài đặt...",
-        "installingNote": "Windhawk sẽ tự động khởi động lại sau khi cài đặt xong.",
+        "installingNote": "UniWind sẽ tự động khởi động lại sau khi cài đặt xong.",
         "failed": "Cập nhật thất bại"
       }
     },
     "changelog": {
-      "title": "Có gì mới trong Windhawk"
+      "title": "Có gì mới trong UniWind"
     },
     "links": {
       "title": "Liên kết",
@@ -521,7 +521,7 @@
         "title": "Yêu cầu Công cụ phát triển",
         "downloading": "Đang tải xuống...",
         "installing": "Đang cài đặt...",
-        "installingNote": "Windhawk sẽ tự động khởi động lại khi cài đặt xong.",
+        "installingNote": "UniWind sẽ tự động khởi động lại khi cài đặt xong.",
         "failed": "Cài đặt thất bại"
       }
     }
@@ -533,10 +533,10 @@
     "beginCodingButton": "Bắt đầu lập trình"
   },
   "safeMode": {
-    "alert": "Windhawk đang chạy ở Chế độ an toàn (Safe mode), tất cả tính năng inject code đã bị tắt.",
+    "alert": "UniWind đang chạy ở Chế độ an toàn (Safe mode), tất cả tính năng inject code đã bị tắt.",
     "offButton": "Tắt Chế độ an toàn",
-    "offConfirm": "Windhawk sẽ khởi động lại để áp dụng cài đặt.",
-    "offConfirmOk": "Khởi động lại Windhawk"
+    "offConfirm": "UniWind sẽ khởi động lại để áp dụng cài đặt.",
+    "offConfirmOk": "Khởi động lại UniWind"
   },
   "modPreview": {
     "notCompiled": "Bạn cần biên dịch mod trước khi có thể xem trước"
@@ -567,29 +567,29 @@
     "home": {
       "tagline": "Nơi tùy biến (Customization marketplace) cho Windows và ứng dụng",
       "getInvolved": "Tham gia cùng chúng tôi",
-      "joinDiscord": "Tham gia cộng đồng Windhawk trên Discord",
-      "discussWindhawk": "Thảo luận về Windhawk trên GitHub Discussions",
+      "joinDiscord": "Tham gia cộng đồng UniWind trên Discord",
+      "discussWindhawk": "Thảo luận về UniWind trên GitHub Discussions",
       "discussMods": "Thảo luận về các mod trên GitHub Discussions",
       "browseLinks": "Duyệt các liên kết hữu ích khác",
       "highlights": "Điểm nổi bật",
       "robust": "Mạnh mẽ & Ổn định",
-      "robustDescription": "Tính ổn định và hiệu năng là ưu tiên hàng đầu của Windhawk. Ứng dụng được thiết kế để chạy ngầm liên tục mà không gây ảnh hưởng đến hệ thống của bạn.",
+      "robustDescription": "Tính ổn định và hiệu năng là ưu tiên hàng đầu của UniWind. Ứng dụng được thiết kế để chạy ngầm liên tục mà không gây ảnh hưởng đến hệ thống của bạn.",
       "simple": "Đơn giản",
-      "simpleDescription": "Không cần là chuyên gia máy tính, ai cũng có thể sử dụng Windhawk. Những mod phức tạp có thể cài đặt dễ dàng chỉ với vài cú nhấp chuột và tùy chỉnh qua giao diện trực quan.",
+      "simpleDescription": "Không cần là chuyên gia máy tính, ai cũng có thể sử dụng UniWind. Những mod phức tạp có thể cài đặt dễ dàng chỉ với vài cú nhấp chuột và tùy chỉnh qua giao diện trực quan.",
       "transparent": "Minh bạch",
-      "transparentDescription": "Các mod trên Windhawk không phải là những 'hộp đen'. Mỗi mod đều đi kèm với mã nguồn mở, giúp mọi người có thể tự kiểm tra để đảm bảo mod chỉ thực hiện đúng những gì nó mô tả."
+      "transparentDescription": "Các mod trên UniWind không phải là những 'hộp đen'. Mỗi mod đều đi kèm với mã nguồn mở, giúp mọi người có thể tự kiểm tra để đảm bảo mod chỉ thực hiện đúng những gì nó mô tả."
     },
     "modDetails": {
-      "getWindhawk": "Tải Windhawk để cài đặt mod này"
+      "getWindhawk": "Tải UniWind để cài đặt mod này"
     },
     "links": {
       "news": "Tin tức",
-      "windhawkNews": "Tin tức Windhawk - Ramen Software",
+      "windhawkNews": "Tin tức UniWind - Ramen Software",
       "windhawkChangelog": "Lịch sử thay đổi (Changelog)",
       "community": "Cộng đồng",
       "discord": "Discord",
-      "windhawkDiscussions": "Windhawk - GitHub Discussions",
-      "modsDiscussions": "Các mod Windhawk - GitHub Discussions",
+      "windhawkDiscussions": "UniWind - GitHub Discussions",
+      "modsDiscussions": "Các mod UniWind - GitHub Discussions",
       "documentation": "Tài liệu",
       "creatingNewMod": "Tạo Mod mới",
       "otherTopics": "Các chủ đề khác",
@@ -598,8 +598,8 @@
       "contactRamenSoftware": "Liên hệ Ramen Software"
     },
     "download": {
-      "title": "Cập nhật Windhawk",
-      "newVersionAvailable": "Đã có phiên bản Windhawk mới",
+      "title": "Cập nhật UniWind",
+      "newVersionAvailable": "Đã có phiên bản UniWind mới",
       "whatsNew": "Có gì mới"
     },
     "footer": {

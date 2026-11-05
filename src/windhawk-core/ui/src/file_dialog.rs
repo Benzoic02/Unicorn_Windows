@@ -281,7 +281,7 @@ unsafe fn result_path(item: windows::core::Result<IShellItem>) -> DialogOutcome 
 fn json_filters() -> [COMDLG_FILTERSPEC; 2] {
     [
         COMDLG_FILTERSPEC {
-            pszName: w!("Windhawk user data (*.json)"),
+            pszName: w!("UniWind user data (*.json)"),
             pszSpec: w!("*.json"),
         },
         COMDLG_FILTERSPEC {

@@ -110,6 +110,8 @@ pub enum ExitCode {
     PeerRejected = 16,
     /// The peer was there and the handshake did not complete.
     Handshake = 17,
+    /// The injection engine could not be loaded or started.
+    EngineStart = 18,
 }
 
 /// Serve one channel, and return the process exit code.
@@ -253,6 +255,8 @@ fn serve(channel: &str) -> Result<(), Failure> {
         app_data_path,
         ui_path,
         compiler_path,
+        engine_path,
+        safe_mode,
         ..
     } = resolve_startup_info(session.as_ref()).map_err(|error| {
         Failure::new(
@@ -263,6 +267,27 @@ fn serve(channel: &str) -> Result<(), Failure> {
             ),
         )
     })?;
+
+    let _engine_runtime = if safe_mode {
+        None
+    } else {
+        let session_id = verified.peer().session.ok_or_else(|| {
+            Failure::new(
+                ExitCode::SessionCreate,
+                "the UI's Windows session could not be identified".to_owned(),
+            )
+        })?;
+        Some(
+            crate::broker::engine::EngineRuntime::start(engine_path, Some(session_id)).map_err(
+                |error| {
+                    Failure::new(
+                        ExitCode::EngineStart,
+                        format!("the injection engine could not be started: {error}"),
+                    )
+                },
+            )?,
+        )
+    };
 
     // The host operations are the SAME implementation the UI runs when it has no
     // broker (`ops::LocalHostOps`): what an operation does is written once, and

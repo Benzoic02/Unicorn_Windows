@@ -125,7 +125,7 @@
       },
       "patternsMatchCriticalSystemProcesses": {
         "title": "Zvažte vzory seznamu zahrnutí pro kritické systémové procesy",
-        "description": "Ve výchozím nastavení Windhawk načítá mody pouze v kritických systémových procesech, pokud je proces zahrnut bez vzorů, např. <0>critical.exe</0>, nikoli <0>*</0> nebo <0>*.exe</0>. Další podrobnosti o kritických systémových procesech naleznete v <1>dokumentace</1>."
+        "description": "Ve výchozím nastavení UniWind načítá mody pouze v kritických systémových procesech, pokud je proces zahrnut bez vzorů, např. <0>critical.exe</0>, nikoli <0>*</0> nebo <0>*.exe</0>. Další podrobnosti o kritických systémových procesech naleznete v <1>dokumentace</1>."
       }
     },
     "changes": {
@@ -166,14 +166,14 @@
   "settings": {
     "language": {
       "title": "Jazyk",
-      "description": "Vyberte požadovaný jazyk rozhraní pro Windhawk.",
+      "description": "Vyberte požadovaný jazyk rozhraní pro UniWind.",
       "contribute": "<0>Přidat nový překlad</0>.",
       "credits": "Český překlad <0>Milan Kliment</0> s několika úpravami od Berry a dalších členů komunity.",
       "creditsLink": "mailto:milan-k@volny.cz"
     },
     "updates": {
       "title": "Zkontrolovat aktualizace",
-      "description": "Pravidelně kontrolujte aktualizace Windhawk a nainstalované modifikace."
+      "description": "Pravidelně kontrolujte aktualizace UniWind a nainstalované modifikace."
     },
     "devMode": {
       "title": "Režim pro vývojáře",
@@ -182,15 +182,15 @@
     "advancedSettings": "Pokročilá nastavení",
     "hideTrayIcon": {
       "title": "Skrýt ikonu na liště",
-      "description": "Pro ukončení Windhawk musíte toto nastavení zakázat."
+      "description": "Pro ukončení UniWind musíte toto nastavení zakázat."
     },
     "requireElevation": {
-      "title": "Vyžadovat UAC ke spuštění Windhawk",
-      "description": "Windhawk vyžaduje administrátorská práva, ale pro jednouživatelské počítače jsou neustálé výzvy UAC otravné, takže je Windhawk obchází. Povolte toto nastavení, chcete-li vrátit výzvy UAC ke spuštění Windhawk."
+      "title": "Vyžadovat UAC ke spuštění UniWind",
+      "description": "UniWind vyžaduje administrátorská práva, ale pro jednouživatelské počítače jsou neustálé výzvy UAC otravné, takže je UniWind obchází. Povolte toto nastavení, chcete-li vrátit výzvy UAC ke spuštění UniWind."
     },
     "dontAutoShowToolkit": {
       "title": "Nezobrazovat dialogové okno nabídky automaticky",
-      "description": "Ve výchozím nastavení Windhawk automaticky zobrazí dialogové okno nabídky, když zjistí, že hlavní panel nefunguje kvůli nestabilitě systému nebo z jiných důvodů. Dialog nabídky umožňuje zavřít Windhawk, vstoupit do nouzového režimu a provést další akce. Dialogové okno nabídky lze zobrazit také stisknutím kombinace kláves Ctrl+Win+W."
+      "description": "Ve výchozím nastavení UniWind automaticky zobrazí dialogové okno nabídky, když zjistí, že hlavní panel nefunguje kvůli nestabilitě systému nebo z jiných důvodů. Dialog nabídky umožňuje zavřít UniWind, vstoupit do nouzového režimu a provést další akce. Dialogové okno nabídky lze zobrazit také stisknutím kombinace kláves Ctrl+Win+W."
     },
     "modInitDialogDelay": {
       "title": "Zpoždění dialogu inicializace úprav",
@@ -198,12 +198,12 @@
     },
     "moreAdvancedSettings": {
       "title": "Další pokročilé možnosti",
-      "restartNotice": "Windhawk bude restartován, aby bylo možné použít nastavení.",
-      "saveButton": "Uložit a restartovat Windhawk"
+      "restartNotice": "UniWind bude restartován, aby bylo možné použít nastavení.",
+      "saveButton": "Uložit a restartovat UniWind"
     },
     "loggingVerbosity": {
-      "appLoggingTitle": "Windhawk Verbose Logging",
-      "engineLoggingTitle": "Podrobné protokolování motoru Windhawk",
+      "appLoggingTitle": "UniWind Verbose Logging",
+      "engineLoggingTitle": "Podrobné protokolování motoru UniWind",
       "description": "Protokoly lze prohlížet například pomocí nástroje DebugView.",
       "none": "Ne",
       "error": "Chyba",
@@ -211,13 +211,13 @@
     },
     "processList": {
       "titleExclusion": "Seznam vyloučených procesů",
-      "descriptionExclusion": "Seznam procesů/cest, do kterých Windhawk nevloží kód. To může být užitečné v případech, kdy Windhawk není kompatibilní s konkrétním programem. Upozorňujeme, že přidání procesu do tohoto seznamu nejen zabrání Windhawku v jeho úpravě, ale také zabrání Windhawku v zachycení podřízených procesů vytvořených vyloučeným procesem. To způsobí zpoždění při načítání úprav do Windhaw.",
+      "descriptionExclusion": "Seznam procesů/cest, do kterých UniWind nevloží kód. To může být užitečné v případech, kdy UniWind není kompatibilní s konkrétním programem. Upozorňujeme, že přidání procesu do tohoto seznamu nejen zabrání UniWindu v jeho úpravě, ale také zabrání UniWindu v zachycení podřízených procesů vytvořených vyloučeným procesem. To způsobí zpoždění při načítání úprav do Windhaw.",
       "descriptionExclusionWiki": "Další podrobnosti o vyloučení procesů a o integrovaných seznamech vyloučení procesů naleznete v <0>dokumentace</0>.",
       "excludeCriticalProcesses": "Vyloučit kritické systémové procesy",
       "excludeIncompatiblePrograms": "Vyloučit známé nekompatibilní programy",
       "excludeGames": "Vyloučit známé hry",
       "titleInclusion": "Seznam cílových procesů",
-      "descriptionInclusion": "Seznam cílových procesů/cest, do kterých Windhawk vloží kód, i když jsou na seznamu vyloučených.",
+      "descriptionInclusion": "Seznam cílových procesů/cest, do kterých UniWind vloží kód, i když jsou na seznamu vyloučených.",
       "inclusionWithoutExclusionNotice": "Seznam cílových procesů nedělá nic, pokud je seznam vyloučených procesů prázdný.",
       "inclusionWithoutTotalExclusionNotice": "Pokud chcete vyloučit všechny procesy kromě těchto, můžete zadat \"*\" v seznamu vyloučených procesů.",
       "processListPlaceholder": "Název/cesty procesu (exe), jedna na řádek, např.:",
@@ -225,13 +225,13 @@
     }
   },
   "about": {
-    "title": "Windhawk ver. {{version}}",
+    "title": "UniWind ver. {{version}}",
     "beta": "beta",
     "subtitle": "Tržiště pro přizpůsobení programů Windows",
     "credit": "Autor: <0>{{author}}</0>",
     "update": {
       "title": "K dispozici aktualizace",
-      "subtitle": "Aktualizujte Windhawk pro nejnovější funkce a opravy chyb"
+      "subtitle": "Aktualizujte UniWind pro nejnovější funkce a opravy chyb"
     },
     "links": {
       "title": "Odkazy",
@@ -264,10 +264,10 @@
     "beginCodingButton": "Začít kódovat"
   },
   "safeMode": {
-    "alert": "Windhawk běží v nouzovém režimu, přizpůsobení programu je zakázáno.",
+    "alert": "UniWind běží v nouzovém režimu, přizpůsobení programu je zakázáno.",
     "offButton": "Vypnout nouzový režim",
-    "offConfirm": "Windhawk bude restartován pro použití nastavení.",
-    "offConfirmOk": "Restartovat Windhawk"
+    "offConfirm": "UniWind bude restartován pro použití nastavení.",
+    "offConfirmOk": "Restartovat UniWind"
   },
   "modPreview": {
     "notCompiled": "Abyste si ji mohli prohlédnout, musíte úpravu zkompilovat"

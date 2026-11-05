@@ -150,7 +150,7 @@
       },
       "patternsMatchCriticalSystemProcesses": {
         "title": "Kritik sistem işlemleriyle eşleşme",
-        "description": "Tanımlanan desenler, <0>critical.exe</0> gibi kritik sistem işlemleriyle eşleşiyor. Güvenlik ve sistem kararlılığı nedeniyle Windhawk varsayılan olarak bu işlemlere mod yüklemez. Daha fazla bilgi için <1>belgelere</1> bakın."
+        "description": "Tanımlanan desenler, <0>critical.exe</0> gibi kritik sistem işlemleriyle eşleşiyor. Güvenlik ve sistem kararlılığı nedeniyle UniWind varsayılan olarak bu işlemlere mod yüklemez. Daha fazla bilgi için <1>belgelere</1> bakın."
       }
     },
     "changes": {
@@ -213,14 +213,14 @@
   "settings": {
     "language": {
       "title": "Dil",
-      "description": "Windhawk için tercih ettiğiniz görüntüleme dilini seçin.",
+      "description": "UniWind için tercih ettiğiniz görüntüleme dilini seçin.",
       "contribute": "<0>Yeni bir çeviriye katkıda bulunun</0>.",
       "credits": "Türkçe çeviri: <0>Fatih Fırıncı</0>.",
       "creditsLink": "mailto:fatihfirinci@gmail.com"
     },
     "updates": {
       "title": "Güncellemeleri denetle",
-      "description": "Windhawk'ın ve yüklü modların yeni sürümlerini düzenli olarak denetle."
+      "description": "UniWind'ın ve yüklü modların yeni sürümlerini düzenli olarak denetle."
     },
     "devMode": {
       "title": "Geliştirici modu",
@@ -229,19 +229,19 @@
     "advancedSettings": "Gelişmiş ayarlar",
     "hideTrayIcon": {
       "title": "Tepsi simgesini gizle",
-      "description": "Windhawk'tan çıkmak için bu seçeneği devre dışı bırakmanız gerekir."
+      "description": "UniWind'tan çıkmak için bu seçeneği devre dışı bırakmanız gerekir."
     },
     "alwaysCompileModsLocally": {
       "title": "Modları her zaman yerel olarak derle",
       "description": "Modları sunucudan indirmek yerine her zaman bilgisayarınızda derleyin. Bu seçenek, güvenlik için modun kaynak kodunu yerel olarak doğrulamak istediğinizde yararlıdır, ancak yükleme süresini uzatabilir."
     },
     "requireElevation": {
-      "title": "Windhawk'ı çalıştırmak için UAC yükseltmesi gerektir",
-      "description": "Windhawk, yönetici hakları gerektirir, ancak tek kullanıcılı bir bilgisayar için, her seferinde UAC istemini almak can sıkıcı olabilir, bu nedenle Windhawk bunu atlar. Windhawk'ı çalıştırmak için UAC yükseltmesi gerektirmek üzere bu seçeneği etkinleştirin."
+      "title": "UniWind'ı çalıştırmak için UAC yükseltmesi gerektir",
+      "description": "UniWind, yönetici hakları gerektirir, ancak tek kullanıcılı bir bilgisayar için, her seferinde UAC istemini almak can sıkıcı olabilir, bu nedenle UniWind bunu atlar. UniWind'ı çalıştırmak için UAC yükseltmesi gerektirmek üzere bu seçeneği etkinleştirin."
     },
     "dontAutoShowToolkit": {
       "title": "Araç takımı iletişim kutusunu otomatik olarak gösterme",
-      "description": "Varsayılan olarak, Windhawk görev çubuğunun sistem dengesizliği veya başka bir nedenden dolayı erişilemez olduğunu algıladığında araç takımı iletişim kutusunu otomatik olarak gösterir. Araç takımı iletişim kutusu Windhawk'tan çıkmayı, güvenli moda geçmeyi ve diğer işlemleri yapmayı sağlar. Araç takımı iletişim kutusu Ctrl+Win+W klavye kısayoluyla da gösterilebilir."
+      "description": "Varsayılan olarak, UniWind görev çubuğunun sistem dengesizliği veya başka bir nedenden dolayı erişilemez olduğunu algıladığında araç takımı iletişim kutusunu otomatik olarak gösterir. Araç takımı iletişim kutusu UniWind'tan çıkmayı, güvenli moda geçmeyi ve diğer işlemleri yapmayı sağlar. Araç takımı iletişim kutusu Ctrl+Win+W klavye kısayoluyla da gösterilebilir."
     },
     "modInitDialogDelay": {
       "title": "Mod başlatma ekranı gecikmesi",
@@ -249,12 +249,12 @@
     },
     "moreAdvancedSettings": {
       "title": "Daha fazla gelişmiş ayar",
-      "restartNotice": "Windhawk, ayarları uygulamak için yeniden başlatılacak.",
-      "saveButton": "Kaydet ve Windhawk'ı yeniden başlat"
+      "restartNotice": "UniWind, ayarları uygulamak için yeniden başlatılacak.",
+      "saveButton": "Kaydet ve UniWind'ı yeniden başlat"
     },
     "loggingVerbosity": {
-      "appLoggingTitle": "Windhawk günlüğe kaydetme ayrıntısı",
-      "engineLoggingTitle": "Windhawk motor günlüğü ayrıntı düzeyi",
+      "appLoggingTitle": "UniWind günlüğe kaydetme ayrıntısı",
+      "engineLoggingTitle": "UniWind motor günlüğü ayrıntı düzeyi",
       "description": "Günlükler, DebugView gibi bir araçla görüntülenebilir.",
       "none": "Hiçbiri",
       "error": "Hata",
@@ -262,13 +262,13 @@
     },
     "processList": {
       "titleExclusion": "İşlem hariç etme listesi",
-      "descriptionExclusion": "Windhawk'ın enjekte etmeyeceği işlem adlarının/yollarının bir listesi. Windhawk'ın belirli bir programla uyumlu olmadığı durumlarda yararlı olabilir. Bu listeye bir süreç eklemenin Windhawk'ın onu özelleştirmesini engellemenin yanı sıra Windhawk'ın bu sürecin oluşturduğu alt süreçleri yakalamasını da engelleyeceğini unutmayın. Bu, Windhawk'ın bu gibi durumlarda modları hafif bir gecikmeyle yüklemesine neden olacaktır.",
+      "descriptionExclusion": "UniWind'ın enjekte etmeyeceği işlem adlarının/yollarının bir listesi. UniWind'ın belirli bir programla uyumlu olmadığı durumlarda yararlı olabilir. Bu listeye bir süreç eklemenin UniWind'ın onu özelleştirmesini engellemenin yanı sıra UniWind'ın bu sürecin oluşturduğu alt süreçleri yakalamasını da engelleyeceğini unutmayın. Bu, UniWind'ın bu gibi durumlarda modları hafif bir gecikmeyle yüklemesine neden olacaktır.",
       "descriptionExclusionWiki": "Daha fazla bilgi için <0>bu wiki sayfasına</0> göz atın.",
       "excludeCriticalProcesses": "Kritik sistem işlemlerini hariç tut",
       "excludeIncompatiblePrograms": "Uyumsuz olduğu bilinen programları hariç tut",
       "excludeGames": "Oyunları hariç tut",
       "titleInclusion": "İşlem dahil etme listesi",
-      "descriptionInclusion": "Dışlama listesinde olsalar bile Windhawk'ın enjekte edeceği işlem adlarının/yollarının bir listesi.",
+      "descriptionInclusion": "Dışlama listesinde olsalar bile UniWind'ın enjekte edeceği işlem adlarının/yollarının bir listesi.",
       "inclusionWithoutExclusionNotice": "İşlem dahil etme listesinin, boş bir işlem hariç tutma listesi ile hiçbir etkisi yoktur.",
       "inclusionWithoutTotalExclusionNotice": "Bunlar dışındaki tüm işlemleri hariç tutmak istiyorsanız, işlem dışlama listesinde \"*\" ayarını yapabilirsiniz.",
       "processListPlaceholder": "İşlem adları/yolları, örneğin her satıra bir tane:",
@@ -276,19 +276,19 @@
     }
   },
   "about": {
-    "title": "Windhawk v{{version}}",
+    "title": "UniWind v{{version}}",
     "beta": "beta",
     "subtitle": "Windows ve programlar için özelleştirme pazarı",
     "credit": "Yapımcı: <0>{{author}}</0>",
     "update": {
       "title": "Bir güncelleme mevcut",
-      "subtitle": "En son özellikleri ve hata düzeltmelerini almak için Windhawk'ı güncellemeyi düşünün",
+      "subtitle": "En son özellikleri ve hata düzeltmelerini almak için UniWind'ı güncellemeyi düşünün",
       "changelogButton": "Değişiklik günlüğü",
       "modal": {
-        "title": "Windhawk güncelleniyor...",
+        "title": "UniWind güncelleniyor...",
         "downloading": "Güncelleme indiriliyor...",
         "installing": "Güncelleme yükleniyor...",
-        "installingNote": "Yükleme sırasında Windhawk yeniden başlatılacak.",
+        "installingNote": "Yükleme sırasında UniWind yeniden başlatılacak.",
         "failed": "Güncelleme başarısız oldu."
       }
     },
@@ -326,9 +326,9 @@
     "beginCodingButton": "Kodlamaya başla"
   },
   "safeMode": {
-    "alert": "Windhawk şu anda güvenli modda çalışıyor. Tüm modlar devre dışı bırakıldı.",
+    "alert": "UniWind şu anda güvenli modda çalışıyor. Tüm modlar devre dışı bırakıldı.",
     "offButton": "Güvenli modu kapat",
-    "offConfirm": "Ayarları uygulamak için Windhawk yeniden başlatılacak.",
+    "offConfirm": "Ayarları uygulamak için UniWind yeniden başlatılacak.",
     "offConfirmOk": "Eminim"
   },
   "modPreview": {
@@ -359,10 +359,10 @@
       "tagline": "Windows programlarını dilediğiniz gibi özelleştirin!",
       "getInvolved": "Topluluğa Katıl!",
       "joinDiscord": "Discord'a Katıl!",
-      "discussWindhawk": "Windhawk Hakkında Konuş!",
+      "discussWindhawk": "UniWind Hakkında Konuş!",
       "discussMods": "Modlar Hakkında Konuş!",
       "browseLinks": "Bağlantılara Göz At!",
-      "highlights": "Neden Windhawk?",
+      "highlights": "Neden UniWind?",
       "robust": "Güçlü ve Kararlı",
       "robustDescription": "Sisteminizin dengesini bozmadan, performans kaybı yaşatmadan çalışır.",
       "simple": "Kullanımı Kolay",
@@ -371,7 +371,7 @@
       "transparentDescription": "Gizli kapaklı iş yok; tüm modların kaynak kodu açıktır, ne yüklediğinizi bilirsiniz."
     },
     "modDetails": {
-      "getWindhawk": "Windhawk'ı İndir"
+      "getWindhawk": "UniWind'ı İndir"
     },
     "links": {
       "news": "Haberler",
@@ -389,7 +389,7 @@
       "contactRamenSoftware": "Geliştiriciye Ulaşın!"
     },
     "download": {
-      "title": "Windhawk'ı İndir",
+      "title": "UniWind'ı İndir",
       "newVersionAvailable": "Yeni bir sürüm çıktı!",
       "whatsNew": "Bu sürümde neler değişti?"
     },

@@ -35,6 +35,8 @@ windhawk-core-protocol = { workspace = true }
 # src/broker/wire.rs, and the protocol integer, the product version, and the frame
 # cap are handed to it from there.
 windhawk-broker = { workspace = true }
+# Resolves the legacy engine's x64 lifecycle exports for the elevated runtime host.
+libloading = { workspace = true }
 serde = { workspace = true }
 # raw_value: the channel carries the core's request envelopes and responses
 # verbatim, as embedded raw JSON rather than as re-serialized values, so error
@@ -54,7 +56,7 @@ windows-sys = { workspace = true, features = [
     # integrity level can write to them (logwindow/capture.rs). lifecycle/window.rs
     # also tests the token against the Administrators alias
     # (AllocateAndInitializeSid/CheckTokenMembership/FreeSid), which is what decides
-    # whether a non-portable install wants its elevated helper.
+    # whether the elevated helper is needed to host the injection engine.
     "Win32_Security",
     "Win32_Security_Authorization",
     # lifecycle/window.rs opens the named event that says a consent dialog is on
@@ -66,6 +68,10 @@ windows-sys = { workspace = true, features = [
     # resolves the writing process's name (Win32_System_Diagnostics_ToolHelp).
     "Win32_Globalization",
     "Win32_System_Diagnostics_ToolHelp",
+    # Engine and broker failures are surfaced through the DBWIN debug capture.
+    "Win32_System_Diagnostics_Debug",
+    # broker/engine.rs resolves the verified UI process's Windows session.
+    "Win32_System_RemoteDesktop",
     "Win32_System_Memory",
     "Win32_System_SystemInformation",
     "Win32_System_Threading",

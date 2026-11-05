@@ -629,7 +629,7 @@ function ModDetailsWebsiteActions(props: { modId: string }) {
           <Trans
             t={t}
             i18nKey="website.modDetails.notInstalled"
-            components={[<a href={WINDHAWK_SETUP_URL}>Get Windhawk</a>]}
+            components={[<a href={WINDHAWK_SETUP_URL}>Get UniWind</a>]}
           />
         </NotInstalledNotice>
       )}

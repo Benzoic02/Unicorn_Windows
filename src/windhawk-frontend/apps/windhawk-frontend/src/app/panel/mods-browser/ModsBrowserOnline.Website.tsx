@@ -58,8 +58,8 @@ export function ModsBrowserOnlineWebsite({ ContentWrapper }: Props) {
   useEffect(() => {
     const displayedMod = displayedModId && repositoryMods?.[displayedModId];
     document.title = displayedMod
-      ? (displayedMod.metadata.name || displayedModId) + ' - Windhawk'
-      : `${t('website.appHeader.mods')} - Windhawk`;
+      ? (displayedMod.metadata.name || displayedModId) + ' - UniWind'
+      : `${t('website.appHeader.mods')} - UniWind`;
   }, [displayedModId, repositoryMods, t]);
 
   return (

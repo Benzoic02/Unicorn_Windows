@@ -164,7 +164,7 @@
       },
       "patternsMatchCriticalSystemProcesses": {
         "title": "Ta hensyn til mønstre i inkluderingslisten for kritiske systemprosesser",
-        "description": "Som standard laster Windhawk kun inn mods i kritiske systemprosesser hvis prosessen er inkludert uten mønstre, f.eks. <0>critical.exe</0>, ikke <0>*</0> eller <0>*.exe</0>. For mer informasjon om kritiske systemprosesser, se <1>dokumentasjonen</1>."
+        "description": "Som standard laster UniWind kun inn mods i kritiske systemprosesser hvis prosessen er inkludert uten mønstre, f.eks. <0>critical.exe</0>, ikke <0>*</0> eller <0>*.exe</0>. For mer informasjon om kritiske systemprosesser, se <1>dokumentasjonen</1>."
       }
     },
     "changes": {
@@ -227,7 +227,7 @@
   "settings": {
     "language": {
       "title": "Språk",
-      "description": "Velg ønsket visningsspråk for Windhawk.",
+      "description": "Velg ønsket visningsspråk for UniWind.",
       "contribute": "<0>Bidra med en ny oversettelse</0>.",
       "credits": "Norsk oversettelse av <0>Neonyy</0>.",
       "creditsLink": "https://github.com/Neonyyy"
@@ -241,7 +241,7 @@
     },
     "updates": {
       "title": "Se etter oppdateringer",
-      "description": "Se automatisk etter og varsle om nye versjoner av Windhawk og installerte mods."
+      "description": "Se automatisk etter og varsle om nye versjoner av UniWind og installerte mods."
     },
     "devMode": {
       "title": "Utviklermodus",
@@ -250,19 +250,19 @@
     "advancedSettings": "Avanserte innstillinger",
     "hideTrayIcon": {
       "title": "Skjul ikonet i systemstatusfeltet",
-      "description": "Du må deaktivere dette alternativet for å avslutte Windhawk."
+      "description": "Du må deaktivere dette alternativet for å avslutte UniWind."
     },
     "alwaysCompileModsLocally": {
       "title": "Kompiler alltid mods lokalt",
-      "description": "Som standard laster Windhawk ned ferdigkompilerte mod-binærfiler fra Windhawk-serveren når de er tilgjengelige. Aktiver dette alternativet for å alltid kompilere mods lokalt i stedet."
+      "description": "Som standard laster UniWind ned ferdigkompilerte mod-binærfiler fra UniWind-serveren når de er tilgjengelige. Aktiver dette alternativet for å alltid kompilere mods lokalt i stedet."
     },
     "requireElevation": {
-      "title": "Krev UAC-rettigheter for å kjøre Windhawk",
-      "description": "Windhawk krever administratorrettigheter, men på en datamaskin med bare én bruker kan det være irriterende å få UAC-forespørselen hver gang, så Windhawk omgår den. Aktiver dette alternativet for å kreve UAC-godkjenning for å kjøre Windhawk."
+      "title": "Krev UAC-rettigheter for å kjøre UniWind",
+      "description": "UniWind krever administratorrettigheter, men på en datamaskin med bare én bruker kan det være irriterende å få UAC-forespørselen hver gang, så UniWind omgår den. Aktiver dette alternativet for å kreve UAC-godkjenning for å kjøre UniWind."
     },
     "dontAutoShowToolkit": {
       "title": "Ikke vis verktøykassedialogen automatisk",
-      "description": "Som standard viser Windhawk verktøykassedialogen automatisk når det oppdages at oppgavelinjen ikke er tilgjengelig, enten på grunn av ustabilitet i systemet eller av en annen grunn. Verktøykassedialogen lar deg avslutte Windhawk, bytte til sikkermodus og utføre andre operasjoner. Verktøykassedialogen kan også vises med hurtigtasten Ctrl+Win+W."
+      "description": "Som standard viser UniWind verktøykassedialogen automatisk når det oppdages at oppgavelinjen ikke er tilgjengelig, enten på grunn av ustabilitet i systemet eller av en annen grunn. Verktøykassedialogen lar deg avslutte UniWind, bytte til sikkermodus og utføre andre operasjoner. Verktøykassedialogen kan også vises med hurtigtasten Ctrl+Win+W."
     },
     "modInitDialogDelay": {
       "title": "Forsinkelse for mod-initialiseringsdialogen",
@@ -270,12 +270,12 @@
     },
     "moreAdvancedSettings": {
       "title": "Flere avanserte innstillinger",
-      "restartNotice": "Windhawk startes på nytt for å ta i bruk innstillingene.",
-      "saveButton": "Lagre og start Windhawk på nytt"
+      "restartNotice": "UniWind startes på nytt for å ta i bruk innstillingene.",
+      "saveButton": "Lagre og start UniWind på nytt"
     },
     "loggingVerbosity": {
-      "appLoggingTitle": "Loggdetaljnivå for Windhawk",
-      "engineLoggingTitle": "Loggdetaljnivå for Windhawk-motoren",
+      "appLoggingTitle": "Loggdetaljnivå for UniWind",
+      "engineLoggingTitle": "Loggdetaljnivå for UniWind-motoren",
       "description": "Logger kan vises med et verktøy som DebugView.",
       "none": "Ingen",
       "error": "Feil",
@@ -283,13 +283,13 @@
     },
     "processList": {
       "titleExclusion": "Ekskluderingsliste for prosesser",
-      "descriptionExclusion": "En liste over prosessnavn/-stier som Windhawk ikke skal injisere i. Kan være nyttig i tilfeller der Windhawk ikke er kompatibel med et bestemt program. Merk at å legge en prosess til i denne listen ikke bare hindrer Windhawk i å tilpasse den, men også hindrer Windhawk i å fange opp underprosesser som denne prosessen oppretter. Dette gjør at Windhawk laster inn mods med en liten forsinkelse i slike tilfeller.",
+      "descriptionExclusion": "En liste over prosessnavn/-stier som UniWind ikke skal injisere i. Kan være nyttig i tilfeller der UniWind ikke er kompatibel med et bestemt program. Merk at å legge en prosess til i denne listen ikke bare hindrer UniWind i å tilpasse den, men også hindrer UniWind i å fange opp underprosesser som denne prosessen oppretter. Dette gjør at UniWind laster inn mods med en liten forsinkelse i slike tilfeller.",
       "descriptionExclusionWiki": "For mer informasjon om ekskludering av prosesser og om de innebygde ekskluderingslistene for prosesser, se <0>dokumentasjonen</0>.",
       "excludeCriticalProcesses": "Ekskluder kritiske systemprosesser",
       "excludeIncompatiblePrograms": "Ekskluder kjente inkompatible programmer",
       "excludeGames": "Ekskluder velkjente spill",
       "titleInclusion": "Inkluderingsliste for prosesser",
-      "descriptionInclusion": "En liste over prosessnavn/-stier som Windhawk injiserer i, selv om de står i ekskluderingslisten.",
+      "descriptionInclusion": "En liste over prosessnavn/-stier som UniWind injiserer i, selv om de står i ekskluderingslisten.",
       "inclusionWithoutExclusionNotice": "Inkluderingslisten for prosesser har ingen effekt når ekskluderingslisten for prosesser er tom.",
       "inclusionWithoutTotalExclusionNotice": "Hvis du mente å ekskludere alle prosesser unntatt disse, kan du angi \"*\" i ekskluderingslisten for prosesser.",
       "processListPlaceholder": "Prosessnavn/-stier, én per linje, for eksempel:",
@@ -297,7 +297,7 @@
     },
     "userData": {
       "title": "Sikkerhetskopiering og gjenoppretting",
-      "description": "Sikkerhetskopier Windhawk-oppsettet ditt – programinnstillingene dine og modsene dine med innstillinger og konfigurasjon for hver mod – til en fil, eller gjenopprett det fra en fil.",
+      "description": "Sikkerhetskopier UniWind-oppsettet ditt – programinnstillingene dine og modsene dine med innstillinger og konfigurasjon for hver mod – til en fil, eller gjenopprett det fra en fil.",
       "exportAction": "Eksporter...",
       "importAction": "Importer...",
       "appSettings": "Programinnstillinger",
@@ -315,7 +315,7 @@
         "exportButton": "Eksporter",
         "doneButton": "Ferdig",
         "doneTitle": "Eksporten er fullført",
-        "doneSubtitle": "Windhawk-brukerdataene dine ble lagret i den valgte filen.",
+        "doneSubtitle": "UniWind-brukerdataene dine ble lagret i den valgte filen.",
         "warningsTitle": "Noen data ble hoppet over",
         "offlineTitle": "Bygg inn kildekode for gjenoppretting uten nett",
         "offlineDescription": "Inkluder kildekoden til hver mod i arkivet, slik at den kan gjenopprettes uten internettilkobling. Dette gir en større fil. Lokale mods bygges alltid inn."
@@ -368,24 +368,24 @@
     }
   },
   "about": {
-    "title": "Windhawk v{{version}}",
+    "title": "UniWind v{{version}}",
     "beta": "beta",
     "subtitle": "Markedsplassen for tilpasning av Windows og programmer",
     "credit": "Av <0>{{author}}</0>",
     "update": {
       "title": "En oppdatering er tilgjengelig",
-      "subtitle": "Vurder å oppdatere Windhawk for å få de nyeste funksjonene og feilrettingene",
+      "subtitle": "Vurder å oppdatere UniWind for å få de nyeste funksjonene og feilrettingene",
       "changelogButton": "Endringslogg",
       "modal": {
-        "title": "Oppdaterer Windhawk",
+        "title": "Oppdaterer UniWind",
         "downloading": "Laster ned oppdatering...",
         "installing": "Installerer oppdatering...",
-        "installingNote": "Windhawk starter automatisk på nytt når installasjonen er fullført.",
+        "installingNote": "UniWind starter automatisk på nytt når installasjonen er fullført.",
         "failed": "Oppdateringen mislyktes"
       }
     },
     "changelog": {
-      "title": "Hva er nytt i Windhawk"
+      "title": "Hva er nytt i UniWind"
     },
     "links": {
       "title": "Lenker",
@@ -420,7 +420,7 @@
         "title": "Utviklingsverktøy kreves",
         "downloading": "Laster ned utviklingsverktøy...",
         "installing": "Installerer utviklingsverktøy...",
-        "installingNote": "Windhawk starter automatisk på nytt når installasjonen er fullført.",
+        "installingNote": "UniWind starter automatisk på nytt når installasjonen er fullført.",
         "failed": "Installasjonen mislyktes"
       }
     }
@@ -432,10 +432,10 @@
     "beginCodingButton": "Begynn å kode"
   },
   "safeMode": {
-    "alert": "Windhawk kjører i sikkermodus, all kodeinjeksjonsfunksjonalitet er slått av.",
+    "alert": "UniWind kjører i sikkermodus, all kodeinjeksjonsfunksjonalitet er slått av.",
     "offButton": "Slå av sikkermodus",
-    "offConfirm": "Windhawk startes på nytt for å ta i bruk innstillingene.",
-    "offConfirmOk": "Start Windhawk på nytt"
+    "offConfirm": "UniWind startes på nytt for å ta i bruk innstillingene.",
+    "offConfirmOk": "Start UniWind på nytt"
   },
   "modPreview": {
     "notCompiled": "Modden må kompileres før den kan forhåndsvises"
@@ -466,29 +466,29 @@
     "home": {
       "tagline": "Markedsplassen for tilpasning av Windows og programmer",
       "getInvolved": "Engasjer deg",
-      "joinDiscord": "Bli med i Windhawk-fellesskapet på Discord",
-      "discussWindhawk": "Diskuter Windhawk på GitHub Discussions",
-      "discussMods": "Diskuter Windhawk-mods på GitHub Discussions",
+      "joinDiscord": "Bli med i UniWind-fellesskapet på Discord",
+      "discussWindhawk": "Diskuter UniWind på GitHub Discussions",
+      "discussMods": "Diskuter UniWind-mods på GitHub Discussions",
       "browseLinks": "Bla gjennom andre nyttige lenker",
       "highlights": "Høydepunkter",
       "robust": "Robust",
-      "robustDescription": "Stabilitet og ytelse har svært høy prioritet for Windhawk. Det ble utformet for å kjøre konstant i bakgrunnen uten å ha merkbar innvirkning på systemet.",
+      "robustDescription": "Stabilitet og ytelse har svært høy prioritet for UniWind. Det ble utformet for å kjøre konstant i bakgrunnen uten å ha merkbar innvirkning på systemet.",
       "simple": "Enkelt",
-      "simpleDescription": "Man trenger ikke å være dataekspert for å bruke Windhawk, det kan brukes av alle. Avanserte mods kan installeres med bare et par klikk og tilpasses via brukervennlige alternativer.",
+      "simpleDescription": "Man trenger ikke å være dataekspert for å bruke UniWind, det kan brukes av alle. Avanserte mods kan installeres med bare et par klikk og tilpasses via brukervennlige alternativer.",
       "transparent": "Transparent",
-      "transparentDescription": "Modsene som Windhawk tilbyr, er ikke svarte bokser. Hver mod leveres i form av kildekode, som kan gjennomgås for å sikre at modden gjør nøyaktig det den sier."
+      "transparentDescription": "Modsene som UniWind tilbyr, er ikke svarte bokser. Hver mod leveres i form av kildekode, som kan gjennomgås for å sikre at modden gjør nøyaktig det den sier."
     },
     "modDetails": {
-      "getWindhawk": "Last ned Windhawk for å installere denne modden"
+      "getWindhawk": "Last ned UniWind for å installere denne modden"
     },
     "links": {
       "news": "Nyheter",
-      "windhawkNews": "Windhawk-nyheter - Ramen Software",
-      "windhawkChangelog": "Windhawk-endringslogg",
+      "windhawkNews": "UniWind-nyheter - Ramen Software",
+      "windhawkChangelog": "UniWind-endringslogg",
       "community": "Fellesskap",
       "discord": "Discord",
-      "windhawkDiscussions": "Windhawk - GitHub Discussions",
-      "modsDiscussions": "Windhawk-mods - GitHub Discussions",
+      "windhawkDiscussions": "UniWind - GitHub Discussions",
+      "modsDiscussions": "UniWind-mods - GitHub Discussions",
       "documentation": "Dokumentasjon",
       "creatingNewMod": "Opprette en ny mod",
       "otherTopics": "Andre emner",
@@ -497,8 +497,8 @@
       "contactRamenSoftware": "Kontakt Ramen Software"
     },
     "download": {
-      "title": "Oppdater Windhawk",
-      "newVersionAvailable": "En ny versjon av Windhawk er tilgjengelig",
+      "title": "Oppdater UniWind",
+      "newVersionAvailable": "En ny versjon av UniWind er tilgjengelig",
       "whatsNew": "Hva er nytt"
     },
     "footer": {

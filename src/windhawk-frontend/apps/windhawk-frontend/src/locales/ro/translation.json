@@ -199,7 +199,7 @@
       },
       "patternsMatchCriticalSystemProcesses": {
         "title": "Ia în considerare pattern-urile pentru lista de includere a procesele de sistem critice",
-        "description": "În mod normal, Windhawk încarcă moduri în procesele de sistem critice numai dacă procesul este inclus fără pattern-uri, de exemplu <0>proces_critic.exe</0>, nu <0>*</0> sau <0>*.exe</0>. Pentru mai multe detalii despre procesele de sistem critice, consultă <1>documentația</1>."
+        "description": "În mod normal, UniWind încarcă moduri în procesele de sistem critice numai dacă procesul este inclus fără pattern-uri, de exemplu <0>proces_critic.exe</0>, nu <0>*</0> sau <0>*.exe</0>. Pentru mai multe detalii despre procesele de sistem critice, consultă <1>documentația</1>."
       }
     },
     "changes": {
@@ -348,7 +348,7 @@
   "settings": {
     "language": {
       "title": "Limbă",
-      "description": "Selectează limba ta preferată de afișare pentru Windhawk.",
+      "description": "Selectează limba ta preferată de afișare pentru UniWind.",
       "contribute": "<0>Contribuie pentru o nouă traducere</0>.",
       "credits": "Tradus în limba română de <0>Valer100</0>.",
       "creditsLink": "https://github.com/Valer100"
@@ -362,7 +362,7 @@
     },
     "updates": {
       "title": "Verifică pentru actualizări",
-      "description": "Verifică periodic pentru noi versiuni de Windhawk și pentru modurile instalate."
+      "description": "Verifică periodic pentru noi versiuni de UniWind și pentru modurile instalate."
     },
     "devMode": {
       "title": "Mod dezvoltator",
@@ -370,20 +370,20 @@
     },
     "advancedSettings": "Setări avansate",
     "hideTrayIcon": {
-      "title": "Ascunde pictograma Windhawk din bara de activități",
-      "description": "Va trebui să dezactivezi această opțiune pentru a închide Windhawk."
+      "title": "Ascunde pictograma UniWind din bara de activități",
+      "description": "Va trebui să dezactivezi această opțiune pentru a închide UniWind."
     },
     "alwaysCompileModsLocally": {
       "title": "Compilează local modurile mereu",
-      "description": "În mod normal, Windhawk descarcă versiuni binare precompilate ale modurilor de pe serverul Windhawk atunci când sunt disponibile. Activează această opțiune pentru a compila local modurile mereu."
+      "description": "În mod normal, UniWind descarcă versiuni binare precompilate ale modurilor de pe serverul UniWind atunci când sunt disponibile. Activează această opțiune pentru a compila local modurile mereu."
     },
     "requireElevation": {
-      "title": "Cere elevare UAC pentru a rula Windhawk",
-      "description": "Windhawk necesită drepturi de administrator, dar pentru un calculator folosit de o singură persoană, afișarea ecranului UAC de fiecare dată poate fi enervantă, așa că Windhawk ocolește acest lucru. Activează această opțiune pentru a cere elevare UAC pentru a rula Windhawk."
+      "title": "Cere elevare UAC pentru a rula UniWind",
+      "description": "UniWind necesită drepturi de administrator, dar pentru un calculator folosit de o singură persoană, afișarea ecranului UAC de fiecare dată poate fi enervantă, așa că UniWind ocolește acest lucru. Activează această opțiune pentru a cere elevare UAC pentru a rula UniWind."
     },
     "dontAutoShowToolkit": {
       "title": "Nu arăta automat dialogul cu trusa de instrumente",
-      "description": "În mod normal, Windhawk arată automat dialogul cu trusa de instrumente când detectează că bara de activități nu este accesibilă, fie din motive de instabilitate a sistemului sau din alt motiv. Dialogul cu trusa de instrumente îți permite să închizi Windhawk, să activezi modul de siguranță și să faci alte operațiuni. Dialogul cu trusa de instrumente poate fi de asemenea afișat folosind combinația de taste Ctrl+Win+W."
+      "description": "În mod normal, UniWind arată automat dialogul cu trusa de instrumente când detectează că bara de activități nu este accesibilă, fie din motive de instabilitate a sistemului sau din alt motiv. Dialogul cu trusa de instrumente îți permite să închizi UniWind, să activezi modul de siguranță și să faci alte operațiuni. Dialogul cu trusa de instrumente poate fi de asemenea afișat folosind combinația de taste Ctrl+Win+W."
     },
     "disableToolkitHotkey": {
       "title": "Dezactivează combinația de taste pentru dialogul cu trusa de instrumente",
@@ -395,16 +395,16 @@
     },
     "moreAdvancedSettings": {
       "title": "Mai multe setări avansate",
-      "restartNotice": "Windhawk va fi repornit pentru a aplica setările.",
-      "saveButton": "Salvează și repornește Windhawk",
+      "restartNotice": "UniWind va fi repornit pentru a aplica setările.",
+      "saveButton": "Salvează și repornește UniWind",
       "unsavedChangesTitle": "Setări nesalvate",
       "unsavedChangesMessage": "Ai modificări nesalvate la setările avansate. Sigur dorești să le elimini?",
       "unsavedChangesLeave": "Elimină modificările",
       "unsavedChangesStay": "Continuă editarea"
     },
     "loggingVerbosity": {
-      "appLoggingTitle": "Verbozitatea scrierii în jurnal pentru Windhawk",
-      "engineLoggingTitle": "Verbozitatea engine-ului de scriere în jurnal Windhawk",
+      "appLoggingTitle": "Verbozitatea scrierii în jurnal pentru UniWind",
+      "engineLoggingTitle": "Verbozitatea engine-ului de scriere în jurnal UniWind",
       "description": "Jurnalurile pot fi văzute cu o unealtă precum DebugView.",
       "none": "Nimic",
       "error": "Eroare",
@@ -412,13 +412,13 @@
     },
     "processList": {
       "titleExclusion": "Lista de excludere a proceselor",
-      "descriptionExclusion": "O listă de nume/căi de procese pe care Windhawk nu le va putea injecta. Poate fi utilă pentru cazurile în care Windhawk nu este compatibil cu un anumit program. Ține minte că adăugând un proces în această listă nu va doar preveni Windhawk de a-l personaliza, dar va preveni de asemenea Windhawk din a intercepta procesele pe care acesta le creează. Acest lucru va cauza ca Windhawk să încarce modurile cu o mică întârziere în astfel de cazuri.",
+      "descriptionExclusion": "O listă de nume/căi de procese pe care UniWind nu le va putea injecta. Poate fi utilă pentru cazurile în care UniWind nu este compatibil cu un anumit program. Ține minte că adăugând un proces în această listă nu va doar preveni UniWind de a-l personaliza, dar va preveni de asemenea UniWind din a intercepta procesele pe care acesta le creează. Acest lucru va cauza ca UniWind să încarce modurile cu o mică întârziere în astfel de cazuri.",
       "descriptionExclusionWiki": "Pentru mai multe detalii despre excluderea proceselor și despre listele incluse de excludere a proceselor, consultă <0>documentația</0>.",
       "excludeCriticalProcesses": "Exclude procesele de sistem critice",
       "excludeIncompatiblePrograms": "Exclude programele incompatibile cunoscute",
       "excludeGames": "Exclude jocuri bine cunoscute",
       "titleInclusion": "Lista de includere a proceselor",
-      "descriptionInclusion": "O listă de nume/căi de procese pe care Windhawk le va putea injecta, chiar dacă ele sunt în lista de excludere.",
+      "descriptionInclusion": "O listă de nume/căi de procese pe care UniWind le va putea injecta, chiar dacă ele sunt în lista de excludere.",
       "inclusionWithoutExclusionNotice": "Lista proceselor incluse nu are niciun efect dacă lista de procese excluse este goală.",
       "inclusionWithoutTotalExclusionNotice": "Dacă ai vrut să excluzi toate procesele în afară de acestea, poți adăuga \"*\" în lista de excludere a proceselor.",
       "processListPlaceholder": "Numele/căile proceselor, câte unul/una pe un singur rând, de exemplu:",
@@ -426,7 +426,7 @@
     },
     "userData": {
       "title": "Backup și restaurare",
-      "description": "Fă un backup al configurărilor tale pentru Windhawk (setările aplicației și modurile tale cu toate setările și configurările acestora) într-un fișier sau restaurează-le dintr-unul.",
+      "description": "Fă un backup al configurărilor tale pentru UniWind (setările aplicației și modurile tale cu toate setările și configurările acestora) într-un fișier sau restaurează-le dintr-unul.",
       "exportAction": "Exportă...",
       "importAction": "Importă...",
       "appSettings": "Setările aplicației",
@@ -444,7 +444,7 @@
         "exportButton": "Exportă",
         "doneButton": "Gata",
         "doneTitle": "Export finalizat",
-        "doneSubtitle": "Datele tale de utilizator Windhawk au fost salvate în fișierul ales.",
+        "doneSubtitle": "Datele tale de utilizator UniWind au fost salvate în fișierul ales.",
         "warningsTitle": "Unele date au fost omise",
         "offlineTitle": "Încorporează sursele pentru restaurare offline",
         "offlineDescription": "Include sursa fiecărui mod în arhivă pentru a le putea restaura fără conexiune la internet. Creează un fișier mai mare. Modurile locale sunt întotdeauna încorporate."
@@ -499,24 +499,24 @@
     }
   },
   "about": {
-    "title": "Windhawk v{{version}}",
+    "title": "UniWind v{{version}}",
     "beta": "beta",
     "subtitle": "Piața de personalizare pentru programele Windows",
     "credit": "De <0>{{author}}</0>",
     "update": {
       "title": "O actualizare este disponibilă",
-      "subtitle": "Ia în considerare să actualizezi Windhawk pentru a obține cele mai noi funcții și remedieri de bug-uri",
+      "subtitle": "Ia în considerare să actualizezi UniWind pentru a obține cele mai noi funcții și remedieri de bug-uri",
       "changelogButton": "Jurnal de modificări",
       "modal": {
-        "title": "Se actualizează Windhawk",
+        "title": "Se actualizează UniWind",
         "downloading": "Se descarcă actualizarea...",
         "installing": "Se instalează actualizarea...",
-        "installingNote": "Windhawk va fi repornit automat după ce instalarea se va finaliza.",
+        "installingNote": "UniWind va fi repornit automat după ce instalarea se va finaliza.",
         "failed": "Actualizare eșuată"
       }
     },
     "changelog": {
-      "title": "Ce este nou în Windhawk"
+      "title": "Ce este nou în UniWind"
     },
     "links": {
       "title": "Linkuri",
@@ -551,7 +551,7 @@
         "title": "Instrumentele de dezvoltare sunt necesare",
         "downloading": "Se descarcă instrumentele de dezvoltare...",
         "installing": "Se instalează instrumentele de dezvoltare...",
-        "installingNote": "Windhawk va fi repornit automat odată ce instalarea s-a finalizat.",
+        "installingNote": "UniWind va fi repornit automat odată ce instalarea s-a finalizat.",
         "failed": "Instalare eșuată"
       }
     }
@@ -563,10 +563,10 @@
     "beginCodingButton": "Începe să codezi"
   },
   "safeMode": {
-    "alert": "Windhawk rulează în modul de siguranță. Toate funcționalitățile de injectat cod sunt dezactivate.",
+    "alert": "UniWind rulează în modul de siguranță. Toate funcționalitățile de injectat cod sunt dezactivate.",
     "offButton": "Oprește modul de siguranță",
-    "offConfirm": "Windhawk va fi repornit pentru a aplica setările.",
-    "offConfirmOk": "Repornește Windhawk"
+    "offConfirm": "UniWind va fi repornit pentru a aplica setările.",
+    "offConfirmOk": "Repornește UniWind"
   },
   "modPreview": {
     "notCompiled": "Modul trebuie să fie compilat pentru a-l putea previzualiza"
@@ -597,29 +597,29 @@
     "home": {
       "tagline": "Piața de personalizare pentru programele Windows",
       "getInvolved": "Implică-te",
-      "joinDiscord": "Alătură-te comunității Windhawk pe Discord",
-      "discussWindhawk": "Discută despre Windhawk pe GitHub Discussions",
-      "discussMods": "Discută despre modurile Windhawk pe GitHub Discussions",
+      "joinDiscord": "Alătură-te comunității UniWind pe Discord",
+      "discussWindhawk": "Discută despre UniWind pe GitHub Discussions",
+      "discussMods": "Discută despre modurile UniWind pe GitHub Discussions",
       "browseLinks": "Răsfoiește alte linkuri utile",
       "highlights": "Evidențieri",
       "robust": "Robust",
-      "robustDescription": "Stabilitatea și performanța sunt o prioritate foarte mare pentru Windhawk. Windhawk a fost proiectat să ruleze constant pe fundal fără a avea un impact vizibil asupra sistemului.",
+      "robustDescription": "Stabilitatea și performanța sunt o prioritate foarte mare pentru UniWind. UniWind a fost proiectat să ruleze constant pe fundal fără a avea un impact vizibil asupra sistemului.",
       "simple": "Simplu",
-      "simpleDescription": "Nu trebuie să fii un expert în calculatoare pentru a folosi Windhawk, acesta poate fi folosit de toată lumea. Modurile sofisticate pot fi instalate cu doar câteva clicuri și personalizate prin opțiuni prietenoase cu utilizatorul.",
+      "simpleDescription": "Nu trebuie să fii un expert în calculatoare pentru a folosi UniWind, acesta poate fi folosit de toată lumea. Modurile sofisticate pot fi instalate cu doar câteva clicuri și personalizate prin opțiuni prietenoase cu utilizatorul.",
       "transparent": "Transparent",
-      "transparentDescription": "Modurile pe care Windhawk le oferă nu sunt cutii negre. Fiecare mod vine sub formă de cod sursă care poate fi examinat pentru a te asigura că modul face exact ceea ce zice."
+      "transparentDescription": "Modurile pe care UniWind le oferă nu sunt cutii negre. Fiecare mod vine sub formă de cod sursă care poate fi examinat pentru a te asigura că modul face exact ceea ce zice."
     },
     "modDetails": {
-      "getWindhawk": "Obține Windhawk pentru a instala acest mod"
+      "getWindhawk": "Obține UniWind pentru a instala acest mod"
     },
     "links": {
       "news": "Știri",
-      "windhawkNews": "Știri Windhawk - Ramen Software",
-      "windhawkChangelog": "Jurnal de modificări Windhawk",
+      "windhawkNews": "Știri UniWind - Ramen Software",
+      "windhawkChangelog": "Jurnal de modificări UniWind",
       "community": "Comunitate",
       "discord": "Discord",
-      "windhawkDiscussions": "Windhawk - GitHub Discussions",
-      "modsDiscussions": "Moduri Windhawk - GitHub Discussions",
+      "windhawkDiscussions": "UniWind - GitHub Discussions",
+      "modsDiscussions": "Moduri UniWind - GitHub Discussions",
       "documentation": "Documentație",
       "creatingNewMod": "Crearea unui mod nou",
       "otherTopics": "Alte subiecte",
@@ -628,8 +628,8 @@
       "contactRamenSoftware": "Contactează Ramen Software"
     },
     "download": {
-      "title": "Actualizează Windhawk",
-      "newVersionAvailable": "O nouă versiune pentru Windhawk este disponibilă",
+      "title": "Actualizează UniWind",
+      "newVersionAvailable": "O nouă versiune pentru UniWind este disponibilă",
       "whatsNew": "Ce este nou"
     },
     "footer": {

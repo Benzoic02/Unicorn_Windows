@@ -41,8 +41,8 @@ fn ensure_placeholder_assets() {
     let _ = fs::create_dir_all(assets);
     let _ = fs::write(
         &index,
-        "<!doctype html><html><head><meta charset=\"utf-8\"><title>Windhawk</title></head>\
-         <body><p>The Windhawk UI front-end assets have not been synced into this \
+        "<!doctype html><html><head><meta charset=\"utf-8\"><title>UniWind</title></head>\
+         <body><p>The UniWind UI front-end assets have not been synced into this \
          build.</p></body></html>\n",
     );
 }

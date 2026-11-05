@@ -150,7 +150,7 @@
       },
       "patternsMatchCriticalSystemProcesses": {
         "title": "Rozważ zawarcie dozwolonych list wzorców dla procesów krytycznych",
-        "description": "Domyślnie Windhawk ładuje mody tylko w krytycznych procesach systemowych, jeśli proces jest uwzględniony bez użycia wzorców, np. <0>critical.exe</0>, a nie <0>*</0> lub <0>*.exe</0>. Po więcej informacji o krytycznych procesach systemowych, prosimy o zapoznanie się z <1>dokumentacją</1>."
+        "description": "Domyślnie UniWind ładuje mody tylko w krytycznych procesach systemowych, jeśli proces jest uwzględniony bez użycia wzorców, np. <0>critical.exe</0>, a nie <0>*</0> lub <0>*.exe</0>. Po więcej informacji o krytycznych procesach systemowych, prosimy o zapoznanie się z <1>dokumentacją</1>."
       }
     },
     "changes": {
@@ -214,14 +214,14 @@
   "settings": {
     "language": {
       "title": "Język",
-      "description": "Wybierz preferowany język dla Windhawk.",
+      "description": "Wybierz preferowany język dla UniWind.",
       "contribute": "<0>Współtwórz nowe tłumaczenia</0>.",
       "credits": "Polskie tłumaczenie stworzył <0>Inkatail</0> oraz CyprinusCarpio (https://github.com/CyprinusCarpio), a funn-hue poprawił.",
       "creditsLink": "https://github.com/Inkatail"
     },
     "updates": {
       "title": "Sprawdź aktualizacje",
-      "description": "Okresowo sprawdzaj dostępność nowych wersji Windhawk i zainstalowanych modów."
+      "description": "Okresowo sprawdzaj dostępność nowych wersji UniWind i zainstalowanych modów."
     },
     "devMode": {
       "title": "Tryb dewelopera",
@@ -230,19 +230,19 @@
     "advancedSettings": "Ustawienia zaawansowane",
     "hideTrayIcon": {
       "title": "Ukryj ikonę w zasobniku",
-      "description": "Będziesz musiał wyłączyć tę opcję, aby wyjść z Windhawk."
+      "description": "Będziesz musiał wyłączyć tę opcję, aby wyjść z UniWind."
     },
     "alwaysCompileModsLocally": {
       "title": "Zawsze kompiluj mody lokalnie",
-      "description": "Domyślnie Windhawk pobiera wstępnie kompilowane wersje binarne modów z serwerów gdy dostępne. Włącz tą opcje jeśli zawsze chcesz kompilować je lokalnie."
+      "description": "Domyślnie UniWind pobiera wstępnie kompilowane wersje binarne modów z serwerów gdy dostępne. Włącz tą opcje jeśli zawsze chcesz kompilować je lokalnie."
     },
     "requireElevation": {
-      "title": "Wymagaj uprawnień UAC do uruchomienia Windhawk",
-      "description": "Windhawk wymaga uprawnień administratora, ale dla komputera z jednym użytkownikiem wyświetlanie komunikatu UAC za każdym razem może być irytujące, więc Windhawk go omija. Włącz tę opcję, aby wymagać uprawnień UAC do uruchamiania Windhawk."
+      "title": "Wymagaj uprawnień UAC do uruchomienia UniWind",
+      "description": "UniWind wymaga uprawnień administratora, ale dla komputera z jednym użytkownikiem wyświetlanie komunikatu UAC za każdym razem może być irytujące, więc UniWind go omija. Włącz tę opcję, aby wymagać uprawnień UAC do uruchamiania UniWind."
     },
     "dontAutoShowToolkit": {
       "title": "Nie wyświetlaj automatycznie okna dialogowego narzędzi",
-      "description": "Domyślnie Windhawk automatycznie wyświetla okno dialogowe narzędzi, gdy wykryje, że pasek zadań nie jest dostępny z powodu niestabilności systemu lub z innego powodu. Okno dialogowe narzędzi pozwala wyjść z Windhawk, przełączyć się do trybu bezpiecznego i wykonać inne operacje. Okno dialogowe narzędzi można również wyświetlić za pomocą skrótu klawiaturowego Ctrl+Win+W."
+      "description": "Domyślnie UniWind automatycznie wyświetla okno dialogowe narzędzi, gdy wykryje, że pasek zadań nie jest dostępny z powodu niestabilności systemu lub z innego powodu. Okno dialogowe narzędzi pozwala wyjść z UniWind, przełączyć się do trybu bezpiecznego i wykonać inne operacje. Okno dialogowe narzędzi można również wyświetlić za pomocą skrótu klawiaturowego Ctrl+Win+W."
     },
     "modInitDialogDelay": {
       "title": "Opóźnienie okna dialogowego inicjalizacji modów",
@@ -250,12 +250,12 @@
     },
     "moreAdvancedSettings": {
       "title": "Więcej ustawień zaawansowanych",
-      "restartNotice": "Windhawk musi zostać uruchomiony ponownie, aby zastosować ustawienia.",
-      "saveButton": "Zapisz i uruchom ponownie Windhawk"
+      "restartNotice": "UniWind musi zostać uruchomiony ponownie, aby zastosować ustawienia.",
+      "saveButton": "Zapisz i uruchom ponownie UniWind"
     },
     "loggingVerbosity": {
-      "appLoggingTitle": "Szczegółowe logi Windhawk",
-      "engineLoggingTitle": "Szczegółowe logi silnika Windhawk",
+      "appLoggingTitle": "Szczegółowe logi UniWind",
+      "engineLoggingTitle": "Szczegółowe logi silnika UniWind",
       "description": "Logi mogą zostać wyswietlone używając narzędzia DebugView",
       "none": "Nic",
       "error": "Błąd",
@@ -263,13 +263,13 @@
     },
     "processList": {
       "titleExclusion": "Lista wykluczonych procesów",
-      "descriptionExclusion": "Lista nazw procesów/ścieżek, do których Windhawk nie będzie wstrzykiwał. Może być przydatna w przypadkach, gdy Windhawk nie jest kompatybilny z określonym programem. Należy pamiętać, że dodanie procesu do tej listy nie tylko uniemożliwi Windhawk dostosowanie go, ale także uniemożliwi Windhawk przechwytywanie procesów potomnych tworzonych przez ten proces. Spowoduje to, że w takich przypadkach Windhawk będzie ładował mody z niewielkim opóźnieniem.",
+      "descriptionExclusion": "Lista nazw procesów/ścieżek, do których UniWind nie będzie wstrzykiwał. Może być przydatna w przypadkach, gdy UniWind nie jest kompatybilny z określonym programem. Należy pamiętać, że dodanie procesu do tej listy nie tylko uniemożliwi UniWind dostosowanie go, ale także uniemożliwi UniWind przechwytywanie procesów potomnych tworzonych przez ten proces. Spowoduje to, że w takich przypadkach UniWind będzie ładował mody z niewielkim opóźnieniem.",
       "descriptionExclusionWiki": "Po więcej informacji o wykluczaniu procesów oraz wbudowanych listach wykluczeń procesów, prosimy o zapoznanie się z <0>dokumentacją</0>.",
       "excludeCriticalProcesses": "Wyklucz krytyczne procesy systemowe",
       "excludeIncompatiblePrograms": "Wyklucz znane niekompatybilne programy",
       "excludeGames": "Wyklucz znane gry",
       "titleInclusion": "Lista uwzględnionych procesów",
-      "descriptionInclusion": "Lista nazw/ścieżek procesów, do których Windhawk będzie wstrzykiwał dane, nawet jeśli znajdują się one na liście wykluczeń.",
+      "descriptionInclusion": "Lista nazw/ścieżek procesów, do których UniWind będzie wstrzykiwał dane, nawet jeśli znajdują się one na liście wykluczeń.",
       "inclusionWithoutExclusionNotice": "Lista uwzględnionych procesów nie ma wpływu na pustą listę wykluczania procesów.",
       "inclusionWithoutTotalExclusionNotice": "Jeśli chcesz wykluczyć wszystkie procesy oprócz tych, możesz ustawić \"*\" na liście wykluczeń procesów.",
       "processListPlaceholder": "Nazwy/ścieżki procesów, po jednej w wierszu, na przykład:",
@@ -277,24 +277,24 @@
     }
   },
   "about": {
-    "title": "Windhawk v{{version}}",
+    "title": "UniWind v{{version}}",
     "beta": "beta",
     "subtitle": "Platforma oferująca dodatki dostosowujące system Windows i programy",
     "credit": "Stworzone przez <0>{{author}}</0>",
     "update": {
       "title": "Aktualizacja jest dostępna",
-      "subtitle": "Rozważ aktualizację Windhawk, aby uzyskać najnowsze funkcje i poprawki błędów",
+      "subtitle": "Rozważ aktualizację UniWind, aby uzyskać najnowsze funkcje i poprawki błędów",
       "changelogButton": "Lista zmian",
       "modal": {
-        "title": "Aktualizowanie Windhawk",
+        "title": "Aktualizowanie UniWind",
         "downloading": "Pobieranie aktualizacji...",
         "installing": "Instalowanie aktualizacji...",
-        "installingNote": "Windhawk uruchomi się ponownie automatycznie gdy instalacja się zakończy.",
+        "installingNote": "UniWind uruchomi się ponownie automatycznie gdy instalacja się zakończy.",
         "failed": "Aktualizacja zakończona niepowodzeniem"
       }
     },
     "changelog": {
-      "title": "Co nowego w Windhawk"
+      "title": "Co nowego w UniWind"
     },
     "links": {
       "title": "Linki",
@@ -327,10 +327,10 @@
     "beginCodingButton": "Rozpocznij kodowanie"
   },
   "safeMode": {
-    "alert": "Windhawk działa w trybie awaryjnym, wszystkie funkcje wstrzykiwania kodu są wyłączone.",
+    "alert": "UniWind działa w trybie awaryjnym, wszystkie funkcje wstrzykiwania kodu są wyłączone.",
     "offButton": "Wyłącz tryb awaryjny",
-    "offConfirm": "Windhawk zostanie uruchomiony ponownie, aby zastosować ustawienia.",
-    "offConfirmOk": "Zrestartuj Windhawk"
+    "offConfirm": "UniWind zostanie uruchomiony ponownie, aby zastosować ustawienia.",
+    "offConfirmOk": "Zrestartuj UniWind"
   },
   "modPreview": {
     "notCompiled": "Mod musi zostać skompilowany przed podglądem"

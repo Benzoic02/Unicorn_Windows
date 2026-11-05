@@ -14,7 +14,6 @@ import { CreateNewModButton } from './shared';
 import { InstallDevToolsModal } from './shared/InstallDevToolsModal';
 import useKeyboardShortcut from './shared/useKeyboardShortcut';
 /// #else
-import AppFooter from './AppFooter';
 import WebsiteHome from './WebsiteHome';
 import Download from './Download';
 import Links from './Links';
@@ -87,10 +86,7 @@ function ContentWrapperBrowser({
 }: React.ComponentProps<'div'> & { $hidden?: boolean }) {
   return (
     <ContentContainerScroll ref={ref} {...props}>
-      <ContentContainer>
-        {props.children}
-        <AppFooter />
-      </ContentContainer>
+      <ContentContainer>{props.children}</ContentContainer>
     </ContentContainerScroll>
   );
 }

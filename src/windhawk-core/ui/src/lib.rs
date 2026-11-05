@@ -15,7 +15,7 @@
 // `// SAFETY:` note on every block. Unsafe stays confined to
 // `logwindow/capture.rs`, `lifecycle/diagnostics.rs`, `lifecycle/window.rs`,
 // `shell.rs`, `clipboard.rs`, `splash/`, `broker/launch.rs`, and
-// `broker/serve.rs`; the rest of the crate is safe.
+// `broker/serve.rs`, and `broker/engine.rs`; the rest of the crate is safe.
 #![deny(unsafe_op_in_unsafe_fn)]
 #![cfg_attr(not(test), deny(clippy::unwrap_used, clippy::expect_used))]
 
@@ -250,12 +250,10 @@ pub fn run() {
         )
         .setup(move |app| {
             // The elevation ladder starts FIRST, before the core is even loaded.
-            // Nothing about the decision needs a session - it is one flag in
-            // windhawk.ini and one token check - so starting here is what lets the
-            // whole elevation round trip overlap the DLL load, the session create,
-            // and the WebView2 build instead of queueing behind them. What does
-            // NOT overlap the build is the ladder's consent dialog: it waits for
-            // the window that owns it (`broker::elevation_prompt_gate`).
+            // The token check needs no core session, so starting here lets the
+            // elevation round trip overlap the DLL load, session creation, and
+            // WebView2 build. The consent dialog still waits for the window that
+            // owns it (`broker::elevation_prompt_gate`).
             let app_root = match lifecycle::discover_app_root() {
                 Some(app_root) => app_root,
                 None => fail_startup(
@@ -264,8 +262,8 @@ pub fn run() {
                      Windhawk installation folder.",
                 ),
             };
-            let needs_broker = broker::needs_broker(&app_root);
-            let ladder = needs_broker.then(broker::Ladder::start);
+            let needs_broker = broker::needs_broker();
+            let mut ladder = needs_broker.then(broker::Ladder::start);
 
             // Bring up the core before the window opens. A failure is fatal and
             // shown natively, since there is no webview yet to render it.
@@ -278,6 +276,8 @@ pub fn run() {
                 portable,
                 ui_path,
                 compiler_path,
+                engine_path,
+                safe_mode,
             } = match lifecycle::start_core(&app_root, pump_sender.clone()) {
                 Ok(handles) => handles,
                 Err(error) => {
@@ -288,6 +288,22 @@ pub fn run() {
                         None => error.message,
                     };
                     fail_startup(&detail);
+                }
+            };
+
+            if portable && safe_mode {
+                // Portable Safe Mode does no elevated work and should not prompt.
+                ladder = None;
+            }
+
+            let engine_runtime = if needs_broker || safe_mode {
+                None
+            } else {
+                match broker::engine::EngineRuntime::start(engine_path, None) {
+                    Ok(runtime) => Some(runtime),
+                    Err(error) => fail_startup(&format!(
+                        "Could not start the UniWind injection engine: {error}"
+                    )),
                 }
             };
 
@@ -307,9 +323,8 @@ pub fn run() {
             // read once here, never asked of the elevated helper.
             let dev_tools_installed = editor::launch::dev_tools_installed(&ui_path);
 
-            // The privileged work this process would do for itself. It stays the
-            // implementation in a portable install and in an already elevated
-            // window, and it is what a lost channel falls back to.
+            // The local host backs already-elevated launches and is the fallback
+            // if the broker channel is lost.
             let local_host: Arc<dyn broker::ops::HostOps> =
                 Arc::new(broker::ops::LocalHostOps::for_ui(
                     core.clone(),
@@ -398,7 +413,7 @@ pub fn run() {
                     // elevated at all, so it would have become permanent furniture
                     // saying nothing; what it stood in for - writes will fail - is
                     // now said by the degraded-mode banner, and only when true.
-                    .title("Windhawk")
+                    .title("UniWind")
                     // Give the native window a stable Win32 class name so external
                     // tools (and our own native launcher/tray) can locate it via
                     // FindWindow, rather than tao's generic default ("Tauri Window").
@@ -695,6 +710,7 @@ pub fn run() {
             // from managed state; the banner commands reach the link the same way.
             app.manage(ctx.clone());
             app.manage(link.clone());
+            app.manage(engine_runtime);
 
             // Now that there is a window, the link can report what it is doing.
             link.attach(app.handle().clone());
@@ -798,7 +814,7 @@ fn fail_fatal(lead: &str, detail: &str) -> ! {
 /// exists: returning Err from setup would surface only as Tauri's opaque
 /// exit-101 panic.
 fn fail_startup(detail: &str) -> ! {
-    fail_fatal("Windhawk could not start.", detail)
+    fail_fatal("UniWind could not start.", detail)
 }
 
 /// Present the loss of a window nobody asked to close, and end the process.
@@ -810,7 +826,7 @@ fn fail_startup(detail: &str) -> ! {
 /// single-instance hand-off, and invisible enough that nobody would know to end
 /// it.
 fn fail_unexpected_close(detail: &str) -> ! {
-    fail_fatal("Windhawk has closed unexpectedly.", detail)
+    fail_fatal("UniWind has closed unexpectedly.", detail)
 }
 
 /// The UI data folder for this install, created if it is not there, or a fatal

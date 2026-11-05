@@ -149,7 +149,7 @@
       },
       "patternsMatchCriticalSystemProcesses": {
         "title": "匹配系统关键进程",
-        "description": "为了安全起见，Windhawk 默认仅在明确指定了系统关键进程名称时（即不使用通配符，如 <0>critical.exe</0> 时）才会在相应的关键进程中加载模组，对于通配符（如 <0>*</0> 或 <0>*.exe</0>）默认是不会匹配到系统关键进程的。有关系统关键进程的详细信息，请参阅 <1>相关文档</1>。"
+        "description": "为了安全起见，UniWind 默认仅在明确指定了系统关键进程名称时（即不使用通配符，如 <0>critical.exe</0> 时）才会在相应的关键进程中加载模组，对于通配符（如 <0>*</0> 或 <0>*.exe</0>）默认是不会匹配到系统关键进程的。有关系统关键进程的详细信息，请参阅 <1>相关文档</1>。"
       }
     },
     "changes": {
@@ -211,14 +211,14 @@
   "settings": {
     "language": {
       "title": "语言",
-      "description": "选择Windhawk首选的显示语言",
+      "description": "选择UniWind首选的显示语言",
       "contribute": "<0>协助我们贡献您的翻译</0>.",
       "credits": "简体中文翻译由<0>Shifeng Zhao 和 Kevin Wang</0>提供。",
       "creditsLink": "mailto:1193008599@qq.com,wmk153024@gmail.com"
     },
     "updates": {
       "title": "检查软件更新",
-      "description": "定期检查最新版本的Windhawk和模组"
+      "description": "定期检查最新版本的UniWind和模组"
     },
     "devMode": {
       "title": "开发者选项",
@@ -227,19 +227,19 @@
     "advancedSettings": "高级设置",
     "hideTrayIcon": {
       "title": "隐藏托盘图标",
-      "description": "您必须禁用此选项才能退出Windhawk。"
+      "description": "您必须禁用此选项才能退出UniWind。"
     },
     "alwaysCompileModsLocally": {
       "title": "始终在本地编译模组",
-      "description": "默认情况下，Windhawk 会在可用时从 Windhawk 服务器下载预编译的模组二进制文件。启用此选项以始终在本地编译模组。"
+      "description": "默认情况下，UniWind 会在可用时从 UniWind 服务器下载预编译的模组二进制文件。启用此选项以始终在本地编译模组。"
     },
     "requireElevation": {
-      "title": "需要管理员权限（UAC）来运行Windhawk",
-      "description": "Windhawk需要管理员权限，但当您电脑只有一个账户时，每次都弹出用户账户控制（UAC）或许很影响您的正常使用，所以Windhawk选择绕过它。启用此选项可在运行Windhawk时要求用户账户控制（UAC）提升权限。"
+      "title": "需要管理员权限（UAC）来运行UniWind",
+      "description": "UniWind需要管理员权限，但当您电脑只有一个账户时，每次都弹出用户账户控制（UAC）或许很影响您的正常使用，所以UniWind选择绕过它。启用此选项可在运行UniWind时要求用户账户控制（UAC）提升权限。"
     },
     "dontAutoShowToolkit": {
       "title": "禁止自动显示Toolkit窗口。",
-      "description": "默认情况下，当Windhawk检测到任务栏无法访问时（可能是由于系统不稳定或其他原因），会自动显示Toolkit窗口。Toolkit窗口允许退出Windhawk，切换到安全模式和进行其他操作。禁用后仍可以使用Ctrl+Win+W键盘快捷键显示Toolkit窗口。"
+      "description": "默认情况下，当UniWind检测到任务栏无法访问时（可能是由于系统不稳定或其他原因），会自动显示Toolkit窗口。Toolkit窗口允许退出UniWind，切换到安全模式和进行其他操作。禁用后仍可以使用Ctrl+Win+W键盘快捷键显示Toolkit窗口。"
     },
     "modInitDialogDelay": {
       "title": "Mod初始化对话延迟",
@@ -247,12 +247,12 @@
     },
     "moreAdvancedSettings": {
       "title": "更多高级设置",
-      "restartNotice": "Windhawk将重启以应用软件设置。",
-      "saveButton": "保存并重启Windhawk"
+      "restartNotice": "UniWind将重启以应用软件设置。",
+      "saveButton": "保存并重启UniWind"
     },
     "loggingVerbosity": {
-      "appLoggingTitle": "Windhawk日志等级",
-      "engineLoggingTitle": "Windhawk引擎的日志等级",
+      "appLoggingTitle": "UniWind日志等级",
+      "engineLoggingTitle": "UniWind引擎的日志等级",
       "description": "可以使用DebugView等工具查看日志。",
       "none": "无",
       "error": "错误",
@@ -260,13 +260,13 @@
     },
     "processList": {
       "titleExclusion": "排除的进程列表",
-      "descriptionExclusion": "这是一个Windhawk不会注入的进程名称/路径列表。当Windhawk与某个特定程序不兼容时，该列表可能会很有用。需要注意的是，将某个进程添加到这个列表中，不仅会阻止Windhawk对其进行自定义设置，还会阻止Windhawk拦截该进程所创建的子进程。在这种情况下，这将导致Windhawk加载模组时会稍有延迟。",
+      "descriptionExclusion": "这是一个UniWind不会注入的进程名称/路径列表。当UniWind与某个特定程序不兼容时，该列表可能会很有用。需要注意的是，将某个进程添加到这个列表中，不仅会阻止UniWind对其进行自定义设置，还会阻止UniWind拦截该进程所创建的子进程。在这种情况下，这将导致UniWind加载模组时会稍有延迟。",
       "descriptionExclusionWiki": "如需了解有关排除进程以及内置进程排除列表的更多详细信息，请参阅<0> 相关文档 </0>。",
       "excludeCriticalProcesses": "排除关键系统进程",
       "excludeIncompatiblePrograms": "排除已知不兼容的程序",
       "excludeGames": "排除知名游戏",
       "titleInclusion": "包含的进程列表",
-      "descriptionInclusion": "Windhawk将注入的进程名/路径列表，即使它们在排除列表中。",
+      "descriptionInclusion": "UniWind将注入的进程名/路径列表，即使它们在排除列表中。",
       "inclusionWithoutExclusionNotice": "进程包含列表对于空的进程排除列表无效。",
       "inclusionWithoutTotalExclusionNotice": "如果您打算排除除这些之外的所有进程，您可以用“*”在进程排除列表中设置。",
       "processListPlaceholder": "进程名/路径，每行一个，例如:",
@@ -274,24 +274,24 @@
     }
   },
   "about": {
-    "title": "Windhawk版本{{version}}",
+    "title": "UniWind版本{{version}}",
     "beta": "beta版本",
     "subtitle": "Windows 和程序的自定义插件市场",
     "credit": "<0>{{author}}团队倾情巨献</0>",
     "update": {
       "title": "更新可用",
-      "subtitle": "更新Windhawk以获得最新功能和错误修复",
+      "subtitle": "更新UniWind以获得最新功能和错误修复",
       "changelogButton": "更新日志",
       "modal": {
-        "title": "正在更新 Windhawk",
+        "title": "正在更新 UniWind",
         "downloading": "正在下载更新...",
         "installing": "正在安装更新...",
-        "installingNote": "安装完成后，Windhawk 将自动重启。",
+        "installingNote": "安装完成后，UniWind 将自动重启。",
         "failed": "更新失败"
       }
     },
     "changelog": {
-      "title": "Windhawk 新版变化"
+      "title": "UniWind 新版变化"
     },
     "links": {
       "title": "链接",
@@ -324,10 +324,10 @@
     "beginCodingButton": "开始编写代码"
   },
   "safeMode": {
-    "alert": "Windhawk正在安全模式下运行，所有代码注入功能已关闭。",
+    "alert": "UniWind正在安全模式下运行，所有代码注入功能已关闭。",
     "offButton": "退出安全模式",
-    "offConfirm": "Windhawk 将重新启动以应用设置。",
-    "offConfirmOk": "重启Windhawk"
+    "offConfirm": "UniWind 将重新启动以应用设置。",
+    "offConfirmOk": "重启UniWind"
   },
   "modPreview": {
     "notCompiled": "模组需要编译后才可预览"
@@ -356,29 +356,29 @@
     "home": {
       "tagline": "Windows 和程序的自定义插件市场",
       "getInvolved": "参与项目",
-      "joinDiscord": "加入 Windhawk 的 Discord 群组",
-      "discussWindhawk": "在 Github 仓库的 Discussions 分区上讨论 Windhawk",
-      "discussMods": "在 Github 仓库的 Discussions 分区上讨论 Windhawk 模组",
+      "joinDiscord": "加入 UniWind 的 Discord 群组",
+      "discussWindhawk": "在 Github 仓库的 Discussions 分区上讨论 UniWind",
+      "discussMods": "在 Github 仓库的 Discussions 分区上讨论 UniWind 模组",
       "browseLinks": "浏览其他有用链接",
       "highlights": "亮点",
       "robust": "稳健",
-      "robustDescription": "稳定性和性能是 Windhawk 的重中之重。它的设计初衷是在后台持续运行，同时不对系统产生任何明显的性能影响。",
+      "robustDescription": "稳定性和性能是 UniWind 的重中之重。它的设计初衷是在后台持续运行，同时不对系统产生任何明显的性能影响。",
       "simple": "简易",
-      "simpleDescription": "使用 Windhawk 无需具备专业的电脑知识，它适合所有人。只需点击几下即可安装功能强大的模组，并通过简洁明了的选项进行自定义。",
+      "simpleDescription": "使用 UniWind 无需具备专业的电脑知识，它适合所有人。只需点击几下即可安装功能强大的模组，并通过简洁明了的选项进行自定义。",
       "transparent": "透明",
-      "transparentDescription": "Windhawk 提供的模组绝非“黑箱”。每个模组都提供源代码，用户可以查阅代码，确保模组的功能与其描述完全一致。"
+      "transparentDescription": "UniWind 提供的模组绝非“黑箱”。每个模组都提供源代码，用户可以查阅代码，确保模组的功能与其描述完全一致。"
     },
     "modDetails": {
-      "getWindhawk": "获取 Windhawk 以安装此模组"
+      "getWindhawk": "获取 UniWind 以安装此模组"
     },
     "links": {
       "news": "新闻",
-      "windhawkNews": "Windhawk 新闻 - Ramen Software",
-      "windhawkChangelog": "Windhawk 更新日志",
+      "windhawkNews": "UniWind 新闻 - Ramen Software",
+      "windhawkChangelog": "UniWind 更新日志",
       "community": "社区",
       "discord": "Discord",
-      "windhawkDiscussions": "Windhawk - GitHub Discussions",
-      "modsDiscussions": "Windhawk 模组 - GitHub Discussions",
+      "windhawkDiscussions": "UniWind - GitHub Discussions",
+      "modsDiscussions": "UniWind 模组 - GitHub Discussions",
       "documentation": "文档",
       "creatingNewMod": "创建新模组",
       "otherTopics": "其他主题",
@@ -387,8 +387,8 @@
       "contactRamenSoftware": "联系 Ramen Software"
     },
     "download": {
-      "title": "更新 Windhawk",
-      "newVersionAvailable": "有新的 Windhawk 版本可用",
+      "title": "更新 UniWind",
+      "newVersionAvailable": "有新的 UniWind 版本可用",
       "whatsNew": "更新内容"
     },
     "footer": {

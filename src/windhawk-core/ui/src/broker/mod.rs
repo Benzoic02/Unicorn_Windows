@@ -23,6 +23,7 @@
 //! arbitrary process to connect to, and the elevated process only ever connects to
 //! an endpoint it has verified.
 
+pub mod engine;
 pub mod launch;
 // The privileged host operations and the channel's vocabulary, and the UI end
 // that speaks it. Public because they ARE the contract with the other process,
@@ -47,7 +48,6 @@ use std::time::{Duration, Instant};
 use serde_json::{Value, json};
 use tauri::{AppHandle, Emitter};
 use windhawk_broker::{Listener, Requester};
-use windhawk_core_host::windhawk_ini::is_portable;
 use windhawk_core_host::{HostError, Session, SessionApi};
 use windhawk_core_protocol::{ErrorCode, WireError};
 
@@ -142,14 +142,11 @@ pub(crate) fn handover_failure() -> HostError {
 
 /// Whether this process needs an elevated helper to do its job.
 ///
-/// Both inputs are available with no DLL, no session, and no invoke, which is the
-/// point: deciding first is what lets the elevation ladder start before the core
-/// is even loaded and overlap everything after it. The core stays the
-/// authority on storage resolution; this reads the one boolean the process edge
-/// already reads the same way.
+/// The token check needs no DLL, session, or invoke, which lets the elevation
+/// ladder start before core startup and overlap the rest of the launch.
 ///
-/// - A PORTABLE install keeps its data inside the install directory and writes no
-///   registry, so it runs unelevated exactly as it does today.
+/// - Every non-elevated UI needs the helper when injection is enabled, including
+///   portable installs, because the process-injection engine must run elevated.
 /// - An already ELEVATED UI can do the work itself - a developer run, a user who
 ///   chose "Run as administrator", or a launcher path that started this process
 ///   elevated for reasons of its own.
@@ -160,8 +157,8 @@ pub(crate) fn handover_failure() -> HostError {
 /// through to the prompt, an administrator supplies credentials, and the broker
 /// comes up on that account. Asking up front would mean predicting the
 /// answer from a linked token that does not always exist.
-pub fn needs_broker(app_root: &str) -> bool {
-    !is_portable(app_root) && !window::is_running_as_admin()
+pub fn needs_broker() -> bool {
+    !window::is_running_as_admin()
 }
 
 /// The full pipe name of a channel.

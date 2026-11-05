@@ -150,7 +150,7 @@
       },
       "patternsMatchCriticalSystemProcesses": {
         "title": "Kritik tizim jarayonlari uchun kiritish qoliplarini hisobga olish",
-        "description": "Odatiy bo‘lib, Windhawk modlarni kritik tizim jarayonlariga faqat jarayon qoliplarsiz kiritilganda yuklaydi (masalan, <0>critical.exe</0>, <0>*</0> yoki <0>*.exe</0> emas). Batafsil ma'lumot uchun <1>hujjatlarga</1> qarang."
+        "description": "Odatiy bo‘lib, UniWind modlarni kritik tizim jarayonlariga faqat jarayon qoliplarsiz kiritilganda yuklaydi (masalan, <0>critical.exe</0>, <0>*</0> yoki <0>*.exe</0> emas). Batafsil ma'lumot uchun <1>hujjatlarga</1> qarang."
       }
     },
     "changes": {
@@ -213,14 +213,14 @@
   "settings": {
     "language": {
       "title": "Til",
-      "description": "Windhawk uchun afzal ko‘rgan tilni tanlang.",
+      "description": "UniWind uchun afzal ko‘rgan tilni tanlang.",
       "contribute": "Yangi tarjima bilan <0>hissa qo‘shing</0>.",
       "credits": "",
       "creditsLink": ""
     },
     "updates": {
       "title": "Yangilanishlarni tekshirish",
-      "description": "Windhawk va o‘rnatilgan modlarning yangi versiyalarini avtomatik tekshirish va xabar berish."
+      "description": "UniWind va o‘rnatilgan modlarning yangi versiyalarini avtomatik tekshirish va xabar berish."
     },
     "devMode": {
       "title": "Dasturchi rejimi",
@@ -229,19 +229,19 @@
     "advancedSettings": "Kengaytirilgan sozlamalar",
     "hideTrayIcon": {
       "title": "Trey belgisini yashirish",
-      "description": "Windhawk'dan chiqish uchun ushbu parametrni o‘chirishingiz kerak bo‘ladi."
+      "description": "UniWind'dan chiqish uchun ushbu parametrni o‘chirishingiz kerak bo‘ladi."
     },
     "alwaysCompileModsLocally": {
       "title": "Modlarni har doim mahalliy kompilyatsiya qilish",
-      "description": "Odatiy bo‘lib, Windhawk mavjud bo‘lganda Windhawk serveridan tayyor mod binar fayllarini yuklab oladi. Modlarni har doim mahalliy kompyuterda kompilyatsiya qilish uchun ushbu parametrni yoqing."
+      "description": "Odatiy bo‘lib, UniWind mavjud bo‘lganda UniWind serveridan tayyor mod binar fayllarini yuklab oladi. Modlarni har doim mahalliy kompyuterda kompilyatsiya qilish uchun ushbu parametrni yoqing."
     },
     "requireElevation": {
-      "title": "Windhawk'ni ishga tushirish uchun UAC ruxsatini talab qilish",
-      "description": "Windhawk administrator huquqlarini talab qiladi, ammo bir foydalanuvchili kompyuterda har safar UAC so‘rovi chiqishi zerikarli bo‘lishi mumkin, shuning uchun Windhawk uni chetlab o‘tadi. Windhawk'ni ishga tushirishda UAC so‘rovini yoqish uchun ushbu parametrni faollashtiring."
+      "title": "UniWind'ni ishga tushirish uchun UAC ruxsatini talab qilish",
+      "description": "UniWind administrator huquqlarini talab qiladi, ammo bir foydalanuvchili kompyuterda har safar UAC so‘rovi chiqishi zerikarli bo‘lishi mumkin, shuning uchun UniWind uni chetlab o‘tadi. UniWind'ni ishga tushirishda UAC so‘rovini yoqish uchun ushbu parametrni faollashtiring."
     },
     "dontAutoShowToolkit": {
       "title": "Asboblar to‘plami oynasini avtomatik ko‘rsatmaslik",
-      "description": "Odatiy bo‘lib, Windhawk vazifalar paneli ishlamay qolganda (tizim beqarorligi yoki boshqa sabab) asboblar to‘plamini avtomatik ko‘rsatadi. Bu oyna Windhawk'dan chiqish yoki xavfsiz rejimga o‘tish imkonini beradi. Shuningdek, uni Ctrl+Win+W tugmalari orqali ham ochish mumkin."
+      "description": "Odatiy bo‘lib, UniWind vazifalar paneli ishlamay qolganda (tizim beqarorligi yoki boshqa sabab) asboblar to‘plamini avtomatik ko‘rsatadi. Bu oyna UniWind'dan chiqish yoki xavfsiz rejimga o‘tish imkonini beradi. Shuningdek, uni Ctrl+Win+W tugmalari orqali ham ochish mumkin."
     },
     "modInitDialogDelay": {
       "title": "Mod initsializatsiyasi oynasining kechikishi",
@@ -249,12 +249,12 @@
     },
     "moreAdvancedSettings": {
       "title": "Boshqa kengaytirilgan sozlamalar",
-      "restartNotice": "Sozlamalarni qo‘llash uchun Windhawk qayta ishga tushiriladi.",
-      "saveButton": "Saqlash va Windhawk'ni qayta ishga tushirish"
+      "restartNotice": "Sozlamalarni qo‘llash uchun UniWind qayta ishga tushiriladi.",
+      "saveButton": "Saqlash va UniWind'ni qayta ishga tushirish"
     },
     "loggingVerbosity": {
-      "appLoggingTitle": "Windhawk jurnallarining batafsilligi",
-      "engineLoggingTitle": "Windhawk dvigateli jurnallarining batafsilligi",
+      "appLoggingTitle": "UniWind jurnallarining batafsilligi",
+      "engineLoggingTitle": "UniWind dvigateli jurnallarining batafsilligi",
       "description": "Jurnallarni DebugView kabi vositalar bilan ko‘rish mumkin.",
       "none": "Yo‘q",
       "error": "Xato",
@@ -262,13 +262,13 @@
     },
     "processList": {
       "titleExclusion": "Jarayonlarni istisno qilish ro‘yxati",
-      "descriptionExclusion": "Windhawk kirmasligi kerak bo‘lgan jarayonlar ro‘yxati. Windhawk ma'lum bir dastur bilan mos kelmagan hollarda foydali. Jarayonni ushbu ro‘yxatga qo‘shish nafaqat sozlashni oldini oladi, balki ushbu jarayon yaratadigan quyi jarayonlarni ham nazorat qilishni to‘xtatadi.",
+      "descriptionExclusion": "UniWind kirmasligi kerak bo‘lgan jarayonlar ro‘yxati. UniWind ma'lum bir dastur bilan mos kelmagan hollarda foydali. Jarayonni ushbu ro‘yxatga qo‘shish nafaqat sozlashni oldini oladi, balki ushbu jarayon yaratadigan quyi jarayonlarni ham nazorat qilishni to‘xtatadi.",
       "descriptionExclusionWiki": "Jarayonlarni istisno qilish va o‘rnatilgan istisno ro‘yxatlari haqida ko‘proq ma'lumot olish uchun <0>hujjatlarga</0> qarang.",
       "excludeCriticalProcesses": "Kritik tizim jarayonlarini istisno qilish",
       "excludeIncompatiblePrograms": "Ma'lum bo‘lgan mos kelmaydigan dasturlarni istisno qilish",
       "excludeGames": "Ma'lum o‘yinlarni istisno qilish",
       "titleInclusion": "Jarayonlarni kiritish ro‘yxati",
-      "descriptionInclusion": "Hatto istisno ro‘yxatida bo‘lsa ham, Windhawk kirishi kerak bo‘lgan jarayonlar ro‘yxati.",
+      "descriptionInclusion": "Hatto istisno ro‘yxatida bo‘lsa ham, UniWind kirishi kerak bo‘lgan jarayonlar ro‘yxati.",
       "inclusionWithoutExclusionNotice": "Jarayonlarni istisno qilish ro‘yxati bo‘sh bo‘lsa, kiritish ro‘yxati ta'sir qilmaydi.",
       "inclusionWithoutTotalExclusionNotice": "Agar siz faqat shu jarayonlardan tashqari hamma narsani chetlab o‘tmoqchi bo‘lsangiz, istisno ro‘yxatiga \"*\" belgisini qo‘yishingiz mumkin.",
       "processListPlaceholder": "Jarayon nomlari/yo‘llari, har bir qatorda bittadan, masalan:",
@@ -276,24 +276,24 @@
     }
   },
   "about": {
-    "title": "Windhawk v{{version}}",
+    "title": "UniWind v{{version}}",
     "beta": "beta",
     "subtitle": "Windows va dasturlar uchun moslashtirish bozori",
     "credit": "Muallif: <0>{{author}}</0>",
     "update": {
       "title": "Yangilanish mavjud",
-      "subtitle": "Eng so‘nggi funksiyalar va tuzatishlarni olish uchun Windhawk'ni yangilang",
+      "subtitle": "Eng so‘nggi funksiyalar va tuzatishlarni olish uchun UniWind'ni yangilang",
       "changelogButton": "O‘zgarishlar jurnali",
       "modal": {
-        "title": "Windhawk yangilanmoqda",
+        "title": "UniWind yangilanmoqda",
         "downloading": "Yangilanish yuklab olinmoqda...",
         "installing": "Yangilanish o‘rnatilmoqda...",
-        "installingNote": "O‘rnatish tugagach, Windhawk avtomatik ravishda qayta ishga tushadi.",
+        "installingNote": "O‘rnatish tugagach, UniWind avtomatik ravishda qayta ishga tushadi.",
         "failed": "Yangilash muvaffaqiyatsiz tugadi"
       }
     },
     "changelog": {
-      "title": "Windhawk'dagi yangiliklar"
+      "title": "UniWind'dagi yangiliklar"
     },
     "links": {
       "title": "Havolalar",
@@ -326,10 +326,10 @@
     "beginCodingButton": "Kodlashni boshlash"
   },
   "safeMode": {
-    "alert": "Windhawk xavfsiz rejimda ishlamoqda, barcha kod kiritish funksiyalari o‘chirilgan.",
+    "alert": "UniWind xavfsiz rejimda ishlamoqda, barcha kod kiritish funksiyalari o‘chirilgan.",
     "offButton": "Xavfsiz rejimni o‘chirish",
-    "offConfirm": "Sozlamalarni qo‘llash uchun Windhawk qayta ishga tushiriladi.",
-    "offConfirmOk": "Windhawk'ni qayta ishga tushirish"
+    "offConfirm": "Sozlamalarni qo‘llash uchun UniWind qayta ishga tushiriladi.",
+    "offConfirmOk": "UniWind'ni qayta ishga tushirish"
   },
   "modPreview": {
     "notCompiled": "Modni ko‘rib chiqishdan oldin u kompilyatsiya qilinishi kerak"
@@ -358,29 +358,29 @@
     "home": {
       "tagline": "Windows va dasturlar uchun moslashtirish bozori",
       "getInvolved": "Ishtirok eting",
-      "joinDiscord": "Discord'dagi Windhawk hamjamiyatiga qo‘shiling",
-      "discussWindhawk": "GitHub Discussions'da Windhawk'ni muhokama qiling",
-      "discussMods": "GitHub Discussions'da Windhawk modlarini muhokama qiling",
+      "joinDiscord": "Discord'dagi UniWind hamjamiyatiga qo‘shiling",
+      "discussWindhawk": "GitHub Discussions'da UniWind'ni muhokama qiling",
+      "discussMods": "GitHub Discussions'da UniWind modlarini muhokama qiling",
       "browseLinks": "Boshqa foydali havolalarni ko‘ring",
       "highlights": "Asosiy xususiyatlar",
       "robust": "Mustahkam",
-      "robustDescription": "Barqarorlik va unumdorlik Windhawk uchun yuqori ustuvorlikdir. U tizimga sezilarli ta'sir ko‘rsatmasdan doimiy ravishda fonda ishlash uchun ishlab chiqilgan.",
+      "robustDescription": "Barqarorlik va unumdorlik UniWind uchun yuqori ustuvorlikdir. U tizimga sezilarli ta'sir ko‘rsatmasdan doimiy ravishda fonda ishlash uchun ishlab chiqilgan.",
       "simple": "Oddiy",
-      "simpleDescription": "Windhawk'dan foydalanish uchun kompyuter eksperti bo‘lish shart emas, undan hamma foydalanishi mumkin. Murakkab modlarni bir necha marta bosish orqali o‘rnatish va qulay parametrlar orqali sozlash mumkin.",
+      "simpleDescription": "UniWind'dan foydalanish uchun kompyuter eksperti bo‘lish shart emas, undan hamma foydalanishi mumkin. Murakkab modlarni bir necha marta bosish orqali o‘rnatish va qulay parametrlar orqali sozlash mumkin.",
       "transparent": "Shaffof",
-      "transparentDescription": "Windhawk taklif qiladigan modlar \"qora qutilar\" emas. Har bir mod manba kodi ko‘rinishida bo‘lib, uni mod aytilgan ishni bajarayotganiga ishonch hosil qilish uchun ko‘rib chiqish mumkin."
+      "transparentDescription": "UniWind taklif qiladigan modlar \"qora qutilar\" emas. Har bir mod manba kodi ko‘rinishida bo‘lib, uni mod aytilgan ishni bajarayotganiga ishonch hosil qilish uchun ko‘rib chiqish mumkin."
     },
     "modDetails": {
-      "getWindhawk": "Ushbu modni o‘rnatish uchun Windhawk'ni yuklab oling"
+      "getWindhawk": "Ushbu modni o‘rnatish uchun UniWind'ni yuklab oling"
     },
     "links": {
       "news": "Yangiliklar",
-      "windhawkNews": "Windhawk yangiliklari - Ramen Software",
-      "windhawkChangelog": "Windhawk o‘zgarishlar jurnali",
+      "windhawkNews": "UniWind yangiliklari - Ramen Software",
+      "windhawkChangelog": "UniWind o‘zgarishlar jurnali",
       "community": "Hamjamiyat",
       "discord": "Discord",
-      "windhawkDiscussions": "Windhawk - GitHub muhokamalari",
-      "modsDiscussions": "Windhawk modlari - GitHub muhokamalari",
+      "windhawkDiscussions": "UniWind - GitHub muhokamalari",
+      "modsDiscussions": "UniWind modlari - GitHub muhokamalari",
       "documentation": "Hujjatlar",
       "creatingNewMod": "Yangi mod yaratish",
       "otherTopics": "Boshqa mavzular",
@@ -389,8 +389,8 @@
       "contactRamenSoftware": "Ramen Software bilan bog‘lanish"
     },
     "download": {
-      "title": "Windhawk'ni yangilash",
-      "newVersionAvailable": "Windhawk'ning yangi versiyasi mavjud",
+      "title": "UniWind'ni yangilash",
+      "newVersionAvailable": "UniWind'ning yangi versiyasi mavjud",
       "whatsNew": "Yangiliklar"
     },
     "footer": {

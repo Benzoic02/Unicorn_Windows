@@ -1166,21 +1166,21 @@ struct StuckPrompt {
 fn stuck_prompt(shell_missing_while_elevated: bool) -> StuckPrompt {
     if shell_missing_while_elevated {
         StuckPrompt {
-            instruction: "Windhawk cannot start while Windows Explorer is not running",
-            content: "Windhawk is running as administrator. Its window is drawn by \
+            instruction: "UniWind cannot start while Windows Explorer is not running",
+            content: "UniWind is running as administrator. Its window is drawn by \
                       WebView2, which in that case starts its browser process through \
                       Windows Explorer, and Explorer is not running - so that process \
-                      is never created and Windhawk cannot finish starting.\n\nStart \
-                      Windows Explorer, then relaunch Windhawk.",
-            action_label: "Relaunch Windhawk",
+                      is never created and UniWind cannot finish starting.\n\nStart \
+                      Windows Explorer, then relaunch UniWind.",
+            action_label: "Relaunch UniWind",
             action_id: ID_RELAUNCH,
         }
     } else {
         StuckPrompt {
-            instruction: "Windhawk is taking longer than usual to start",
-            content: "Windhawk has not finished starting. It may still be coming up, \
+            instruction: "UniWind is taking longer than usual to start",
+            content: "UniWind has not finished starting. It may still be coming up, \
                       or the process may be stuck.\n\nKeep waiting, or end the \
-                      Windhawk process so you can start it again?",
+                      UniWind process so you can start it again?",
             action_label: "Keep waiting",
             action_id: ID_KEEP_WAITING,
         }
@@ -1265,7 +1265,7 @@ unsafe extern "system" fn startup_stuck_prompt_callback(
 fn show_startup_stuck_prompt() -> StuckChoice {
     let prompt = stuck_prompt(shell_missing_while_elevated());
 
-    let title = wide("Windhawk");
+    let title = wide("UniWind");
     let instruction = wide(prompt.instruction);
     let content = wide(prompt.content);
     let action = wide(prompt.action_label);
@@ -1501,7 +1501,7 @@ unsafe extern "system" fn fatal_dialog_callback(
 /// A task dialog needs comctl32 v6, so a failure to show one falls back to the
 /// message box: the last thing that may fail is the report of a failure.
 pub fn show_fatal(instruction: &str, content: &str, diagnostics: Option<&str>) {
-    let title = wide("Windhawk");
+    let title = wide("UniWind");
     let instruction_text = wide(instruction);
     let content_text = wide(content);
     let diagnostics_text = diagnostics.map(wide);
@@ -1579,7 +1579,7 @@ pub fn show_fatal(instruction: &str, content: &str, diagnostics: Option<&str>) {
 /// the user how to clear it themselves.
 pub fn show_stuck_background_instance() {
     show_fatal(
-        "Windhawk is already running, but it never finished starting.",
+        "UniWind is already running, but it never finished starting.",
         "A previous Windhawk UI process is likely stuck. Open Task Manager, end \
          every \"windhawk-ui.exe\" process on the Details tab, then start Windhawk \
          again.",

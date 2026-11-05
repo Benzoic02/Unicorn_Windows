@@ -157,14 +157,14 @@
   "settings": {
     "language": {
       "title": "Nyelv",
-      "description": "Válassza ki a Windhawk megjelenítési nyelvét.",
+      "description": "Válassza ki a UniWind megjelenítési nyelvét.",
       "contribute": "<0>Járuljon hozzá egy új fordítással</0>.",
       "credits": "Angol fordítás: <0>Polauf László</0>.",
       "creditsLink": "mailto:aolauf35@gmail.com"
     },
     "updates": {
       "title": "Frissítések keresése",
-      "description": "Rendszeresen ellenőrzi a Windhawk és a telepített modok új verzióit."
+      "description": "Rendszeresen ellenőrzi a UniWind és a telepített modok új verzióit."
     },
     "devMode": {
       "title": "Fejlesztői mód",
@@ -173,15 +173,15 @@
     "advancedSettings": "Haladó beállítások",
     "hideTrayIcon": {
       "title": "Tálcaikon elrejtése",
-      "description": "A Windhawk bezárásához le kell tiltania ezt az opciót."
+      "description": "A UniWind bezárásához le kell tiltania ezt az opciót."
     },
     "requireElevation": {
-      "title": "UAC emelés szükséges a Windhawk futtatásához",
-      "description": "A Windhawk adminisztrátori jogokat igényel, de egyetlen felhasználós számítógépen bosszantó lehet minden alkalommal megkapni az UAC kérdést, ezért a Windhawk ezt megkerüli. Engedélyezze ezt az opciót, ha szeretné, hogy a Windhawk adminisztrátori jogokkal induljon."
+      "title": "UAC emelés szükséges a UniWind futtatásához",
+      "description": "A UniWind adminisztrátori jogokat igényel, de egyetlen felhasználós számítógépen bosszantó lehet minden alkalommal megkapni az UAC kérdést, ezért a UniWind ezt megkerüli. Engedélyezze ezt az opciót, ha szeretné, hogy a UniWind adminisztrátori jogokkal induljon."
     },
     "dontAutoShowToolkit": {
       "title": "Ne jelenítse meg automatikusan az eszközkészlet párbeszédablakot",
-      "description": "Alapértelmezés szerint a Windhawk automatikusan megjeleníti az eszközkészlet párbeszédablakot, amikor azt észleli, hogy a tálca nem elérhető, akár rendszerinstabilitás, akár más ok miatt."
+      "description": "Alapértelmezés szerint a UniWind automatikusan megjeleníti az eszközkészlet párbeszédablakot, amikor azt észleli, hogy a tálca nem elérhető, akár rendszerinstabilitás, akár más ok miatt."
     },
     "modInitDialogDelay": {
       "title": "Mod inicializálási párbeszédablak késleltetése",
@@ -189,12 +189,12 @@
     },
     "moreAdvancedSettings": {
       "title": "További haladó beállítások",
-      "restartNotice": "A beállítások alkalmazásához a Windhawk újraindul.",
-      "saveButton": "Mentés és Windhawk újraindítása"
+      "restartNotice": "A beállítások alkalmazásához a UniWind újraindul.",
+      "saveButton": "Mentés és UniWind újraindítása"
     },
     "loggingVerbosity": {
-      "appLoggingTitle": "Windhawk naplózási részletesség",
-      "engineLoggingTitle": "Windhawk motor naplózási részletesség",
+      "appLoggingTitle": "UniWind naplózási részletesség",
+      "engineLoggingTitle": "UniWind motor naplózási részletesség",
       "description": "A naplókat meg lehet tekinteni egy olyan eszközzel, mint a DebugView.",
       "none": "Nincs",
       "error": "Hiba",
@@ -202,22 +202,22 @@
     },
     "processList": {
       "titleExclusion": "Folyamat kizárási lista",
-      "descriptionExclusion": "A Windhawk nem fog injektálni az itt megadott folyamatokba.",
+      "descriptionExclusion": "A UniWind nem fog injektálni az itt megadott folyamatokba.",
       "titleInclusion": "Folyamat bevonási lista",
-      "descriptionInclusion": "Lista folyamatokról, amelyekbe a Windhawk injektál, még akkor is, ha azok a kizárási listán vannak.",
+      "descriptionInclusion": "Lista folyamatokról, amelyekbe a UniWind injektál, még akkor is, ha azok a kizárási listán vannak.",
       "inclusionWithoutExclusionNotice": "A folyamat bevonási lista nem működik üres folyamat kizárási listával.",
       "inclusionWithoutTotalExclusionNotice": "Ha azt szeretné, hogy minden folyamat kizárva legyen, kivéve ezeket, állítsa be a „*” értéket a folyamat kizárási listában.",
       "processListPlaceholder": "Folyamat nevek/útvonalak, egy sorban, például:"
     }
   },
   "about": {
-    "title": "Windhawk v{{version}}",
+    "title": "UniWind v{{version}}",
     "beta": "béta",
     "subtitle": "Testreszabási piactér Windowsra és programokra",
     "credit": "Készítette: <0>{{author}}</0>",
     "update": {
       "title": "Frissítés elérhető",
-      "subtitle": "Fontolja meg a Windhawk frissítését az új funkciók és hibajavítások érdekében"
+      "subtitle": "Fontolja meg a UniWind frissítését az új funkciók és hibajavítások érdekében"
     },
     "links": {
       "title": "Linkek",
@@ -250,10 +250,10 @@
     "beginCodingButton": "Kódolás elkezdése"
   },
   "safeMode": {
-    "alert": "A Windhawk biztonságos módban fut, minden kódbefecskendezési funkció ki van kapcsolva.",
+    "alert": "A UniWind biztonságos módban fut, minden kódbefecskendezési funkció ki van kapcsolva.",
     "offButton": "Biztonságos mód kikapcsolása",
-    "offConfirm": "A Windhawk újraindul a beállítások alkalmazásához.",
-    "offConfirmOk": "Windhawk újraindítása"
+    "offConfirm": "A UniWind újraindul a beállítások alkalmazásához.",
+    "offConfirmOk": "UniWind újraindítása"
   },
   "modPreview": {
     "notCompiled": "A modot le kell fordítani, mielőtt előnézetet lehetne készíteni"

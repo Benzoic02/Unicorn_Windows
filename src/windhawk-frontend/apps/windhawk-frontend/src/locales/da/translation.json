@@ -157,14 +157,14 @@
   "settings": {
     "language": {
       "title": "Sprog",
-      "description": "Vælg dit foretrukne visningssprog for Windhawk.",
+      "description": "Vælg dit foretrukne visningssprog for UniWind.",
       "contribute": "<0>Bidrag en ny oversættelse</0>.",
       "credits": "Dansk oversættelse af <0>AlbertCoolGuy</0>.",
       "creditsLink": "https://github.com/AlbertCoolGuy"
     },
     "updates": {
       "title": "Tjek efter opdateringer",
-      "description": "Tjek jævnligt efter nye versioner af Windhawk og af de installerede modifikationer."
+      "description": "Tjek jævnligt efter nye versioner af UniWind og af de installerede modifikationer."
     },
     "devMode": {
       "title": "Udviklertilstand",
@@ -173,15 +173,15 @@
     "advancedSettings": "Avancerede indstillinger",
     "hideTrayIcon": {
       "title": "Skjul systembakkeikon",
-      "description": "Du bliver nødt til at deaktivere denne indstilling for at afslutte Windhawk."
+      "description": "Du bliver nødt til at deaktivere denne indstilling for at afslutte UniWind."
     },
     "requireElevation": {
-      "title": "Kræv UAC-elevation for at køre Windhawk",
-      "description": "Windhawk kræver administratorrettigheder, men for en enkeltbrugercomputer kan det være irriterende at få UAC-prompten hver gang, så Windhawk omgår den. Aktiver denne mulighed for at kræve UAC elevation for at køre Windhawk."
+      "title": "Kræv UAC-elevation for at køre UniWind",
+      "description": "UniWind kræver administratorrettigheder, men for en enkeltbrugercomputer kan det være irriterende at få UAC-prompten hver gang, så UniWind omgår den. Aktiver denne mulighed for at kræve UAC elevation for at køre UniWind."
     },
     "dontAutoShowToolkit": {
       "title": "Vis ikke automatisk værktøjskasse-dialogen",
-      "description": "Som standard viser Windhawk automatisk værktøjskasse-dialogen, når den registrerer, at proceslinjen ikke er tilgængelig, enten på grund af systemets ustabilitet eller af en anden årsag. Værktøjskassedialogen gør det muligt at afslutte Windhawk, skifte til sikker tilstand og foretage andre handlinger. Værktøjskassedialogen kan også vises med Ctrl+Win+W tastaturgenvejen."
+      "description": "Som standard viser UniWind automatisk værktøjskasse-dialogen, når den registrerer, at proceslinjen ikke er tilgængelig, enten på grund af systemets ustabilitet eller af en anden årsag. Værktøjskassedialogen gør det muligt at afslutte UniWind, skifte til sikker tilstand og foretage andre handlinger. Værktøjskassedialogen kan også vises med Ctrl+Win+W tastaturgenvejen."
     },
     "modInitDialogDelay": {
       "title": "Modifikation-initialiseringsdialogforsinkelse",
@@ -189,12 +189,12 @@
     },
     "moreAdvancedSettings": {
       "title": "Flere avancerede indstillinger",
-      "restartNotice": "Windhawk bliver genstartet for at anvende indstillingerne.",
-      "saveButton": "Gem og genstart Windhawk"
+      "restartNotice": "UniWind bliver genstartet for at anvende indstillingerne.",
+      "saveButton": "Gem og genstart UniWind"
     },
     "loggingVerbosity": {
-      "appLoggingTitle": "Windhawk logverbositet",
-      "engineLoggingTitle": "Windhawk-motor logverbositet",
+      "appLoggingTitle": "UniWind logverbositet",
+      "engineLoggingTitle": "UniWind-motor logverbositet",
       "description": "Logs kan blive vist med et værktøj såsom DebugView.",
       "none": "Intet",
       "error": "Fejl",
@@ -202,22 +202,22 @@
     },
     "processList": {
       "titleExclusion": "Procesinklusionsliste",
-      "descriptionExclusion": "En liste over procesnavne/stier, som Windhawk ikke vil injicere i. Kan være nyttigt i tilfælde, hvor Windhawk ikke er kompatibel med et specifikt program. Bemærk, at tilføjelse af en proces til denne liste ikke kun forhindrer Windhawk i at tilpasse den, men også forhindrer Windhawk i at opfange underprocesser, som denne proces opretter. Dette vil forårsage en lille forsinkelse, når Windhawk indlæser mods i sådanne tilfælde.",
+      "descriptionExclusion": "En liste over procesnavne/stier, som UniWind ikke vil injicere i. Kan være nyttigt i tilfælde, hvor UniWind ikke er kompatibel med et specifikt program. Bemærk, at tilføjelse af en proces til denne liste ikke kun forhindrer UniWind i at tilpasse den, men også forhindrer UniWind i at opfange underprocesser, som denne proces opretter. Dette vil forårsage en lille forsinkelse, når UniWind indlæser mods i sådanne tilfælde.",
       "titleInclusion": "Proceseksklusionsliste",
-      "descriptionInclusion": "En liste over procesnavne/stier, som Windhawk vil injicere i, selvom de er på ekskluderingslisten.",
+      "descriptionInclusion": "En liste over procesnavne/stier, som UniWind vil injicere i, selvom de er på ekskluderingslisten.",
       "inclusionWithoutExclusionNotice": "Procesinkluderingslisten har ingen effekt med en tom procesekskluderingsliste.",
       "inclusionWithoutTotalExclusionNotice": "Hvis du havde til hensigt at ekskludere alle processer undtagen disse, kan du indstille \"*\" i procesekskluderingslisten.",
       "processListPlaceholder": "Procesnavne/stier, én pr. linje, for eksempel:"
     }
   },
   "about": {
-    "title": "Windhawk v{{version}}",
+    "title": "UniWind v{{version}}",
     "beta": "beta",
     "subtitle": "Tilpasningsmarkedspladsen for Windows og programmer",
     "credit": "Af <0>{{author}}</0>",
     "update": {
       "title": "En opdatering er tilgængelig",
-      "subtitle": "Overvej at opdatere Windhawk for at få de nyeste funktioner og fejlrettelser"
+      "subtitle": "Overvej at opdatere UniWind for at få de nyeste funktioner og fejlrettelser"
     },
     "links": {
       "title": "Links",
@@ -250,10 +250,10 @@
     "beginCodingButton": "Begynd på at kode"
   },
   "safeMode": {
-    "alert": "Windhawk kører i sikker tilstand, al kodeindsprøjtningsfunktionalitet er slået fra.",
+    "alert": "UniWind kører i sikker tilstand, al kodeindsprøjtningsfunktionalitet er slået fra.",
     "offButton": "Slå sikker tilstand fra",
-    "offConfirm": "Windhawk vil blive genstartet for at anvende indstillingerne.",
-    "offConfirmOk": "Genstart Windhawk"
+    "offConfirm": "UniWind vil blive genstartet for at anvende indstillingerne.",
+    "offConfirmOk": "Genstart UniWind"
   },
   "modPreview": {
     "notCompiled": "Modfikation skal kompileres før den kan forhåndsvises"

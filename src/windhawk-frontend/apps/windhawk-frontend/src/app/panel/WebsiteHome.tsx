@@ -8,9 +8,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, Empty, Tooltip } from 'antd';
 import { useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import styled, { css, keyframes } from 'styled-components';
+import styled, { css } from 'styled-components';
 import useSWR from 'swr';
-import landingMainScreenshot from './assets/windhawk-screenshot-main.png';
 import { ModCard } from './shared';
 import ButtonLink from './shared/ButtonLink';
 
@@ -23,7 +22,7 @@ const LandingSection = styled.div`
 
 const LandingMainText = styled.div`
   font-size: 72px;
-  font-family: Oxanium;
+  font-family: var(--whui-font-family-secondary);
 
   @media (max-width: 576px) {
     font-size: 48px;
@@ -32,6 +31,7 @@ const LandingMainText = styled.div`
 
 const LandingMainDescription = styled.div`
   font-size: 24px;
+  font-family: var(--whui-font-family-secondary);
   text-align: center;
 
   @media (max-width: 576px) {
@@ -75,21 +75,6 @@ const GetInvolvedDescription = styled.span`
   line-height: 1.15;
 `;
 
-const MainScreenshotImageAnimation = keyframes`
-  from {
-  }
-
-  to {
-    filter: drop-shadow(0 0 4px #fff) drop-shadow(0 0 5px var(--whui-primary)) drop-shadow(0 0 8px var(--whui-primary)) brightness(1.1);
-  }
-`;
-
-const MainScreenshotImage = styled.img`
-  &:hover {
-    animation: ${MainScreenshotImageAnimation} 2s ease-in-out infinite alternate;
-  }
-`;
-
 const SectionText = styled.h2`
   margin-top: 40px;
 `;
@@ -117,6 +102,7 @@ const HighlightsItemTitle = styled.h3`
 
 const HighlightsItemText = styled.div`
   color: var(--whui-text-muted);
+  font-family: var(--whui-font-family-secondary);
 `;
 
 const ModsContainer = styled.div<{ $extraBottomPadding?: boolean }>`
@@ -216,7 +202,7 @@ function WebsiteHome({ ContentWrapper }: Props) {
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
-    document.title = 'Windhawk';
+    document.title = 'UniWind';
   }, []);
 
   // Fetch catalog from web with language-specific fallback
@@ -250,7 +236,7 @@ function WebsiteHome({ ContentWrapper }: Props) {
     <ContentWrapper>
       <ModsContainer>
         <LandingSection>
-          <LandingMainText>Windhawk</LandingMainText>
+          <LandingMainText>UniWind</LandingMainText>
           <LandingMainDescription>
             {t('website.home.tagline')}
           </LandingMainDescription>
@@ -285,7 +271,6 @@ function WebsiteHome({ ContentWrapper }: Props) {
               </Button>
             </Tooltip>
           </LandingMainActions>
-          <MainScreenshotImage src={landingMainScreenshot} alt='Windhawk screenshot' />
         </LandingSection>
         <SectionText>
           <SectionIcon icon={faRocket} /> {t('website.home.highlights')}

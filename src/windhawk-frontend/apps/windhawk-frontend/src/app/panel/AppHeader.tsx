@@ -39,7 +39,7 @@ const HeaderLogo = styled.div`
   margin-inline-end: auto;
   font-size: 40px;
   white-space: nowrap;
-  font-family: Oxanium;
+  font-family: var(--whui-font-family-secondary);
   user-select: none;
   color: var(--whui-logo-color);
 `;
@@ -50,8 +50,8 @@ const HeaderLogo = styled.div`
 // An <img> can't inherit `color`, so it would stay a fixed white.
 const LogoMark = styled.span`
   display: inline-block;
-  width: 80px;
-  height: 80px;
+  width: 48px;
+  height: 48px;
   vertical-align: middle;
   margin-inline-end: 6px;
   background-color: currentColor;
@@ -176,7 +176,7 @@ function AppHeaderHosted() {
     <Header data-testid="app-header">
       <HeaderLogo>
         <HeaderLogoButton type="button" onClick={() => navigate('/')}>
-          <LogoMark aria-hidden /> Windhawk
+          <LogoMark aria-hidden /> UniWind
         </HeaderLogoButton>
       </HeaderLogo>
       <HeaderButtonsWrapper>
@@ -254,14 +254,14 @@ function AppHeaderBrowser() {
         {location.pathname === '/' ? (
           <>
             <HeaderLogoLink to="/">
-              <LogoMark role="img" aria-label="Windhawk" />
+              <LogoMark role="img" aria-label="UniWind" />
             </HeaderLogoLink>
             {/* A hidden text that serves as a layout placeholder */}
-            <LogoTextHidden> Windhawk</LogoTextHidden>
+            <LogoTextHidden> UniWind</LogoTextHidden>
           </>
         ) : (
           <HeaderLogoLink to="/">
-            <LogoMark aria-hidden /> Windhawk
+            <LogoMark aria-hidden /> UniWind
           </HeaderLogoLink>
         )}
       </HeaderLogo>

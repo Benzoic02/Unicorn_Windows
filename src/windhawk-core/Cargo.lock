@@ -4616,6 +4616,7 @@ name = "windhawk-ui"
 version = "2.0.0-alpha.8"
 dependencies = [
  "jsonc-parser",
+ "libloading",
  "log",
  "serde",
  "serde_json",

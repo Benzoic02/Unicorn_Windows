@@ -36,7 +36,7 @@ function cssColorToHex(color: string): string | null {
 export function applyMonacoAppTheme(themeKind: ResolvedTheme) {
   const background =
     cssColorToHex(getComputedStyle(document.body).backgroundColor) ??
-    (themeKind === 'light' ? '#f5f5f5' : '#1e1e1e');
+    (themeKind === 'light' ? '#f5f5f5' : '#161616');
   monaco.editor.defineTheme(MONACO_APP_THEME, {
     base: themeKind === 'light' ? 'vs' : 'vs-dark',
     inherit: true,

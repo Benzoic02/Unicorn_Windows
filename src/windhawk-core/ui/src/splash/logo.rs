@@ -1,18 +1,18 @@
-//! The splash logo's geometry: the Windhawk mark read out of the SVG asset
-//! (`icons/main-icon-no-background.svg`, a copy of the art folder's file) as
-//! resolution-independent path segments, plus the transform that centers it in a
-//! window. The painter turns the segments into a GDI+ path; everything here is
-//! pure, so the parsing and the placement are unit-testable without a window.
+//! The splash logo's geometry: the mark read out of the SVG asset
+//! (`icons/main-icon-no-background.svg`) as resolution-independent path
+//! segments, plus the transform that centers it in a window. The painter turns
+//! the segments into a GDI+ path; everything here is pure, so the parsing and
+//! the placement are unit-testable without a window.
 //!
 //! Only the path-data subset this asset uses is understood - moveto, lineto,
-//! curveto, smooth curveto and closepath, absolute and relative. The file is a
-//! fixed asset of this crate rather than arbitrary input, so anything else fails
-//! the parse outright (the splash then paints the themed background alone)
-//! instead of guessing at a shape.
+//! vertical lineto, curveto, smooth curveto and closepath, absolute and
+//! relative. The file is a fixed asset of this crate rather than arbitrary
+//! input, so anything else fails the parse outright (the splash then paints
+//! the themed background alone) instead of guessing at a shape.
 
 /// The square the mark is fitted into, in logical (DPI-independent) pixels: it
-/// keeps its aspect ratio inside this box, so a wide mark spans the full width and
-/// leaves room above and below.
+/// keeps its aspect ratio inside this box, so the mark's longest dimension spans
+/// the box and its shorter dimension leaves room around it.
 pub const LOGO_BOX: f32 = 250.0;
 
 /// The most of a small window the box may take, so the mark still reads as a mark
@@ -179,6 +179,15 @@ fn parse_path_data(data: &str, segments: &mut Vec<Segment>) -> Option<()> {
                 segments.push(Segment::Line(point));
                 current = point;
             }
+            b'V' => {
+                let y = next_number(bytes, &mut at)?;
+                let point = Point {
+                    x: current.x,
+                    y: if relative { current.y + y } else { y },
+                };
+                segments.push(Segment::Line(point));
+                current = point;
+            }
             b'C' => {
                 let control1 = next_point(bytes, &mut at, current, relative)?;
                 let control2 = next_point(bytes, &mut at, current, relative)?;
@@ -212,8 +221,8 @@ fn parse_path_data(data: &str, segments: &mut Vec<Segment>) -> Option<()> {
                 // is, rather than a closepath that consumes nothing and loops.
                 command = 0;
             }
-            // Every other SVG command (the quadratic curves, the arcs, the
-            // horizontal/vertical linetos): not in this asset, so not guessed at.
+            // Every other SVG command (the quadratic curves, arcs, and
+            // horizontal linetos): not in this asset, so not guessed at.
             _ => return None,
         }
         previous_control = curve_control;
@@ -471,17 +480,33 @@ mod tests {
         assert!((placed.scale * 100.0 - 180.0).abs() < 0.01, "{placed:?}");
     }
 
+    #[test]
+    fn parses_absolute_and_relative_vertical_linetos() {
+        let logo =
+            Logo::parse(r#"<svg><path d="M0,0 v10 V30 l10,0 Z"/></svg>"#).expect("parsed");
+
+        assert_eq!(
+            logo.segments(),
+            &[
+                Segment::Move(Point { x: 0.0, y: 0.0 }),
+                Segment::Line(Point { x: 0.0, y: 10.0 }),
+                Segment::Line(Point { x: 0.0, y: 30.0 }),
+                Segment::Line(Point { x: 10.0, y: 30.0 }),
+                Segment::Close,
+            ]
+        );
+    }
+
     // The shipped asset must parse, or the splash would show a bare background.
     #[test]
-    fn the_shipped_logo_parses_and_is_wider_than_it_is_tall() {
+    fn the_shipped_logo_parses_and_is_taller_than_it_is_wide() {
         let logo = Logo::parse(super::super::LOGO_SVG).expect("the shipped logo parses");
         assert!(logo.segments().len() > 20);
 
         let placed = logo.placement(1000.0, 1000.0, LOGO_BOX);
-        // The mark is a wide shape, so its width is what the box binds: it spans
-        // the full box across and leaves room above and below.
-        assert!((placed.scale * logo.bounds.width() - LOGO_BOX).abs() < 0.01);
-        assert!(placed.scale * logo.bounds.height() < LOGO_BOX);
-        assert!(logo.bounds.width() > logo.bounds.height());
+        // The mark is taller than it is wide, so its height is what the box binds.
+        assert!((placed.scale * logo.bounds.height() - LOGO_BOX).abs() < 0.01);
+        assert!(placed.scale * logo.bounds.width() < LOGO_BOX);
+        assert!(logo.bounds.height() > logo.bounds.width());
     }
 }

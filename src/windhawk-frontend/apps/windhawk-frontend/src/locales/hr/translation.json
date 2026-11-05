@@ -124,7 +124,7 @@
       },
       "patternsMatchCriticalSystemProcesses": {
         "title": "Uvažavaj obrasce za kritične procese sustava",
-        "description": "Po zadanom, Windhawk učitava dodatke u kritične procese sustava samo ako su izravno navedeni (npr. <0>critical.exe</0>), a ne putem uzoraka (<0>*</0> ili <0>*.exe</0>). Za više detalja o kritičnim procesima sustava, pogledajte <1>dokumentaciju</1>."
+        "description": "Po zadanom, UniWind učitava dodatke u kritične procese sustava samo ako su izravno navedeni (npr. <0>critical.exe</0>), a ne putem uzoraka (<0>*</0> ili <0>*.exe</0>). Za više detalja o kritičnim procesima sustava, pogledajte <1>dokumentaciju</1>."
       }
     },
     "changes": {
@@ -164,14 +164,14 @@
   "settings": {
     "language": {
       "title": "Jezik",
-      "description": "Odaberite željeni jezik sučelja za Windhawk.",
+      "description": "Odaberite željeni jezik sučelja za UniWind.",
       "contribute": "<0>Doprinesite novom prijevodu</0>.",
       "credits": "Engleski prijevod: <0>Davor Kustec</0>.",
       "creditsLink": "mailto:dkustec@gmail.com"
     },
     "updates": {
       "title": "Provjera ažuriranja",
-      "description": "Povremeno provjerava dostupnost novih verzija Windhawka i instaliranih dodataka."
+      "description": "Povremeno provjerava dostupnost novih verzija UniWinda i instaliranih dodataka."
     },
     "devMode": {
       "title": "Način za razvojne programere",
@@ -180,15 +180,15 @@
     "advancedSettings": "Napredne postavke",
     "hideTrayIcon": {
       "title": "Sakrij ikonu u sistemskoj traci",
-      "description": "Morat ćete isključiti ovu opciju ako želite izaći iz Windhawka."
+      "description": "Morat ćete isključiti ovu opciju ako želite izaći iz UniWinda."
     },
     "requireElevation": {
-      "title": "Zahtijevaj administratorska prava za pokretanje Windhawka",
-      "description": "Windhawku su potrebna administratorska prava, no za jednokorisničko računalo stalni UAC upiti mogu biti zamorni, pa se Windhawk podrazumijevano pokreće bez njih. Omogućite ovu opciju ako želite da Windhawk svaki put traži administratorska prava."
+      "title": "Zahtijevaj administratorska prava za pokretanje UniWinda",
+      "description": "UniWindu su potrebna administratorska prava, no za jednokorisničko računalo stalni UAC upiti mogu biti zamorni, pa se UniWind podrazumijevano pokreće bez njih. Omogućite ovu opciju ako želite da UniWind svaki put traži administratorska prava."
     },
     "dontAutoShowToolkit": {
       "title": "Ne prikazuj automatski alatni komplet",
-      "description": "Windhawk prema zadanim postavkama automatski prikazuje dijalog alatnog kompleta kad otkrije da programska traka nije dostupna, primjerice zbog nestabilnosti sustava. Alatni komplet omogućuje izlazak iz Windhawka, prijelaz u sigurni način rada i druge radnje. Možete ga prikazati i pomoću prečaca Ctrl+Win+W."
+      "description": "UniWind prema zadanim postavkama automatski prikazuje dijalog alatnog kompleta kad otkrije da programska traka nije dostupna, primjerice zbog nestabilnosti sustava. Alatni komplet omogućuje izlazak iz UniWinda, prijelaz u sigurni način rada i druge radnje. Možete ga prikazati i pomoću prečaca Ctrl+Win+W."
     },
     "modInitDialogDelay": {
       "title": "Kašnjenje dijaloga pri inicijalizaciji dodataka",
@@ -196,12 +196,12 @@
     },
     "moreAdvancedSettings": {
       "title": "Još naprednih postavki",
-      "restartNotice": "Windhawk će se ponovno pokrenuti kako bi primijenio postavke.",
-      "saveButton": "Spremi i ponovno pokreni Windhawk"
+      "restartNotice": "UniWind će se ponovno pokrenuti kako bi primijenio postavke.",
+      "saveButton": "Spremi i ponovno pokreni UniWind"
     },
     "loggingVerbosity": {
-      "appLoggingTitle": "Razina zapisivanja u Windhawku",
-      "engineLoggingTitle": "Razina zapisivanja u Windhawk pogonu",
+      "appLoggingTitle": "Razina zapisivanja u UniWindu",
+      "engineLoggingTitle": "Razina zapisivanja u UniWind pogonu",
       "description": "Zapisnike možete pregledavati u alatima kao što je DebugView.",
       "none": "Isključeno",
       "error": "Pogreške",
@@ -209,13 +209,13 @@
     },
     "processList": {
       "titleExclusion": "Popis procesa za isključivanje",
-      "descriptionExclusion": "Popis naziva/putanja procesa u koje se Windhawk neće ubrizgavati. To može biti korisno ako Windhawk nije kompatibilan s određenim programom. Dodavanje procesa ovdje onemogućuje prilagodbu tog procesa i sprječava presretanje child procesa koje taj proces pokreće, što može uzrokovati malo kašnjenje pri učitavanju dodataka.",
+      "descriptionExclusion": "Popis naziva/putanja procesa u koje se UniWind neće ubrizgavati. To može biti korisno ako UniWind nije kompatibilan s određenim programom. Dodavanje procesa ovdje onemogućuje prilagodbu tog procesa i sprječava presretanje child procesa koje taj proces pokreće, što može uzrokovati malo kašnjenje pri učitavanju dodataka.",
       "descriptionExclusionWiki": "Više informacija o isključivanju procesa i ugrađenim popisima za isključivanje potražite u <0>dokumentaciji</0>.",
       "excludeCriticalProcesses": "Isključi kritične procese sustava",
       "excludeIncompatiblePrograms": "Isključi poznate nekompatibilne programe",
       "excludeGames": "Isključi dobro poznate igre",
       "titleInclusion": "Popis procesa za uključivanje",
-      "descriptionInclusion": "Popis naziva/putanja procesa u koje će se Windhawk ubrizgavati, čak i ako su na popisu za isključivanje.",
+      "descriptionInclusion": "Popis naziva/putanja procesa u koje će se UniWind ubrizgavati, čak i ako su na popisu za isključivanje.",
       "inclusionWithoutExclusionNotice": "Popis za uključivanje procesa nema učinka dok je popis za isključivanje prazan.",
       "inclusionWithoutTotalExclusionNotice": "Ako želite isključiti sve procese osim ovih, dodajte \"*\" u popis za isključivanje.",
       "processListPlaceholder": "Nazivi/putanje procesa, jedan po retku, primjerice:",
@@ -223,13 +223,13 @@
     }
   },
   "about": {
-    "title": "Windhawk v{{version}}",
+    "title": "UniWind v{{version}}",
     "beta": "beta",
     "subtitle": "Tržište prilagodbi za Windows i programe",
     "credit": "Autor: <0>{{author}}</0>",
     "update": {
       "title": "Dostupno je ažuriranje",
-      "subtitle": "Preporučuje se ažuriranje Windhawka radi najnovijih značajki i ispravki"
+      "subtitle": "Preporučuje se ažuriranje UniWinda radi najnovijih značajki i ispravki"
     },
     "links": {
       "title": "Poveznice",
@@ -262,10 +262,10 @@
     "beginCodingButton": "Započni s kodiranjem"
   },
   "safeMode": {
-    "alert": "Windhawk radi u sigurnom načinu rada i svaka je funkcionalnost presretanja koda isključena.",
+    "alert": "UniWind radi u sigurnom načinu rada i svaka je funkcionalnost presretanja koda isključena.",
     "offButton": "Isključi sigurni način rada",
-    "offConfirm": "Windhawk će se ponovno pokrenuti kako bi primijenio postavke.",
-    "offConfirmOk": "Ponovno pokreni Windhawk"
+    "offConfirm": "UniWind će se ponovno pokrenuti kako bi primijenio postavke.",
+    "offConfirmOk": "Ponovno pokreni UniWind"
   },
   "modPreview": {
     "notCompiled": "Dodatak je potrebno kompilirati prije pregleda"

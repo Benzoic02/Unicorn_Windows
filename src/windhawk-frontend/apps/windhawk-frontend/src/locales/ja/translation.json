@@ -149,7 +149,7 @@
       },
       "patternsMatchCriticalSystemProcesses": {
         "title": "重要なシステムプロセスの内包リストパターンを考慮",
-        "description": "説明: 既定では Windhawk はプロセスのパターンなし (例: <0>*</0> または <0>*.exe</0> ではなく <0>critical.exe</0>) で内包されている場合でのみ、重要なシステムプロセスに Mod を読み込みます。重要なシステムプロセスの詳細については<1>ドキュメント</1>を参照してください。"
+        "description": "説明: 既定では UniWind はプロセスのパターンなし (例: <0>*</0> または <0>*.exe</0> ではなく <0>critical.exe</0>) で内包されている場合でのみ、重要なシステムプロセスに Mod を読み込みます。重要なシステムプロセスの詳細については<1>ドキュメント</1>を参照してください。"
       }
     },
     "changes": {
@@ -211,14 +211,14 @@
   "settings": {
     "language": {
       "title": "言語",
-      "description": "Windhawk の表示言語を選択してください。",
-      "contribute": "Windhawk の<0>翻訳に貢献</0>する。",
+      "description": "UniWind の表示言語を選択してください。",
+      "contribute": "UniWind の<0>翻訳に貢献</0>する。",
       "credits": "lmncaj と Keita Kunishi と Tatsuya Takahashi と <0>Re*Index.(ot_inc)</0> によって日本語訳されました。",
       "creditsLink": "https://reindex-ot.github.io/"
     },
     "updates": {
       "title": "更新を確認",
-      "description": "Windhawk とインストールされている Mod の新しいバージョンを定期的に確認します。"
+      "description": "UniWind とインストールされている Mod の新しいバージョンを定期的に確認します。"
     },
     "devMode": {
       "title": "開発者モード",
@@ -227,19 +227,19 @@
     "advancedSettings": "高度な設定",
     "hideTrayIcon": {
       "title": "トレイアイコンを隠す",
-      "description": "Windhawk を終了するには、このオプションを無効化する必要があります。"
+      "description": "UniWind を終了するには、このオプションを無効化する必要があります。"
     },
     "alwaysCompileModsLocally": {
       "title": "常にローカルで Mod をコンパイルする",
-      "description": "既定では Windhawk が Windhawk のサーバーからプリコンパイル済みの Mod バイナリをダウンロードします (利用可能な場合)。このオプションを有効化すると常にローカルで Mod をコンパイルします。"
+      "description": "既定では UniWind が UniWind のサーバーからプリコンパイル済みの Mod バイナリをダウンロードします (利用可能な場合)。このオプションを有効化すると常にローカルで Mod をコンパイルします。"
     },
     "requireElevation": {
-      "title": "Windhawk の実行時に UAC の昇格を要求",
-      "description": "Windhawk の実行には管理者権限が必要ですが、シングルユーザーコンピューターの環境で毎回 UAC のプロンプトが表示されるのは煩わしいため、Windhawk はこれを回避しています。Windhawk の実行に UAC の昇格を要求させるにはこのオプションを有効化してください。"
+      "title": "UniWind の実行時に UAC の昇格を要求",
+      "description": "UniWind の実行には管理者権限が必要ですが、シングルユーザーコンピューターの環境で毎回 UAC のプロンプトが表示されるのは煩わしいため、UniWind はこれを回避しています。UniWind の実行に UAC の昇格を要求させるにはこのオプションを有効化してください。"
     },
     "dontAutoShowToolkit": {
       "title": "ツールキットダイアログを自動で表示しない",
-      "description": "既定では、システムが不安定な状態やその他の理由でタスクバーにアクセスできない状態を検出すると、Windhawk は自動的にツールキットダイアログを表示します。ツールキットダイアログは、「Windhawk の終了」「セーフモードの切り替え」「その他の操作」を行なうことができます。ツールキットダイアログは、Ctrl+Win+W のキーボードショートカットでも表示できます。"
+      "description": "既定では、システムが不安定な状態やその他の理由でタスクバーにアクセスできない状態を検出すると、UniWind は自動的にツールキットダイアログを表示します。ツールキットダイアログは、「UniWind の終了」「セーフモードの切り替え」「その他の操作」を行なうことができます。ツールキットダイアログは、Ctrl+Win+W のキーボードショートカットでも表示できます。"
     },
     "modInitDialogDelay": {
       "title": "Mod 初期化ダイアログの遅延",
@@ -247,12 +247,12 @@
     },
     "moreAdvancedSettings": {
       "title": "その他の高度な設定",
-      "restartNotice": "Windhawk を再起動すると設定が適用されます。",
-      "saveButton": "保存して Windhawk を再起動"
+      "restartNotice": "UniWind を再起動すると設定が適用されます。",
+      "saveButton": "保存して UniWind を再起動"
     },
     "loggingVerbosity": {
-      "appLoggingTitle": "Windhawk ログの冗長性",
-      "engineLoggingTitle": "Windhawk エンジンのログの冗長性",
+      "appLoggingTitle": "UniWind ログの冗長性",
+      "engineLoggingTitle": "UniWind エンジンのログの冗長性",
       "description": "ログはデバッグビューなどのツールで確認することができます。",
       "none": "なし",
       "error": "エラー",
@@ -260,13 +260,13 @@
     },
     "processList": {
       "titleExclusion": "プロセス除外リスト",
-      "descriptionExclusion": "Windhawk がインジェクションをしないプロセスとパスのリストです。Windhawk が特定のプログラムと互換性がない場合に役立ちます。このリストにプロセスを追加すると、Windhawk がそのプロセスをカスタマイズしなくなるだけでなくそのプロセスが作成する、子プロセスを Windhawk が傍受できなくなることに注意してください。場合によっては Windhawk の Mod の読み込みに若干の遅延が発生します。",
+      "descriptionExclusion": "UniWind がインジェクションをしないプロセスとパスのリストです。UniWind が特定のプログラムと互換性がない場合に役立ちます。このリストにプロセスを追加すると、UniWind がそのプロセスをカスタマイズしなくなるだけでなくそのプロセスが作成する、子プロセスを UniWind が傍受できなくなることに注意してください。場合によっては UniWind の Mod の読み込みに若干の遅延が発生します。",
       "descriptionExclusionWiki": "プロセスの除外と内蔵のプロセス除外リストの詳細については、<0>ドキュメント</0>を参照してください。",
       "excludeCriticalProcesses": "重要なシステムプロセスを除外",
       "excludeIncompatiblePrograms": "互換性のない既知のプログラムを除外",
       "excludeGames": "有名なゲームを除外",
       "titleInclusion": "プロセス包含リスト",
-      "descriptionInclusion": "除外リストに含んでいても Windhawk がインジェクションをするプロセス名とパスのリスト",
+      "descriptionInclusion": "除外リストに含んでいても UniWind がインジェクションをするプロセス名とパスのリスト",
       "inclusionWithoutExclusionNotice": "プロセス除外リストが空の場合、プロセス対象リストには効果がありません。",
       "inclusionWithoutTotalExclusionNotice": "これら以外のすべてのプロセスを除外する場合は、プロセス除外リストに｢*(ワイルドカード)｣を設定できます。",
       "processListPlaceholder": "プロセス名またはパス (1 行に 1 つずつ):",
@@ -274,24 +274,24 @@
     }
   },
   "about": {
-    "title": "Windhawk v{{version}}",
+    "title": "UniWind v{{version}}",
     "beta": "Beta",
     "subtitle": "Windows プログラムのカスタマイズマーケットプレイス",
     "credit": "作者: <0>{{author}}</0>",
     "update": {
       "title": "更新が利用可能です",
-      "subtitle": "最新の機能を使用、バグの修正を適用するために Windhawk を更新することをご検討ください。",
+      "subtitle": "最新の機能を使用、バグの修正を適用するために UniWind を更新することをご検討ください。",
       "changelogButton": "更新履歴",
       "modal": {
-        "title": "Windhawk を更新中",
+        "title": "UniWind を更新中",
         "downloading": "更新をダウンロード中...",
         "installing": "更新をインストール中...",
-        "installingNote": "インストールの完了後に Windhawk は自動的に再起動します。",
+        "installingNote": "インストールの完了後に UniWind は自動的に再起動します。",
         "failed": "更新に失敗しました"
       }
     },
     "changelog": {
-      "title": "Windhawk の新着情報"
+      "title": "UniWind の新着情報"
     },
     "links": {
       "title": "リンク",
@@ -324,10 +324,10 @@
     "beginCodingButton": "コーディングを開始"
   },
   "safeMode": {
-    "alert": "現在の Windhawk はセーフモードで動作しています。コードインジェクション機能はすべて停止しています。",
+    "alert": "現在の UniWind はセーフモードで動作しています。コードインジェクション機能はすべて停止しています。",
     "offButton": "セーフモードを終了",
-    "offConfirm": "Windhawk が再起動され、設定が適用されます。",
-    "offConfirmOk": "Windhawk を再起動"
+    "offConfirm": "UniWind が再起動され、設定が適用されます。",
+    "offConfirmOk": "UniWind を再起動"
   },
   "modPreview": {
     "notCompiled": "Mod はプレビューをする前にコンパイルする必要があります"
@@ -356,29 +356,29 @@
     "home": {
       "tagline": "Windows プログラムのカスタマイズマーケットプレイス",
       "getInvolved": "コミュニティに参加",
-      "joinDiscord": "Discord で Windhawk コミュニティに参加する",
-      "discussWindhawk": "GitHub Discussions で Windhawk について話し合う",
-      "discussMods": "GitHub Discussions で Windhawk Mod について話し合う",
+      "joinDiscord": "Discord で UniWind コミュニティに参加する",
+      "discussWindhawk": "GitHub Discussions で UniWind について話し合う",
+      "discussMods": "GitHub Discussions で UniWind Mod について話し合う",
       "browseLinks": "その他の有用なリンクを見る",
       "highlights": "注目の機能",
       "robust": "堅牢",
-      "robustDescription": "Windhawk は安定性とパフォーマンスを非常に重視しています。システムに目立った影響を与えることなく、常にバックグラウンドで動作するように設計されています。",
+      "robustDescription": "UniWind は安定性とパフォーマンスを非常に重視しています。システムに目立った影響を与えることなく、常にバックグラウンドで動作するように設計されています。",
       "simple": "シンプル",
-      "simpleDescription": "Windhawk を使うのにコンピュータの専門知識は必要ありません。誰でも使うことができます。洗練された Mod を数回のクリックでインストールでき、ユーザーフレンドリーなオプションでカスタマイズできます。",
+      "simpleDescription": "UniWind を使うのにコンピュータの専門知識は必要ありません。誰でも使うことができます。洗練された Mod を数回のクリックでインストールでき、ユーザーフレンドリーなオプションでカスタマイズできます。",
       "transparent": "透明性",
-      "transparentDescription": "Windhawk が提供する Mod はブラックボックスではありません。各 Mod はソースコードの形式で提供されるため、Mod が記載通りに動作するかどうかを確認することができます。"
+      "transparentDescription": "UniWind が提供する Mod はブラックボックスではありません。各 Mod はソースコードの形式で提供されるため、Mod が記載通りに動作するかどうかを確認することができます。"
     },
     "modDetails": {
-      "getWindhawk": "この Mod をインストールするには Windhawk を入手してください"
+      "getWindhawk": "この Mod をインストールするには UniWind を入手してください"
     },
     "links": {
       "news": "ニュース",
-      "windhawkNews": "Windhawk ニュース - Ramen Software",
-      "windhawkChangelog": "Windhawk の更新履歴",
+      "windhawkNews": "UniWind ニュース - Ramen Software",
+      "windhawkChangelog": "UniWind の更新履歴",
       "community": "コミュニティ",
       "discord": "Discord",
-      "windhawkDiscussions": "Windhawk - GitHub Discussions",
-      "modsDiscussions": "Windhawk Mod - GitHub Discussions",
+      "windhawkDiscussions": "UniWind - GitHub Discussions",
+      "modsDiscussions": "UniWind Mod - GitHub Discussions",
       "documentation": "ドキュメント",
       "creatingNewMod": "新規 Mod の作成",
       "otherTopics": "その他のトピック",
@@ -387,8 +387,8 @@
       "contactRamenSoftware": "Ramen Software へのお問い合わせ"
     },
     "download": {
-      "title": "Windhawk を更新",
-      "newVersionAvailable": "Windhawk の新しいバージョンが利用可能です",
+      "title": "UniWind を更新",
+      "newVersionAvailable": "UniWind の新しいバージョンが利用可能です",
       "whatsNew": "新着情報"
     },
     "footer": {

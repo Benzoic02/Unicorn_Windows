@@ -35,7 +35,7 @@ function Links() {
   const { t } = useTranslation();
 
   useEffect(() => {
-    document.title = `${t('website.appHeader.links')} - Windhawk`;
+    document.title = `${t('website.appHeader.links')} - UniWind`;
   }, [t]);
 
   return (

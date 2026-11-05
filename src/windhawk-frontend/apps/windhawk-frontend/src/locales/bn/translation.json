@@ -163,7 +163,7 @@
       },
       "patternsMatchCriticalSystemProcesses": {
         "title": "গুরুত্বপূর্ণ সিস্টেম প্রসেসের ক্ষেত্রে ইনক্লুশন প্যাটার্ন বিবেচনা করুন",
-        "description": "ডিফল্টভাবে, Windhawk কেবল তখনই ক্রিটিক্যাল সিস্টেম প্রসেসে মড লোড করে যদি কোনো প্যাটার্ন ছাড়া প্রসেস যুক্ত থাকে, যেমন: <0>critical.exe</0> (কিন্তু <0>*</0> বা <0>*.exe</0> নয়)। ক্রিটিক্যাল প্রসেস সম্পর্কে বিস্তারিত জানতে <1>ডকুমেন্টেশন দেখুন</1>।"
+        "description": "ডিফল্টভাবে, UniWind কেবল তখনই ক্রিটিক্যাল সিস্টেম প্রসেসে মড লোড করে যদি কোনো প্যাটার্ন ছাড়া প্রসেস যুক্ত থাকে, যেমন: <0>critical.exe</0> (কিন্তু <0>*</0> বা <0>*.exe</0> নয়)। ক্রিটিক্যাল প্রসেস সম্পর্কে বিস্তারিত জানতে <1>ডকুমেন্টেশন দেখুন</1>।"
       }
     },
     "changes": {
@@ -226,14 +226,14 @@
   "settings": {
     "language": {
       "title": "ভাষা (Language)",
-      "description": "Windhawk-এর জন্য আপনার পছন্দনীয় ভাষা নির্বাচন করুন।",
+      "description": "UniWind-এর জন্য আপনার পছন্দনীয় ভাষা নির্বাচন করুন।",
       "contribute": "<0>নতুন অনুবাদ জমা দিন</0>।",
       "credits": "বাংলা অনুবাদ করেছেন Bihon Paul Orin।",
       "creditsLink": "-"
     },
     "updates": {
       "title": "আপডেট চেক করুন",
-      "description": "Windhawk এবং ইনস্টল করা মডগুলির নতুন ভার্সনের জন্য স্বয়ংক্রিয়ভাবে চেক করুন এবং নোটিফিকেশন দিন।"
+      "description": "UniWind এবং ইনস্টল করা মডগুলির নতুন ভার্সনের জন্য স্বয়ংক্রিয়ভাবে চেক করুন এবং নোটিফিকেশন দিন।"
     },
     "devMode": {
       "title": "ডেভেলপার মোড",
@@ -242,19 +242,19 @@
     "advancedSettings": "অ্যাডভান্সড সেটিংস",
     "hideTrayIcon": {
       "title": "ট্রে আইকন লুকান",
-      "description": "Windhawk থেকে প্রস্থান করতে আপনাকে আগে এই অপশনটি ডিজেবল করতে হবে।"
+      "description": "UniWind থেকে প্রস্থান করতে আপনাকে আগে এই অপশনটি ডিজেবল করতে হবে।"
     },
     "alwaysCompileModsLocally": {
       "title": "সবসময় লোকালি মড কম্পাইল করুন",
-      "description": "ডিফল্টভাবে, Windhawk সার্ভারে প্রস্তুত থাকা কম্পাইলকৃত মড ডাউনলোড করে। লোকালি সবসময় কম্পাইল করতে এটি চালুর রাখুন।"
+      "description": "ডিফল্টভাবে, UniWind সার্ভারে প্রস্তুত থাকা কম্পাইলকৃত মড ডাউনলোড করে। লোকালি সবসময় কম্পাইল করতে এটি চালুর রাখুন।"
     },
     "requireElevation": {
-      "title": "Windhawk চালানোর জন্য UAC অ্যাডমিন অনুমতির প্রয়োজন",
-      "description": "Windhawk-এর জন্য অ্যাডমিনিস্ট্রেটর রাইটস প্রয়োজন, কিন্তু প্রতিবার UAC প্রম্পট এড়াতে এটি ডিফল্টভাবে বাইপাস করা হয়। সবসময় প্রম্পট চাইলে এটি ইনেবল করুন।"
+      "title": "UniWind চালানোর জন্য UAC অ্যাডমিন অনুমতির প্রয়োজন",
+      "description": "UniWind-এর জন্য অ্যাডমিনিস্ট্রেটর রাইটস প্রয়োজন, কিন্তু প্রতিবার UAC প্রম্পট এড়াতে এটি ডিফল্টভাবে বাইপাস করা হয়। সবসময় প্রম্পট চাইলে এটি ইনেবল করুন।"
     },
     "dontAutoShowToolkit": {
       "title": "স্বয়ংক্রিয়ভাবে টুলকিট ডায়ালগ দেখাবেন না",
-      "description": "ডিফল্টভাবে, টাস্কবার এক্সেস করা না গেলে Windhawk স্বয়ংক্রিয়ভাবে টুলকিট প্রদর্শন করে। টুলকিট থেকে সেফ মোড বা এক্সিট করা যায়। Ctrl+Win+W চেপেও এটি আনা যায়।"
+      "description": "ডিফল্টভাবে, টাস্কবার এক্সেস করা না গেলে UniWind স্বয়ংক্রিয়ভাবে টুলকিট প্রদর্শন করে। টুলকিট থেকে সেফ মোড বা এক্সিট করা যায়। Ctrl+Win+W চেপেও এটি আনা যায়।"
     },
     "modInitDialogDelay": {
       "title": "মড ইনিশিয়ালাইজেশন ডায়ালগ বিলম্ব",
@@ -262,12 +262,12 @@
     },
     "moreAdvancedSettings": {
       "title": "আরও অ্যাডভান্সড সেটিংস",
-      "restartNotice": "সেটিংস প্রয়োগ করতে Windhawk রিস্টার্ট করা হবে।",
-      "saveButton": "সেভ করুন এবং Windhawk রিস্টার্ট করুন"
+      "restartNotice": "সেটিংস প্রয়োগ করতে UniWind রিস্টার্ট করা হবে।",
+      "saveButton": "সেভ করুন এবং UniWind রিস্টার্ট করুন"
     },
     "loggingVerbosity": {
-      "appLoggingTitle": "Windhawk লগিং পরিধি",
-      "engineLoggingTitle": "Windhawk ইঞ্জিন লগিং পরিধি",
+      "appLoggingTitle": "UniWind লগিং পরিধি",
+      "engineLoggingTitle": "UniWind ইঞ্জিন লগিং পরিধি",
       "description": "DebugView-এর মতো টুল দিয়ে লগ দেখা যাবে।",
       "none": "বন্ধ (None)",
       "error": "কেবল ত্রুটি (Error)",
@@ -275,13 +275,13 @@
     },
     "processList": {
       "titleExclusion": "প্রসেস বাদ দেওয়ার তালিকা (Exclusion)",
-      "descriptionExclusion": "এমন প্রসেসের তালিকা যেখানে Windhawk ইনজেক্ট করবে না। কোনো প্রোগ্রাম সামঞ্জস্যপূর্ণ না হলে এটি দরকারী।",
+      "descriptionExclusion": "এমন প্রসেসের তালিকা যেখানে UniWind ইনজেক্ট করবে না। কোনো প্রোগ্রাম সামঞ্জস্যপূর্ণ না হলে এটি দরকারী।",
       "descriptionExclusionWiki": "প্রসেস বাদ দেওয়া সম্পর্কে আরও জানতে <0>ডকুমেন্টেশন দেখুন</0>।",
       "excludeCriticalProcesses": "গুরুত্বপূর্ণ সিস্টেম প্রসেস বাদ দিন",
       "excludeIncompatiblePrograms": "অসামঞ্জস্যপূর্ণ প্রোগ্রাম বাদ দিন",
       "excludeGames": "পরিচিত গেমসমূহ বাদ দিন",
       "titleInclusion": "প্রসেস অন্তর্ভুক্তির তালিকা (Inclusion)",
-      "descriptionInclusion": "এমন প্রসেসের তালিকা যেখানে এক্সক্লুশন তালিকায় থাকলেও Windhawk ইনজেক্ট করবে।",
+      "descriptionInclusion": "এমন প্রসেসের তালিকা যেখানে এক্সক্লুশন তালিকায় থাকলেও UniWind ইনজেক্ট করবে।",
       "inclusionWithoutExclusionNotice": "এক্সক্লুশন তালিকা খালি থাকলে ইনক্লুশন তালিকার কোনো প্রভাব থাকবে না।",
       "inclusionWithoutTotalExclusionNotice": "আপনি যদি এই কয়েকটি বাদে সব প্রসেস বাদ দিতে চান, তবে এক্সক্লুশন তালিকায় \"*\" বসাতে পারেন।",
       "processListPlaceholder": "প্রসেসের নাম/পাথ, প্রতি লাইনে একটি, উদাহরণস্বরূপ:",
@@ -289,24 +289,24 @@
     }
   },
   "about": {
-    "title": "Windhawk v{{version}}",
+    "title": "UniWind v{{version}}",
     "beta": "বিটা",
     "subtitle": "উইন্ডোজ এবং বিভিন্ন প্রোগ্রামের জন্য কাস্টমাইজেশন মার্কেটপ্লেস",
     "credit": "তৈরিতে <0>{{author}}</0>",
     "update": {
       "title": "একটি নতুন আপডেট উপলব্ধ",
-      "subtitle": "সর্বশেষ ফিচার এবং বাগ ফিক্স পেতে Windhawk আপডেট করার কথা বিবেচনা করুন",
+      "subtitle": "সর্বশেষ ফিচার এবং বাগ ফিক্স পেতে UniWind আপডেট করার কথা বিবেচনা করুন",
       "changelogButton": "চেঞ্জলগ (Changelog)",
       "modal": {
-        "title": "Windhawk আপডেট করা হচ্ছে",
+        "title": "UniWind আপডেট করা হচ্ছে",
         "downloading": "আপডেট ডাউনলোড হচ্ছে...",
         "installing": "আপডেট ইনস্টল হচ্ছে...",
-        "installingNote": "ইনস্টলেশন শেষ হলে Windhawk স্বয়ংক্রিয়ভাবে রিস্টার্ট হবে।",
+        "installingNote": "ইনস্টলেশন শেষ হলে UniWind স্বয়ংক্রিয়ভাবে রিস্টার্ট হবে।",
         "failed": "আপডেট ব্যর্থ হয়েছে"
       }
     },
     "changelog": {
-      "title": "Windhawk-এ নতুন কী আছে"
+      "title": "UniWind-এ নতুন কী আছে"
     },
     "links": {
       "title": "লিংকসমূহ",
@@ -340,7 +340,7 @@
         "title": "ডেভেলপমেন্ট টুলস প্রয়োজন",
         "downloading": "ডেভেলপমেন্ট টুলস ডাউনলোড হচ্ছে...",
         "installing": "ডেভেলপমেন্ট টুলস ইনস্টল হচ্ছে...",
-        "installingNote": "ইনস্টলেশন শেষ হলে Windhawk স্বয়ংক্রিয়ভাবে রিস্টার্ট হবে।",
+        "installingNote": "ইনস্টলেশন শেষ হলে UniWind স্বয়ংক্রিয়ভাবে রিস্টার্ট হবে।",
         "failed": "ইনস্টলেশন ব্যর্থ হয়েছে"
       }
     }
@@ -352,10 +352,10 @@
     "beginCodingButton": "কোডিং শুরু করুন"
   },
   "safeMode": {
-    "alert": "Windhawk সেফ মোডে চলছে, সমস্ত কোড ইনজেকশন ফিচার বন্ধ রাখা হয়েছে।",
+    "alert": "UniWind সেফ মোডে চলছে, সমস্ত কোড ইনজেকশন ফিচার বন্ধ রাখা হয়েছে।",
     "offButton": "সেফ মোড বন্ধ করুন",
-    "offConfirm": "সেটিংস প্রয়োগ করতে Windhawk রিস্টার্ট করা হবে।",
-    "offConfirmOk": "Windhawk রিস্টার্ট করুন"
+    "offConfirm": "সেটিংস প্রয়োগ করতে UniWind রিস্টার্ট করা হবে।",
+    "offConfirmOk": "UniWind রিস্টার্ট করুন"
   },
   "modPreview": {
     "notCompiled": "প্রিভিউ করার আগে মডটি কম্পাইল করা প্রয়োজন"
@@ -384,8 +384,8 @@
     "home": {
       "tagline": "উইন্ডোজ এবং বিভিন্ন প্রোগ্রামের জন্য কাস্টমাইজেশন মার্কেটপ্লেস",
       "getInvolved": "যুক্ত হন",
-      "joinDiscord": "Discord-এ Windhawk কমিউনিটিতে যোগ দিন",
-      "discussWindhawk": "GitHub Discussions-এ Windhawk নিয়ে আলোচনা করুন",
+      "joinDiscord": "Discord-এ UniWind কমিউনিটিতে যোগ দিন",
+      "discussWindhawk": "GitHub Discussions-এ UniWind নিয়ে আলোচনা করুন",
       "discussMods": "GitHub Discussions-এ মডসমূহ নিয়ে আলোচনা করুন",
       "browseLinks": "অন্যান্য প্রয়োজনীয় লিংক দেখুন",
       "highlights": "বিশেষ সুবিধাসমূহ",
@@ -397,16 +397,16 @@
       "transparentDescription": "প্রতিটি মড সোর্স কোড আকারে উন্মুক্ত থাকে, যা দেখে নিশ্চিত হওয়া যায় মডটি কোনো ক্ষতিকর কাজ করছে না।"
     },
     "modDetails": {
-      "getWindhawk": "এই মডটি ইনস্টল করতে Windhawk সংগ্রহ করুন"
+      "getWindhawk": "এই মডটি ইনস্টল করতে UniWind সংগ্রহ করুন"
     },
     "links": {
       "news": "সংবাদ",
-      "windhawkNews": "Windhawk নিউজ - Ramen Software",
-      "windhawkChangelog": "Windhawk চেঞ্জলগ",
+      "windhawkNews": "UniWind নিউজ - Ramen Software",
+      "windhawkChangelog": "UniWind চেঞ্জলগ",
       "community": "কমিউনিটি",
       "discord": "Discord",
-      "windhawkDiscussions": "Windhawk - GitHub Discussions",
-      "modsDiscussions": "Windhawk Mods - GitHub Discussions",
+      "windhawkDiscussions": "UniWind - GitHub Discussions",
+      "modsDiscussions": "UniWind Mods - GitHub Discussions",
       "documentation": "ডকুমেন্টেশন",
       "creatingNewMod": "নতুন মড তৈরি করা",
       "otherTopics": "অন্যান্য বিষয়",
@@ -415,8 +415,8 @@
       "contactRamenSoftware": "Ramen Software-এর সাথে যোগাযোগ করুন"
     },
     "download": {
-      "title": "Windhawk আপডেট করুন",
-      "newVersionAvailable": "একটি নতুন Windhawk ভার্সন পাওয়া যাচ্ছে",
+      "title": "UniWind আপডেট করুন",
+      "newVersionAvailable": "একটি নতুন UniWind ভার্সন পাওয়া যাচ্ছে",
       "whatsNew": "নতুন কী আছে"
     },
     "footer": {

@@ -150,7 +150,7 @@
       },
       "patternsMatchCriticalSystemProcesses": {
         "title": "Konsidere mòdel lis enklizyon pou pwosesis sistèm kritik",
-        "description": "Pa default, Windhawk sèlman chaje mod nan pwosesis sistèm kritik si pwosesis la enkli san modèl, e.g. <0>critical.exe</0>, pa <0>*</0> oubyen <0>*.exe</0>. Pou plis detay de pwosesis sistèm kritik, tanpri refere nan <1>dokimantasyon an</1>."
+        "description": "Pa default, UniWind sèlman chaje mod nan pwosesis sistèm kritik si pwosesis la enkli san modèl, e.g. <0>critical.exe</0>, pa <0>*</0> oubyen <0>*.exe</0>. Pou plis detay de pwosesis sistèm kritik, tanpri refere nan <1>dokimantasyon an</1>."
       }
     },
     "changes": {
@@ -213,14 +213,14 @@
   "settings": {
     "language": {
       "title": "Lang",
-      "description": "Chwazi lang prefere ou ki etale pou Windhawk.",
+      "description": "Chwazi lang prefere ou ki etale pou UniWind.",
       "contribute": "<0>Kontribye yon nouvo tradiksyon</0>.",
       "credits": "Tradikasyon Kreyòl Ayisyen pa <0>Samuel Laguerre (chartersamster)</0>.",
       "creditsLink": "mailto:sammylaguerre305@gmail.com"
     },
     "updates": {
       "title": "Tcheke pou mizajou",
-      "description": "Tcheke otomatikman epi notifye nouvo vèsyon Windhawk ak mod enstale yo."
+      "description": "Tcheke otomatikman epi notifye nouvo vèsyon UniWind ak mod enstale yo."
     },
     "devMode": {
       "title": "Mòd devlopè",
@@ -229,19 +229,19 @@
     "advancedSettings": "Paramèt avanse",
     "hideTrayIcon": {
       "title": "Kache ikòn plato",
-      "description": "W'ap dwe enfim opsyon sa a pou kite Windhawk."
+      "description": "W'ap dwe enfim opsyon sa a pou kite UniWind."
     },
     "alwaysCompileModsLocally": {
       "title": "Toujou konpile mod lokalman",
-      "description": "Pa default, Windhawk telechaje binè mod pre-konpile yo soti nan sèvè Windhawk la lè yo disponib. Aktive opsyon sa a pou toujou konpile mod yo lokalman pito."
+      "description": "Pa default, UniWind telechaje binè mod pre-konpile yo soti nan sèvè UniWind la lè yo disponib. Aktive opsyon sa a pou toujou konpile mod yo lokalman pito."
     },
     "requireElevation": {
-      "title": "Oblije elevasyon UAC pou kouri Windhawk",
-      "description": "Windhawk bezwen dwa administratè, men pou yon òdinatè ki sèlman itilize youn itilizatè, li kapab anmèdan pou w resevwa envitasyon UAC la chak fwa, kidonk Windhawk sote li. Aktive opsyon sa a pou mande pou ogmante UAC pou w ka itilize Windhawk."
+      "title": "Oblije elevasyon UAC pou kouri UniWind",
+      "description": "UniWind bezwen dwa administratè, men pou yon òdinatè ki sèlman itilize youn itilizatè, li kapab anmèdan pou w resevwa envitasyon UAC la chak fwa, kidonk UniWind sote li. Aktive opsyon sa a pou mande pou ogmante UAC pou w ka itilize UniWind."
     },
     "dontAutoShowToolkit": {
       "title": "Pa montre dyalòg zouti a otomatikman",
-      "description": "Pa default, Windhawk otomatikman montre dyalòg zouti a lè li detekte ke ba travay la pa aksesib, swa akòz enstabilite sistèm swa pou yon lòt rezon. Dyalòg zouti a pèmèt ou pou kite Windhawk, chanje nan mòd san danje, epi fè lòt operasyon. Ou kapab tou wè dyalòg zouti a avèk rakoursi klavye Ctrl+Win+W."
+      "description": "Pa default, UniWind otomatikman montre dyalòg zouti a lè li detekte ke ba travay la pa aksesib, swa akòz enstabilite sistèm swa pou yon lòt rezon. Dyalòg zouti a pèmèt ou pou kite UniWind, chanje nan mòd san danje, epi fè lòt operasyon. Ou kapab tou wè dyalòg zouti a avèk rakoursi klavye Ctrl+Win+W."
     },
     "modInitDialogDelay": {
       "title": "Reta dyalòg inisyalizasyon mod",
@@ -249,12 +249,12 @@
     },
     "moreAdvancedSettings": {
       "title": "Plis paramèt avanse",
-      "restartNotice": "Windhawk pral rekòmanse pou aplike paramèt yo.",
-      "saveButton": "Sove ak rekòmanse Windhawk"
+      "restartNotice": "UniWind pral rekòmanse pou aplike paramèt yo.",
+      "saveButton": "Sove ak rekòmanse UniWind"
     },
     "loggingVerbosity": {
-      "appLoggingTitle": "Vèbosite anrejistreman Windhawk",
-      "engineLoggingTitle": "Vèbosite anrejistreman motè Windhawk",
+      "appLoggingTitle": "Vèbosite anrejistreman UniWind",
+      "engineLoggingTitle": "Vèbosite anrejistreman motè UniWind",
       "description": "Jounal yo kapab vi avèk yon zouti tankou DebugView.",
       "none": "Okenn",
       "error": "Erè",
@@ -262,13 +262,13 @@
     },
     "processList": {
       "titleExclusion": "Lis esklizyon pwosesis ki pèsonalize",
-      "descriptionExclusion": "Yon lis non/chemen pwosesis ke Windhawk p'ap enjekte ladan. Li kapab itil lè Windhawk pa konpatib ak yon pwogram espesifik. Remake byen ke ajoute yon pwosesis nan lis sa a pa sèlman ap anpeche Windhawk pèsonalize li, men tou li ap anpeche Windhawk entèsepte pwosesis pitit ke pwosesis sa a kreye. Sa a ap lakòz Windhawk chaje mod yo ak yon ti reta nan ka sa yo.",
+      "descriptionExclusion": "Yon lis non/chemen pwosesis ke UniWind p'ap enjekte ladan. Li kapab itil lè UniWind pa konpatib ak yon pwogram espesifik. Remake byen ke ajoute yon pwosesis nan lis sa a pa sèlman ap anpeche UniWind pèsonalize li, men tou li ap anpeche UniWind entèsepte pwosesis pitit ke pwosesis sa a kreye. Sa a ap lakòz UniWind chaje mod yo ak yon ti reta nan ka sa yo.",
       "descriptionExclusionWiki": "Pou plis detay sou eksklizyon pwosesis ak sou lis eksklizyon pwosesis entegre yo, tanpri refere nan <0>dokimantasyon an</0>.",
       "excludeCriticalProcesses": "Eskli pwosesis sistèm kritik yo",
       "excludeIncompatiblePrograms": "Eskli pwogram enkonpatib ki konnen yo",
       "excludeGames": "Eskli jwèt byen koni yo",
       "titleInclusion": "Lis enklizyon pwosesis",
-      "descriptionInclusion": "Yon lis non/chemen pwosesis ke Windhawk ap enjekte nan, menm si yo nan lis esklizyon an.",
+      "descriptionInclusion": "Yon lis non/chemen pwosesis ke UniWind ap enjekte nan, menm si yo nan lis esklizyon an.",
       "inclusionWithoutExclusionNotice": "Lis enklizyon pwosesis la pa gen okenn efè ak yon lis esklizyon pwosesis vid.",
       "inclusionWithoutTotalExclusionNotice": "Si ou te vle di pou eksli tout pwosesis men sa yo, ou ka mete \"*\" nan lis esklizyon pwosesis la.",
       "processListPlaceholder": "Non/chemen pwosesis, youn pou chak liy, pou egzanp:",
@@ -276,24 +276,24 @@
     }
   },
   "about": {
-    "title": "Windhawk v{{version}}",
+    "title": "UniWind v{{version}}",
     "beta": "beta",
     "subtitle": "Mache pèsyonalizasyon an pou Windows ak pwogram yo",
     "credit": "<0>{{author}}</0>",
     "update": {
       "title": "Yon mizajou disponsib",
-      "subtitle": "Konsidere mete Windhawk ajou pou jwenn pi dènye fonksyonalite ak koreksyon pinèz yo.",
+      "subtitle": "Konsidere mete UniWind ajou pou jwenn pi dènye fonksyonalite ak koreksyon pinèz yo.",
       "changelogButton": "Lis chanjman",
       "modal": {
-        "title": "Mete Windhawk ajou",
+        "title": "Mete UniWind ajou",
         "downloading": "Telechaje mizajou...",
         "installing": "Enstale mizajou...",
-        "installingNote": "Windhawk pral rekòmanse lè enstalasyon an fini.",
+        "installingNote": "UniWind pral rekòmanse lè enstalasyon an fini.",
         "failed": "Mizajou echwe"
       }
     },
     "changelog": {
-      "title": "Sa ki Nouvo nan Windhawk"
+      "title": "Sa ki Nouvo nan UniWind"
     },
     "links": {
       "title": "Lyan",
@@ -326,10 +326,10 @@
     "beginCodingButton": "Kòmanse kodaj"
   },
   "safeMode": {
-    "alert": "Windhawk ap kouri nan mòd an sekirite, tout fonksyonalite enjeksyon kòd se etenn",
+    "alert": "UniWind ap kouri nan mòd an sekirite, tout fonksyonalite enjeksyon kòd se etenn",
     "offButton": "Etenn mòd an sekirite",
-    "offConfirm": "Windhawk pral rekòmanse pou aplike paramèt yo",
-    "offConfirmOk": "Rekòmanse Windhawk"
+    "offConfirm": "UniWind pral rekòmanse pou aplike paramèt yo",
+    "offConfirmOk": "Rekòmanse UniWind"
   },
   "modPreview": {
     "notCompiled": "Mod bezwen konpile anvan li kapab fè koutje"
@@ -358,29 +358,29 @@
     "home": {
       "tagline": "Mache pèsyonalizasyon an pou Windows ak pwogram yo",
       "getInvolved": "Enplike",
-      "joinDiscord": "Rantre kominote Windhawk la sou Discord",
-      "discussWindhawk": "Diskite Windhawk sou GitHub Discussions",
-      "discussMods": "Diskite mod Windhawk yo sou GitHub Discussions",
+      "joinDiscord": "Rantre kominote UniWind la sou Discord",
+      "discussWindhawk": "Diskite UniWind sou GitHub Discussions",
+      "discussMods": "Diskite mod UniWind yo sou GitHub Discussions",
       "browseLinks": "Gade pou lòt lyen itil",
       "highlights": "Pwen enpòtan yo",
       "robust": "Solid",
-      "robustDescription": "Estabilite ak pèfòmans se yon priyorite ki wo anpil pou Windhawk. Li te fèt pou l fonksyone toujou nan background nan san l pa gen yon enpak aparan sou sistèm nan.",
+      "robustDescription": "Estabilite ak pèfòmans se yon priyorite ki wo anpil pou UniWind. Li te fèt pou l fonksyone toujou nan background nan san l pa gen yon enpak aparan sou sistèm nan.",
       "simple": "Senp",
-      "simpleDescription": "Pa gen bezwen yon ekspè nan òdinatè pou itilize Windhawk, li kapab itilize pa tout moun. Mod sofistike kapab enstale nan jis kèk klik, ak pèsonalize yo atravè opsyon fasil pou itilize.",
+      "simpleDescription": "Pa gen bezwen yon ekspè nan òdinatè pou itilize UniWind, li kapab itilize pa tout moun. Mod sofistike kapab enstale nan jis kèk klik, ak pèsonalize yo atravè opsyon fasil pou itilize.",
       "transparent": "Transparan",
-      "transparentDescription": "Mod Windhawk ofri yo pa bwat nwa. Chak mod vini sou fòm kòd sous, ke ou ka revize pou asire w ke mod la fè egzakteman sa li di a."
+      "transparentDescription": "Mod UniWind ofri yo pa bwat nwa. Chak mod vini sou fòm kòd sous, ke ou ka revize pou asire w ke mod la fè egzakteman sa li di a."
     },
     "modDetails": {
-      "getWindhawk": "Jwenn Windhawk pou enstale mod sa a"
+      "getWindhawk": "Jwenn UniWind pou enstale mod sa a"
     },
     "links": {
       "news": "Jounal",
-      "windhawkNews": "Windhawk News - Ramen Software",
-      "windhawkChangelog": "Lis chanjman Windhawk",
+      "windhawkNews": "UniWind News - Ramen Software",
+      "windhawkChangelog": "Lis chanjman UniWind",
       "community": "Kominote",
       "discord": "Discord",
-      "windhawkDiscussions": "Windhawk - GitHub Discussions",
-      "modsDiscussions": "Windhawk Mods - GitHub Discussions",
+      "windhawkDiscussions": "UniWind - GitHub Discussions",
+      "modsDiscussions": "UniWind Mods - GitHub Discussions",
       "documentation": "Dokimantasyon",
       "creatingNewMod": "Kreye yon Nouvo Mod",
       "otherTopics": "Lòt Sijè",
@@ -389,8 +389,8 @@
       "contactRamenSoftware": "Kontakte Ramen Software"
     },
     "download": {
-      "title": "Mete ajou Windhawk",
-      "newVersionAvailable": "Yon nouvo vèsyon Windhawk disponib",
+      "title": "Mete ajou UniWind",
+      "newVersionAvailable": "Yon nouvo vèsyon UniWind disponib",
       "whatsNew": "Sa ki nouvo"
     },
     "footer": {

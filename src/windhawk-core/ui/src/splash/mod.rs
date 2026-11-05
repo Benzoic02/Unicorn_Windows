@@ -62,9 +62,8 @@ use crate::lifecycle::window;
 use crate::shell;
 use logo::{Logo, Segment};
 
-/// The Windhawk mark, the same artwork the installer and the front-end header
-/// use. Kept as the SVG rather than a bitmap so it stays crisp at any display
-/// scale.
+/// The mark shown by the native UI splash. Kept as SVG path data rather than a
+/// bitmap so it stays crisp at any display scale.
 pub const LOGO_SVG: &str = include_str!("../../icons/main-icon-no-background.svg");
 
 /// The overlay's own window class ([`window::SPLASH_WINDOW_CLASS`], which owns it

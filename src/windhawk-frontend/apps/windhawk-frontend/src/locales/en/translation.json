@@ -127,7 +127,7 @@
     "loggingEnabledInAdvancedTab": "Debug logging is enabled in the mod's advanced tab",
     "nuked": {
       "badge": "Disabled by the catalog",
-      "title": "Disabled by the Windhawk mod catalog",
+      "title": "Disabled by the UniWind mod catalog",
       "restoredByUpdate": "Updating to the latest version restores the mod.",
       "staysDisabled": "The mod can't be enabled until the issue is resolved."
     }
@@ -296,7 +296,7 @@
       },
       "patternsMatchCriticalSystemProcesses": {
         "title": "Consider inclusion list patterns for critical system processes",
-        "description": "By default, Windhawk only loads mods in critical system processes if the process is included without patterns, e.g. <0>critical.exe</0>, not <0>*</0> or <0>*.exe</0>. For more details about critical system processes, please refer to <1>the documentation</1>."
+        "description": "By default, UniWind only loads mods in critical system processes if the process is included without patterns, e.g. <0>critical.exe</0>, not <0>*</0> or <0>*.exe</0>. For more details about critical system processes, please refer to <1>the documentation</1>."
       },
       "userScope": {
         "title": "Separate configuration for the current user",
@@ -449,7 +449,7 @@
   "settings": {
     "language": {
       "title": "Language",
-      "description": "Select your preferred display language for Windhawk.",
+      "description": "Select your preferred display language for UniWind.",
       "contribute": "<0>Contribute a new translation</0>.",
       "credits": "English translation by <0>John Smith</0>.",
       "creditsLink": "mailto:john.smith@example.com"
@@ -463,7 +463,7 @@
     },
     "updates": {
       "title": "Check for updates",
-      "description": "Automatically check for and notify about new versions of Windhawk and installed mods."
+      "description": "Automatically check for and notify about new versions of UniWind and installed mods."
     },
     "devMode": {
       "title": "Developer mode",
@@ -472,19 +472,19 @@
     "advancedSettings": "Advanced settings",
     "hideTrayIcon": {
       "title": "Hide tray icon",
-      "description": "You will have to disable this option to exit Windhawk."
+      "description": "You will have to disable this option to exit UniWind."
     },
     "alwaysCompileModsLocally": {
       "title": "Always compile mods locally",
-      "description": "By default, Windhawk downloads precompiled mod binaries from the Windhawk server when available. Enable this option to always compile mods locally instead."
+      "description": "By default, UniWind downloads precompiled mod binaries from the UniWind server when available. Enable this option to always compile mods locally instead."
     },
     "requireElevation": {
-      "title": "Require UAC elevation for running Windhawk",
-      "description": "Windhawk requires administrator rights, but for a single-user computer, getting the UAC prompt every time can be annoying, so Windhawk bypasses it. Enable this option to require UAC elevation for running Windhawk."
+      "title": "Require UAC elevation for running UniWind",
+      "description": "UniWind requires administrator rights, but for a single-user computer, getting the UAC prompt every time can be annoying, so UniWind bypasses it. Enable this option to require UAC elevation for running UniWind."
     },
     "dontAutoShowToolkit": {
       "title": "Don't automatically show the toolkit dialog",
-      "description": "By default, Windhawk automatically shows the toolkit dialog when it detects that the taskbar isn't accessible, either due to system instability or for another reason. The toolkit dialog allows you to exit Windhawk, switch to safe mode, and perform other operations. The toolkit dialog can also be shown with the Ctrl+Win+W keyboard shortcut."
+      "description": "By default, UniWind automatically shows the toolkit dialog when it detects that the taskbar isn't accessible, either due to system instability or for another reason. The toolkit dialog allows you to exit UniWind, switch to safe mode, and perform other operations. The toolkit dialog can also be shown with the Ctrl+Win+W keyboard shortcut."
     },
     "disableToolkitHotkey": {
       "title": "Disable the toolkit dialog keyboard shortcut",
@@ -496,16 +496,16 @@
     },
     "moreAdvancedSettings": {
       "title": "More advanced settings",
-      "restartNotice": "Windhawk will be restarted to apply the settings.",
-      "saveButton": "Save and restart Windhawk",
+      "restartNotice": "UniWind will be restarted to apply the settings.",
+      "saveButton": "Save and restart UniWind",
       "unsavedChangesTitle": "Unsaved settings",
       "unsavedChangesMessage": "You have unsaved advanced settings changes. Are you sure you want to discard them?",
       "unsavedChangesLeave": "Discard changes",
       "unsavedChangesStay": "Keep editing"
     },
     "loggingVerbosity": {
-      "appLoggingTitle": "Windhawk logging verbosity",
-      "engineLoggingTitle": "Windhawk engine logging verbosity",
+      "appLoggingTitle": "UniWind logging verbosity",
+      "engineLoggingTitle": "UniWind engine logging verbosity",
       "description": "Logs can be viewed with a tool such as DebugView.",
       "none": "None",
       "error": "Error",
@@ -513,13 +513,13 @@
     },
     "processList": {
       "titleExclusion": "Process exclusion list",
-      "descriptionExclusion": "A list of process names/paths that Windhawk won't inject into. Can be useful for cases when Windhawk isn't compatible with a specific program. Note that adding a process to this list will not only prevent Windhawk from customizing it, but will also prevent Windhawk from intercepting child processes that this process creates. This will cause Windhawk to load mods with a slight delay in such cases.",
+      "descriptionExclusion": "A list of process names/paths that UniWind won't inject into. Can be useful for cases when UniWind isn't compatible with a specific program. Note that adding a process to this list will not only prevent UniWind from customizing it, but will also prevent UniWind from intercepting child processes that this process creates. This will cause UniWind to load mods with a slight delay in such cases.",
       "descriptionExclusionWiki": "For more details about excluding processes and about the built-in process exclusion lists, please refer to <0>the documentation</0>.",
       "excludeCriticalProcesses": "Exclude critical system processes",
       "excludeIncompatiblePrograms": "Exclude known incompatible programs",
       "excludeGames": "Exclude well-known games",
       "titleInclusion": "Process inclusion list",
-      "descriptionInclusion": "A list of process names/paths that Windhawk will inject into, even if they're in the exclusion list.",
+      "descriptionInclusion": "A list of process names/paths that UniWind will inject into, even if they're in the exclusion list.",
       "inclusionWithoutExclusionNotice": "The process inclusion list has no effect with an empty process exclusion list.",
       "inclusionWithoutTotalExclusionNotice": "If you meant to exclude all processes but these, you can set \"*\" in the process exclusion list.",
       "processListPlaceholder": "Process names/paths, one per line, for example:",
@@ -527,7 +527,7 @@
     },
     "userData": {
       "title": "Backup & restore",
-      "description": "Back up your Windhawk setup - your app settings and your mods with each mod's settings and configuration - to a file, or restore it from one.",
+      "description": "Back up your UniWind setup - your app settings and your mods with each mod's settings and configuration - to a file, or restore it from one.",
       "exportAction": "Export...",
       "importAction": "Import...",
       "appSettings": "App settings",
@@ -545,7 +545,7 @@
         "exportButton": "Export",
         "doneButton": "Done",
         "doneTitle": "Export complete",
-        "doneSubtitle": "Your Windhawk user data was saved to the chosen file.",
+        "doneSubtitle": "Your UniWind user data was saved to the chosen file.",
         "warningsTitle": "Some data was skipped",
         "offlineTitle": "Embed source for offline restore",
         "offlineDescription": "Include each mod's source in the archive so it restores with no internet connection. Makes a larger file. Local mods are always embedded."
@@ -599,24 +599,24 @@
     }
   },
   "about": {
-    "title": "Windhawk v{{version}}",
+    "title": "UniWind v{{version}}",
     "beta": "beta",
     "subtitle": "The customization marketplace for Windows and programs",
     "credit": "By <0>{{author}}</0>",
     "update": {
       "title": "An update is available",
-      "subtitle": "Consider updating Windhawk to get the latest features and bug fixes",
+      "subtitle": "Consider updating UniWind to get the latest features and bug fixes",
       "changelogButton": "Changelog",
       "modal": {
-        "title": "Updating Windhawk",
+        "title": "Updating UniWind",
         "downloading": "Downloading update...",
         "installing": "Installing update...",
-        "installingNote": "Windhawk will restart automatically when the installation is complete.",
+        "installingNote": "UniWind will restart automatically when the installation is complete.",
         "failed": "Update failed"
       }
     },
     "changelog": {
-      "title": "What's new in Windhawk"
+      "title": "What's new in UniWind"
     },
     "links": {
       "title": "Links",
@@ -651,7 +651,7 @@
         "title": "Development tools required",
         "downloading": "Downloading development tools...",
         "installing": "Installing development tools...",
-        "installingNote": "Windhawk will restart automatically when the installation is complete.",
+        "installingNote": "UniWind will restart automatically when the installation is complete.",
         "failed": "Installation failed"
       }
     }
@@ -663,10 +663,10 @@
     "beginCodingButton": "Begin coding"
   },
   "safeMode": {
-    "alert": "Windhawk is running in safe mode, all code injection functionality is turned off.",
+    "alert": "UniWind is running in safe mode, all code injection functionality is turned off.",
     "offButton": "Turn off safe mode",
-    "offConfirm": "Windhawk will be restarted to apply the settings.",
-    "offConfirmOk": "Restart Windhawk"
+    "offConfirm": "UniWind will be restarted to apply the settings.",
+    "offConfirmOk": "Restart UniWind"
   },
   "modPreview": {
     "notCompiled": "Mod needs to be compiled before it can be previewed"
@@ -698,31 +698,31 @@
     "home": {
       "tagline": "The customization marketplace for Windows and programs",
       "getInvolved": "Get involved",
-      "joinDiscord": "Join the Windhawk community on Discord",
-      "discussWindhawk": "Discuss Windhawk on GitHub Discussions",
-      "discussMods": "Discuss Windhawk mods on GitHub Discussions",
+      "joinDiscord": "Join the UniWind community on Discord",
+      "discussWindhawk": "Discuss UniWind on GitHub Discussions",
+      "discussMods": "Discuss UniWind mods on GitHub Discussions",
       "browseLinks": "Browse for other useful links",
       "highlights": "Highlights",
       "robust": "Robust",
-      "robustDescription": "Stability and performance are a very high priority for Windhawk. It was designed to be constantly running in the background without having a noticeable impact on the system.",
+      "robustDescription": "Stability and performance are a very high priority for UniWind. It was designed to be constantly running in the background without having a noticeable impact on the system.",
       "simple": "Simple",
-      "simpleDescription": "There's no need to be a computer expert to use Windhawk, it can be used by everybody. Sophisticated mods can be installed with just a couple of clicks, and customized via user friendly options.",
+      "simpleDescription": "There's no need to be a computer expert to use UniWind, it can be used by everybody. Sophisticated mods can be installed with just a couple of clicks, and customized via user friendly options.",
       "transparent": "Transparent",
-      "transparentDescription": "The mods that Windhawk offers are not black boxes. Each mod comes in the form of source code, which can be reviewed to make sure that the mod does exactly what it says."
+      "transparentDescription": "The mods that UniWind offers are not black boxes. Each mod comes in the form of source code, which can be reviewed to make sure that the mod does exactly what it says."
     },
     "modDetails": {
-      "getWindhawk": "Get Windhawk to install this mod",
-      "openInWindhawk": "Open in Windhawk",
-      "notInstalled": "Windhawk doesn't seem to be installed. <0>Get Windhawk</0> to install this mod."
+      "getWindhawk": "Get UniWind to install this mod",
+      "openInWindhawk": "Open in UniWind",
+      "notInstalled": "UniWind doesn't seem to be installed. <0>Get UniWind</0> to install this mod."
     },
     "links": {
       "news": "News",
-      "windhawkNews": "Windhawk News - Ramen Software",
-      "windhawkChangelog": "Windhawk Changelog",
+      "windhawkNews": "UniWind News - Ramen Software",
+      "windhawkChangelog": "UniWind Changelog",
       "community": "Community",
       "discord": "Discord",
-      "windhawkDiscussions": "Windhawk - GitHub Discussions",
-      "modsDiscussions": "Windhawk Mods - GitHub Discussions",
+      "windhawkDiscussions": "UniWind - GitHub Discussions",
+      "modsDiscussions": "UniWind Mods - GitHub Discussions",
       "documentation": "Documentation",
       "creatingNewMod": "Creating a New Mod",
       "otherTopics": "Other Topics",
@@ -731,8 +731,8 @@
       "contactRamenSoftware": "Contact Ramen Software"
     },
     "download": {
-      "title": "Update Windhawk",
-      "newVersionAvailable": "A new Windhawk version is available",
+      "title": "Update UniWind",
+      "newVersionAvailable": "A new UniWind version is available",
       "whatsNew": "What's new"
     },
     "footer": {
