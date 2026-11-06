@@ -268,7 +268,18 @@ fn serve(channel: &str) -> Result<(), Failure> {
         )
     })?;
 
-    let _engine_runtime = if safe_mode {
+    let service_running = if safe_mode {
+        false
+    } else {
+        crate::engine_service::is_service_running().map_err(|error| {
+            Failure::new(
+                ExitCode::EngineStart,
+                format!("the persistent engine service could not be checked: {error}"),
+            )
+        })?
+    };
+
+    let _engine_runtime = if safe_mode || service_running {
         None
     } else {
         let session_id = verified.peer().session.ok_or_else(|| {

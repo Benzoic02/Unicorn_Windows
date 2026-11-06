@@ -72,9 +72,12 @@ windows-sys = { workspace = true, features = [
     "Win32_System_Diagnostics_Debug",
     # broker/engine.rs resolves the verified UI process's Windows session.
     "Win32_System_RemoteDesktop",
+    "Win32_System_Services",
+    "Win32_System_Environment",
     "Win32_System_Memory",
     "Win32_System_SystemInformation",
     "Win32_System_Threading",
+    "Win32_System_WindowsProgramming",
     # clipboard.rs watches the clipboard from the main window
     # (AddClipboardFormatListener) and writes what the webview copied back under this
     # window's ownership - GetClipboardOwner plus open/empty/enumerate/get/set - which is

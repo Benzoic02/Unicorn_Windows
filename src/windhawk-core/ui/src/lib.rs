@@ -36,6 +36,7 @@ mod deeplink;
 // through. Exposed as public API so the handler orchestration tests build the
 // in-process host operations over a recording launch seam.
 pub mod editor;
+pub mod engine_service;
 mod file_dialog;
 mod fonts;
 mod ipc;
@@ -296,7 +297,19 @@ pub fn run() {
                 ladder = None;
             }
 
-            let engine_runtime = if needs_broker || safe_mode {
+            let service_running = if needs_broker || safe_mode {
+                false
+            } else {
+                match engine_service::is_service_running() {
+                    Ok(running) => running,
+                    Err(error) => {
+                        fail_startup(&format!(
+                            "Could not check the UniWind persistent engine service: {error}"
+                        ));
+                    }
+                }
+            };
+            let engine_runtime = if needs_broker || safe_mode || service_running {
                 None
             } else {
                 match broker::engine::EngineRuntime::start(engine_path, None) {

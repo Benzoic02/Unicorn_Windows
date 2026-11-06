@@ -28,6 +28,9 @@ The Windhawk source code can be found in the `src` folder, which contains the fo
 
 A simple way to get started is by extracting the portable version of Windhawk with the official installer, building the part of Windhawk that you want to modify, and then replacing the corresponding files in the portable version with the newly built files.
 
+For the UniWind local build's optional persistent engine service, see
+[PERSISTENT_ENGINE.md](PERSISTENT_ENGINE.md).
+
 ## Additional resources
 
 Code which demonstrates the global injection and hooking method that is used can be found in this repository: [global-inject-demo](https://github.com/m417z/global-inject-demo).

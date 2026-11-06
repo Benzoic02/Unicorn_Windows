@@ -18,6 +18,8 @@ const PROCESS_SCAN_INTERVAL: Duration = Duration::from_secs(1);
 type StartSession = unsafe extern "C" fn() -> *mut c_void;
 type HandleNewProcesses = unsafe extern "C" fn(*mut c_void) -> i32;
 type RecordSessionUsers = unsafe extern "C" fn(*mut c_void) -> i32;
+type RecordSessionLogon = unsafe extern "C" fn(*mut c_void, u32) -> i32;
+type RemoveSessionUser = unsafe extern "C" fn(*mut c_void, u32) -> i32;
 type HandleNewLogonSession = unsafe extern "C" fn(u32) -> i32;
 type EndSession = unsafe extern "C" fn(*mut c_void) -> i32;
 
@@ -109,17 +111,19 @@ fn run_engine(
     }
 }
 
-struct EngineSession {
+pub(crate) struct EngineSession {
     _library: Library,
     session: *mut c_void,
     handle_new_processes: HandleNewProcesses,
     record_session_users: RecordSessionUsers,
+    record_session_logon: RecordSessionLogon,
+    remove_session_user: RemoveSessionUser,
     handle_new_logon_session: HandleNewLogonSession,
     end_session: EndSession,
 }
 
 impl EngineSession {
-    fn start(engine_path: &Path) -> Result<Self, String> {
+    pub(crate) fn start(engine_path: &Path) -> Result<Self, String> {
         let dll_path = engine_path.join("64").join("windhawk.dll");
         // SAFETY: this path comes from the core's resolved installation config,
         // and the library is kept loaded for the full lifetime of its session.
@@ -162,6 +166,24 @@ impl EngineSession {
         };
         // SAFETY: this export is declared in the engine's _exports.def with this
         // x64 Windows signature.
+        let record_session_logon = unsafe {
+            *library
+                .get::<RecordSessionLogon>(b"GlobalHookSessionRecordSessionLogon\0")
+                .map_err(|error| {
+                    format!("the engine session-logon export is unavailable: {error}")
+                })?
+        };
+        // SAFETY: this export is declared in the engine's _exports.def with this
+        // x64 Windows signature.
+        let remove_session_user = unsafe {
+            *library
+                .get::<RemoveSessionUser>(b"GlobalHookSessionRemoveSessionUser\0")
+                .map_err(|error| {
+                    format!("the engine session-user removal export is unavailable: {error}")
+                })?
+        };
+        // SAFETY: this export is declared in the engine's _exports.def with this
+        // x64 Windows signature.
         let end_session = unsafe {
             *library
                 .get::<EndSession>(b"GlobalHookSessionEnd\0")
@@ -183,12 +205,14 @@ impl EngineSession {
             session,
             handle_new_processes,
             record_session_users,
+            record_session_logon,
+            remove_session_user,
             handle_new_logon_session,
             end_session,
         })
     }
 
-    fn record_current_session_users(&self) -> Result<(), String> {
+    pub(crate) fn record_current_session_users(&self) -> Result<(), String> {
         // SAFETY: the session handle was created by this engine instance and is
         // used only on its owning worker thread.
         if unsafe { (self.record_session_users)(self.session) } == 0 {
@@ -197,7 +221,7 @@ impl EngineSession {
         Ok(())
     }
 
-    fn handle_logon(&self, session_id: u32) -> Result<(), String> {
+    pub(crate) fn handle_logon(&self, session_id: u32) -> Result<(), String> {
         // SAFETY: the engine exports this function to start tool mods for an
         // already logged-on Windows session.
         if unsafe { (self.handle_new_logon_session)(session_id) } == 0 {
@@ -208,7 +232,29 @@ impl EngineSession {
         Ok(())
     }
 
-    fn handle_new_processes(&self) -> Result<(), String> {
+    pub(crate) fn record_session_logon(&self, session_id: u32) -> Result<(), String> {
+        // SAFETY: the session handle was created by this engine instance and is
+        // used only on its owning worker thread.
+        if unsafe { (self.record_session_logon)(self.session, session_id) } == 0 {
+            return Err(format!(
+                "the engine failed to record the logon for Windows session {session_id}"
+            ));
+        }
+        Ok(())
+    }
+
+    pub(crate) fn remove_session_user(&self, session_id: u32) -> Result<(), String> {
+        // SAFETY: the session handle was created by this engine instance and is
+        // used only on its owning worker thread.
+        if unsafe { (self.remove_session_user)(self.session, session_id) } == 0 {
+            return Err(format!(
+                "the engine failed to remove the user for Windows session {session_id}"
+            ));
+        }
+        Ok(())
+    }
+
+    pub(crate) fn handle_new_processes(&self) -> Result<(), String> {
         // SAFETY: the session handle was created by this engine instance and is
         // used only on its owning worker thread.
         if unsafe { (self.handle_new_processes)(self.session) } == 0 {
@@ -243,7 +289,7 @@ impl Drop for EngineSession {
     }
 }
 
-fn report_engine_error(message: &str) {
+pub(crate) fn report_engine_error(message: &str) {
     let message = format!("[WH] UniWind injection engine: {message}\n\0");
     let message: Vec<u16> = message.encode_utf16().collect();
     // SAFETY: message is NUL-terminated UTF-16 and remains alive for the call.

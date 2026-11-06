@@ -26,6 +26,9 @@ fn main() -> ExitCode {
         .map(|arg| arg.to_string_lossy().into_owned())
         .collect();
     if args.first().map(String::as_str) != Some(BROKER_FLAG) {
+        if let Some(code) = windhawk_ui::engine_service::run_command(&args) {
+            return ExitCode::from(code);
+        }
         windhawk_ui::run();
         return ExitCode::SUCCESS;
     }
