@@ -1,36 +1,15 @@
-# Windhawk
+#UniWind
 
-![Screenshot](screenshot.png)
+UniWind is a fork of Windhawk by RamenSoftware
 
-Windhawk aims to make it easier to customize Windows programs. For more details, see [the official website](https://windhawk.net/) and [the announcement](https://ramensoftware.com/windhawk).
+Run windhawk-ui.exe from this folder and keep the whole folder together. Portable
+settings, engine data, and installed mods are stored under AppData. The included
+Compiler supports building 32-bit and 64-bit mods; the matching runtime libraries
+and engine import libraries are included.
 
-This repository is used to [report issues](https://github.com/ramensoftware/windhawk/issues) and to [discuss Windhawk](https://github.com/ramensoftware/windhawk/discussions). For discussing Windhawk mods, refer to [the windhawk-mods repository](https://github.com/ramensoftware/windhawk-mods).
+This is a pre-release integration build. Harmless 32-bit and 64-bit mod compile
+probes succeeded, but live mod injection has not been validated. Mods run inside
+target applications and can destabilize them; install only mods you trust. The
+optional external editor is not bundled. WebView2 Runtime is required.
 
-You're also welcome to join [the Windhawk Discord channel](https://discord.com/servers/windhawk-923944342991818753) for a live discussion.
-
-## Technical details
-
-High level architecture:
-
-![High level architecture diagram](diagram.png)
-
-For technical details about the global injection and hooking method that is used, refer to the following blog post: [Implementing Global Injection and Hooking in Windows](https://m417z.com/Implementing-Global-Injection-and-Hooking-in-Windows/).
-
-## Source code
-
-The Windhawk source code can be found in the `src` folder, which contains the following subfolders:
-
-* `windhawk`: The code of the main `windhawk.exe` executable and the 32-bit and 64-bit `windhawk.dll` engine libraries.
-
-* `vscode-windhawk`: The code of the VSCode extension that is responsible for UI operations such as installing mods and listing installed mods.
-
-* `vscode-windhawk-ui`: The UI part of the VSCode extension.
-
-A simple way to get started is by extracting the portable version of Windhawk with the official installer, building the part of Windhawk that you want to modify, and then replacing the corresponding files in the portable version with the newly built files.
-
-For the UniWind local build's optional persistent engine service, see
-[PERSISTENT_ENGINE.md](PERSISTENT_ENGINE.md).
-
-## Additional resources
-
-Code which demonstrates the global injection and hooking method that is used can be found in this repository: [global-inject-demo](https://github.com/m417z/global-inject-demo).
+The Compiler folder retains its upstream LICENSE.TXT.
